@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PlayerController : CharacterBase
 {
-    // Start is called before the first frame update
+    [field: SerializeField] public AbilityManager AbilityManager { get; private set; }
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            AbilityManager.Abilities[0].Use(gameObject);
+        }
     }
 }

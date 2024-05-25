@@ -29,11 +29,15 @@ public class DelayedClickTargeting : TargetingStrategy
     /// <returns></returns>
     private IEnumerator Targeting(GameObject user, PlayerController playerController, Action<IEnumerable<GameObject>> finished)
     {
-        playerController.enabled = false;
+        //playerController.enabled = false;
 
         if (targetingZoneInstance == null)
         {
+            // Instantiate targeting zone
             targetingZoneInstance = Instantiate(targetingZone);
+
+            // Scale targeting zone
+            targetingZoneInstance.transform.localScale = new Vector3(areaRadius, areaRadius, areaRadius);
         }
         else
         {
@@ -55,13 +59,14 @@ public class DelayedClickTargeting : TargetingStrategy
             {   
                 // Update targeting zone position
                 targetingZoneInstance.transform.position = raycastHit.point;
+                Debug.Log("strange stuff");
 
                 if (Input.GetMouseButtonDown(0))
                 {
                     // Wait to completly finish the click frame
                     yield return new WaitWhile(() => Input.GetMouseButton(0));
 
-                    playerController.enabled = true;
+                    //playerController.enabled = true;
 
                     finished(GetGameObjectsInRadius(raycastHit.point));
 

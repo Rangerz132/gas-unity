@@ -723,6 +723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 1118900371}
+  <AbilityManager>k__BackingField: {fileID: 1118900370}
 --- !u!114 &1118900370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,7 +736,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f4fb2bc3850ac47b59888376917593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Abilities>k__BackingField: []
+  <Abilities>k__BackingField:
+  - {fileID: 11400000, guid: a4b05cf45169b53408d87707982750b7, type: 2}
 --- !u!114 &1118900371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -762,7 +764,7 @@ GameObject:
   - component: {fileID: 1225104031}
   - component: {fileID: 1225104030}
   - component: {fileID: 1225104029}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
