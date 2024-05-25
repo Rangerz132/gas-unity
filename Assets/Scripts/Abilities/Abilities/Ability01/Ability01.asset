@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a187e2e636fe2c458cafee0dd579472, type: 3}
+  m_Name: Ability01
+  m_EditorClassIdentifier: 
+  id: ability01
+  displayName: Ability01
+  description: 
+  icon: {fileID: 0}
+  targetingStrategy: {fileID: 11400000, guid: 0559e2f020b67f84e93724833e68813d, type: 2}
