@@ -11,6 +11,7 @@ public class Ability : ScriptableObject
     public Sprite icon;
 
     [SerializeField] private TargetingStrategy targetingStrategy;
+    [SerializeField] private FilterStrategy[] filterStrategies;
 
     /// <summary>
     /// Trigger the ability
@@ -27,8 +28,19 @@ public class Ability : ScriptableObject
     /// <param name="targets"></param>
     private void TargetAcquired(IEnumerable<GameObject> targets)
     {
+        Debug.Log("TargetAcquired");
+
+        // Apply filter to all gameObjects
+        foreach (var filter in filterStrategies)
+        {
+            targets = filter.Filter(targets);
+        }
+
+        Debug.Log(targets);
+      
+        // Get name of all gameObjects
         foreach (var target in targets) {
-            Debug.Log(target);
+            Debug.Log(target.name);
         }
     }
 }

@@ -423,7 +423,6 @@ GameObject:
   - component: {fileID: 499334954}
   - component: {fileID: 499334957}
   - component: {fileID: 499334956}
-  - component: {fileID: 499334955}
   m_Layer: 0
   m_Name: EnemyVisual
   m_TagString: Untagged
@@ -446,29 +445,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1959940571}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &499334955
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499334953}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &499334956
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -530,7 +506,6 @@ GameObject:
   - component: {fileID: 605643525}
   - component: {fileID: 605643528}
   - component: {fileID: 605643527}
-  - component: {fileID: 605643526}
   m_Layer: 0
   m_Name: EnemyVisual
   m_TagString: Untagged
@@ -553,29 +528,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1553863256}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &605643526
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 605643524}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &605643527
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -867,9 +819,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1553863256}
+  - component: {fileID: 1553863257}
   m_Layer: 0
   m_Name: Enemy (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -890,6 +843,29 @@ Transform:
   - {fileID: 605643525}
   m_Father: {fileID: 278280628}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1553863257
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553863255}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1632554056
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +877,6 @@ GameObject:
   - component: {fileID: 1632554057}
   - component: {fileID: 1632554060}
   - component: {fileID: 1632554059}
-  - component: {fileID: 1632554058}
   m_Layer: 0
   m_Name: EnemyVisual
   m_TagString: Untagged
@@ -924,29 +899,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1782867025}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1632554058
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632554056}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1632554059
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1145,9 +1097,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1782867025}
+  - component: {fileID: 1782867026}
   m_Layer: 0
   m_Name: Enemy (2)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1168,6 +1121,29 @@ Transform:
   - {fileID: 1632554057}
   m_Father: {fileID: 278280628}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1782867026
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782867024}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1959940570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,9 +1153,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1959940571}
+  - component: {fileID: 1959940572}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1200,6 +1177,29 @@ Transform:
   - {fileID: 499334954}
   m_Father: {fileID: 278280628}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1959940572
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959940570}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

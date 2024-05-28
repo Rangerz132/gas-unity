@@ -17,6 +17,6 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
-  areaRadius: 5
+  areaRadius: 8
   targetingZone: {fileID: 3812691789212675063, guid: 4e4477c2dd00b434aa8bb61421615767,
     type: 3}
