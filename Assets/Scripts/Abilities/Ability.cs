@@ -12,6 +12,7 @@ public class Ability : ScriptableObject
 
     [SerializeField] private TargetingStrategy targetingStrategy;
     [SerializeField] private FilterStrategy[] filterStrategies;
+    [SerializeField] private EffectStrategy[] effectStrategies;
 
     /// <summary>
     /// Trigger the ability
@@ -19,26 +20,26 @@ public class Ability : ScriptableObject
     /// <param name="user"></param>
     public void Use(GameObject user)
     {
-        targetingStrategy.StartTargeting(user, TargetAcquired);
+        targetingStrategy.StartTargeting(user, (IEnumerable<GameObject> targets) => TargetAcquired(user, targets));
     }
 
     /// <summary>
     /// Do something when targets have been acquired
     /// </summary>
     /// <param name="targets"></param>
-    private void TargetAcquired(IEnumerable<GameObject> targets)
+    private void TargetAcquired(GameObject user, IEnumerable<GameObject> targets)
     {
-        Debug.Log("TargetAcquired");
-
         // Apply filter to all gameObjects
         foreach (var filter in filterStrategies)
         {
             targets = filter.Filter(targets);
         }
 
-        // Get name of all gameObjects
-        foreach (var target in targets) {
-            Debug.Log(target.name);
+        foreach (var effect in effectStrategies)
+        {
+            effect.StartEffect(user, targets, EffectFinished);
         }
     }
+
+    private void EffectFinished() { }
 }

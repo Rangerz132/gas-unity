@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
     /// Deal damage to entity
     /// </summary>
     /// <param name="damageAmount"></param>
-    public virtual void TakeDamage(float damageAmount)
+    public virtual void TakeDamage(GameObject damageDealer, float damageAmount)
     {
         currentHealth -= damageAmount;
         if (currentHealth <= 0)
@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
     /// Heal entity
     /// </summary>
     /// <param name="healAmount"></param>
-    public virtual void Heal(float healAmount)
+    public virtual void Heal(GameObject healDealer, float healAmount)
     {
         currentHealth += healAmount;
         if (currentHealth > maxHealth)
