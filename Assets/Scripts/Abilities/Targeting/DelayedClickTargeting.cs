@@ -11,7 +11,6 @@ public class DelayedClickTargeting : TargetingStrategy
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private float areaRadius;
     [SerializeField] private GameObject targetingZone;
-
     private GameObject targetingZoneInstance = null;
 
     public override void StartTargeting(AbilityData data, Action finished)
@@ -67,6 +66,7 @@ public class DelayedClickTargeting : TargetingStrategy
 
                     //playerController.enabled = true;
 
+                    data.targetedPoints = raycastHit.point;
                     data.targets = GetGameObjectsInRadius(raycastHit.point);
                     finished();
 
