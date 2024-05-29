@@ -10,9 +10,9 @@ public class DamageEffect : EffectStrategy
     [SerializeField] private bool isPercent;
     private float currentValue;
 
-    public override void StartEffect(GameObject user, IEnumerable<GameObject> targets, Action finished)
+    public override void StartEffect(AbilityData data, Action finished)
     {
-        foreach (var target in targets)
+        foreach (var target in data.targets)
         {
             // Get health component
             if (target.TryGetComponent<Health>(out Health health))
@@ -21,7 +21,7 @@ public class DamageEffect : EffectStrategy
                 currentValue = isPercent ? damageValue * health.maxHealth / 100 : damageValue;
 
                 // Do damage
-                health.TakeDamage(user, currentValue);
+                health.TakeDamage(data.User, currentValue);
             }
         }
     }

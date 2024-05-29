@@ -20,24 +20,25 @@ public class Ability : ScriptableObject
     /// <param name="user"></param>
     public void Use(GameObject user)
     {
-        targetingStrategy.StartTargeting(user, (IEnumerable<GameObject> targets) => TargetAcquired(user, targets));
+        AbilityData data = new AbilityData(user);
+        targetingStrategy.StartTargeting(data, () => TargetAcquired(data));
     }
 
     /// <summary>
     /// Do something when targets have been acquired
     /// </summary>
     /// <param name="targets"></param>
-    private void TargetAcquired(GameObject user, IEnumerable<GameObject> targets)
+    private void TargetAcquired(AbilityData data)
     {
         // Apply filter to all gameObjects
         foreach (var filter in filterStrategies)
         {
-            targets = filter.Filter(targets);
+            data.targets = filter.Filter(data.targets);
         }
 
         foreach (var effect in effectStrategies)
         {
-            effect.StartEffect(user, targets, EffectFinished);
+            effect.StartEffect(data, EffectFinished);
         }
     }
 

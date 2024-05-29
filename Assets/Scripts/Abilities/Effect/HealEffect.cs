@@ -10,9 +10,9 @@ public class HealEffect : EffectStrategy
     [SerializeField] private bool isPercent;
     private float currentValue;
 
-    public override void StartEffect(GameObject user, IEnumerable<GameObject> targets, Action finished)
+    public override void StartEffect(AbilityData data, Action finished)
     {
-        foreach (var target in targets)
+        foreach (var target in data.targets)
         {
             // Get health component
             if (target.TryGetComponent<Health>(out Health health))
@@ -21,7 +21,7 @@ public class HealEffect : EffectStrategy
                 currentValue = isPercent ? healValue * health.maxHealth / 100 : healValue;
 
                 // Heal
-                health.Heal(user, currentValue);
+                health.Heal(data.User, currentValue);
             }
         }
     }

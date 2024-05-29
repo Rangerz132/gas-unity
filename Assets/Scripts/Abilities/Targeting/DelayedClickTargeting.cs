@@ -14,10 +14,10 @@ public class DelayedClickTargeting : TargetingStrategy
 
     private GameObject targetingZoneInstance = null;
 
-    public override void StartTargeting(GameObject user, Action<IEnumerable<GameObject>> finished)
+    public override void StartTargeting(AbilityData data, Action finished)
     {
-        PlayerController playerController = user.GetComponent<PlayerController>();
-        playerController.StartCoroutine(Targeting(user, playerController, finished));
+        PlayerController playerController = data.User.GetComponent<PlayerController>();
+        playerController.StartCoroutine(Targeting(data, playerController, finished));
     }
 
     /// <summary>
@@ -27,7 +27,7 @@ public class DelayedClickTargeting : TargetingStrategy
     /// <param name="playerController"></param>
     /// <param name="finished"></param>
     /// <returns></returns>
-    private IEnumerator Targeting(GameObject user, PlayerController playerController, Action<IEnumerable<GameObject>> finished)
+    private IEnumerator Targeting(AbilityData data, PlayerController playerController, Action finished)
     {
         //playerController.enabled = false;
 
@@ -67,7 +67,8 @@ public class DelayedClickTargeting : TargetingStrategy
 
                     //playerController.enabled = true;
 
-                    finished(GetGameObjectsInRadius(raycastHit.point));
+                    data.targets = GetGameObjectsInRadius(raycastHit.point);
+                    finished();
 
                     targetingZoneInstance.SetActive(false);
 
