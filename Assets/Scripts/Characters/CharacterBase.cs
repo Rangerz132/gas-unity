@@ -5,4 +5,9 @@ using UnityEngine;
 public abstract class CharacterBase : MonoBehaviour
 {
     [field: SerializeField] public Health health;
+
+    private void Start()
+    {
+        health = gameObject.GetComponent<Health>();
+    }
 }

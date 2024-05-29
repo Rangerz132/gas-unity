@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "TagFilter", menuName = "Abilities/Filter/Tag", order = 0)]
 public class TagFilter : FilterStrategy
 {
-    [SerializeField] string tagToFilter = "";
+    [SerializeField] private string tagToFilter = "";
 
     public override IEnumerable<GameObject> Filter(IEnumerable<GameObject> objectsToFilter)
     {

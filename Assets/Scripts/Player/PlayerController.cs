@@ -8,11 +8,13 @@ public class PlayerController : CharacterBase
 
     void Start()
     {
-
+        // Get components
+        AbilityManager = gameObject.GetComponent<AbilityManager>();
     }
 
     void Update()
     {
+        // Use ability 01
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             AbilityManager.Abilities[0].Use(gameObject);

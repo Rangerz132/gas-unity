@@ -59,7 +59,6 @@ public class DelayedClickTargeting : TargetingStrategy
             {   
                 // Update targeting zone position
                 targetingZoneInstance.transform.position = raycastHit.point;
-                Debug.Log("strange stuff");
 
                 if (Input.GetMouseButtonDown(0))
                 {

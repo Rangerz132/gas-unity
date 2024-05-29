@@ -36,8 +36,6 @@ public class Ability : ScriptableObject
             targets = filter.Filter(targets);
         }
 
-        Debug.Log(targets);
-      
         // Get name of all gameObjects
         foreach (var target in targets) {
             Debug.Log(target.name);
