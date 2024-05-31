@@ -26,11 +26,11 @@ public class SpawnTargetPrefabEffect : EffectStrategy
             var targetPosition = target.transform.position;
 
             // Spawn prefab at target position
-            prefabToSpawn = Instantiate(prefabToSpawn);
-            prefabToSpawn.transform.position = targetPosition;
+            var prefabInstance = Instantiate(prefabToSpawn);
+            prefabInstance.transform.position = targetPosition;
 
             // Add prefabs to the list
-            prefabs.Add(prefabToSpawn);
+            prefabs.Add(prefabInstance);
         }
 
         if (destroyDelay > 0)
@@ -38,9 +38,9 @@ public class SpawnTargetPrefabEffect : EffectStrategy
             yield return new WaitForSeconds(destroyDelay);
 
             // Destroy all prefabs in the list
-            for (var i = 0; i < prefabs.Count; i++)
+            foreach (var prefabInstance in prefabs)
             {
-                Destroy(prefabs[i]);
+                Destroy(prefabInstance);
             }
 
             // Clear the list

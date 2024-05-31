@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bee493eed6ef33d4f9fef09faf5dd48b, type: 3}
-  m_Name: Ability01SpawnEffect
+  m_Script: {fileID: 11500000, guid: b5b39abfc6cb38540a8b0c76c5ae1572, type: 3}
+  m_Name: Ability01TimerCooldown
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 5763760265450574752, guid: 2ff8024b5616fcd479517f109f710977,
-    type: 3}
-  spawnDelay: 0
-  destroyDelay: 1
+  timeValue: 3

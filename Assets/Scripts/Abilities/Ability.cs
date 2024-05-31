@@ -11,6 +11,7 @@ public class Ability : ScriptableObject
     public Sprite icon;
 
     [SerializeField] private TargetingStrategy targetingStrategy;
+    [SerializeField] private CooldownStrategy cooldownStrategy;
     [SerializeField] private FilterStrategy[] filterStrategies;
     [SerializeField] private EffectStrategy[] effectStrategies;
 
@@ -20,8 +21,12 @@ public class Ability : ScriptableObject
     /// <param name="user"></param>
     public void Use(GameObject user)
     {
-        AbilityData data = new AbilityData(user);
-        targetingStrategy.StartTargeting(data, () => TargetAcquired(data));
+        Debug.Log(cooldownStrategy.IsReady);
+        if (cooldownStrategy == null || cooldownStrategy.IsReady)
+        {
+            AbilityData data = new AbilityData(user);
+            targetingStrategy.StartTargeting(data, () => TargetAcquired(data));
+        }
     }
 
     /// <summary>
@@ -40,6 +45,9 @@ public class Ability : ScriptableObject
         {
             effect.StartEffect(data, EffectFinished);
         }
+
+        // Apply cooldown
+        cooldownStrategy.StartCooldown(data);
     }
 
     private void EffectFinished() { }

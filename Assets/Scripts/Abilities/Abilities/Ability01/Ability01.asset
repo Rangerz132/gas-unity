@@ -17,6 +17,7 @@ MonoBehaviour:
   description: 
   icon: {fileID: 0}
   targetingStrategy: {fileID: 11400000, guid: 0559e2f020b67f84e93724833e68813d, type: 2}
+  cooldownStrategy: {fileID: 11400000, guid: 09a298a0c2715a142ad237a3e2c205be, type: 2}
   filterStrategies:
   - {fileID: 11400000, guid: 2ce44ab87a19b1444863ff1be4ea636c, type: 2}
   effectStrategies:

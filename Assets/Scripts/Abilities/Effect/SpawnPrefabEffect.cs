@@ -19,13 +19,13 @@ public class SpawnPrefabEffect : EffectStrategy
 
         yield return new WaitForSeconds(spawnDelay);
 
-        prefabToSpawn = Instantiate(prefabToSpawn);
-        prefabToSpawn.transform.position = data.targetedPoints;
+        GameObject prefabInstance = Instantiate(prefabToSpawn);
+        prefabInstance.transform.position = data.targetedPoints;
 
         if (destroyDelay>0)
         {
             yield return new WaitForSeconds(destroyDelay);
-            Destroy(prefabToSpawn);
+            Destroy(prefabInstance);
         }
         finished();
     }

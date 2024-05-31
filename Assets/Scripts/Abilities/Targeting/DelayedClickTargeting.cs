@@ -65,12 +65,10 @@ public class DelayedClickTargeting : TargetingStrategy
                     yield return new WaitWhile(() => Input.GetMouseButton(0));
 
                     //playerController.enabled = true;
-
+                    targetingZoneInstance.SetActive(false);
                     data.targetedPoints = raycastHit.point;
                     data.targets = GetGameObjectsInRadius(raycastHit.point);
                     finished();
-
-                    targetingZoneInstance.SetActive(false);
 
                     // Stop Coroutine
                     yield break;

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 5763760265450574752, guid: 2ff8024b5616fcd479517f109f710977,
     type: 3}
-  spawnDelay: 0
+  spawnDelay: 0.5
   destroyDelay: 2
