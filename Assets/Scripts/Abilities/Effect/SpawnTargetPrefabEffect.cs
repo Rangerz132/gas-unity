@@ -7,7 +7,6 @@ using UnityEngine;
 public class SpawnTargetPrefabEffect : EffectStrategy
 {
     [SerializeField] private GameObject prefabToSpawn;
-    [SerializeField] private float spawnDelay;
     [SerializeField] private float destroyDelay = -1;
     private List<GameObject> prefabs = new List<GameObject>();
 
@@ -18,8 +17,6 @@ public class SpawnTargetPrefabEffect : EffectStrategy
 
     private IEnumerator Effect(AbilityData data, Action finished)
     {
-        yield return new WaitForSeconds(spawnDelay);
-
         foreach (var target in data.targets)
         {
             // Get target position
