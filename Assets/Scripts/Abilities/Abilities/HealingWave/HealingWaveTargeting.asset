@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e117d64f7372ab04496c97d730c1a1a0, type: 3}
-  m_Name: Ability01Targeting
+  m_Name: HealingWaveTargeting
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -18,5 +18,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   areaRadius: 8
-  targetingZone: {fileID: 3812691789212675063, guid: 4e4477c2dd00b434aa8bb61421615767,
+  offset: {x: 0, y: 0.1, z: 0}
+  targetingZone: {fileID: 6155760918174645704, guid: 28bb7c1629030424ead4802b8cb4d46e,
     type: 3}

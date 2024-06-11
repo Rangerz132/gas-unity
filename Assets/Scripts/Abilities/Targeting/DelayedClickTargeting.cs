@@ -10,6 +10,7 @@ public class DelayedClickTargeting : TargetingStrategy
     [SerializeField] private Vector2 cursorHotspot;
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private float areaRadius;
+    [SerializeField] private Vector3 offset;
     [SerializeField] private GameObject targetingZone;
     private GameObject targetingZoneInstance = null;
 
@@ -57,7 +58,7 @@ public class DelayedClickTargeting : TargetingStrategy
             if (Physics.Raycast(ray, out raycastHit, maxDistance, layerMask))
             {   
                 // Update targeting zone position
-                targetingZoneInstance.transform.position = raycastHit.point;
+                targetingZoneInstance.transform.position = raycastHit.point + offset;
 
                 if (Input.GetMouseButtonDown(0))
                 {

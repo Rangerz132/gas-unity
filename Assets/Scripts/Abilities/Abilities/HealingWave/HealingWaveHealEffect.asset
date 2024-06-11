@@ -9,6 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79c799c4f76303d45aafd509cb73c29f, type: 3}
-  m_Name: Ability01SelfTargeting
+  m_Script: {fileID: 11500000, guid: f428e94391da58348b137b4e5cd9ed43, type: 3}
+  m_Name: HealingWaveHealEffect
   m_EditorClassIdentifier: 
+  healValue: 25
+  isPercent: 0

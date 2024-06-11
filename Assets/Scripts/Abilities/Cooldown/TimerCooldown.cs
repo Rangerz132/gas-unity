@@ -9,6 +9,13 @@ public class TimerCooldown : CooldownStrategy
     [SerializeField] private float timeValue;
     private float currentTimeValue;
 
+
+    private void OnEnable()
+    {
+        currentTimeValue = 0;
+        IsReady = currentTimeValue <= 0;
+    }
+
     public override void StartCooldown(AbilityData data)
     {
         data.StartCoroutine(Cooldown());
