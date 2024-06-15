@@ -7,13 +7,12 @@ using UnityEngine;
 public class TimerCooldown : CooldownStrategy
 {
     [SerializeField] private float timeValue;
-    private float currentTimeValue;
 
 
     private void OnEnable()
     {
-        currentTimeValue = 0;
-        IsReady = currentTimeValue <= 0;
+        remainingTime = 0;
+        IsReady = remainingTime <= 0;
     }
 
     public override void StartCooldown(AbilityData data)
@@ -24,13 +23,13 @@ public class TimerCooldown : CooldownStrategy
     public IEnumerator Cooldown()
     {
         IsReady = false;
-        currentTimeValue = timeValue;
-        while (currentTimeValue > 0)
+        remainingTime = timeValue;
+        while (remainingTime > 0)
         {
             yield return null;
-            currentTimeValue -= Time.deltaTime;
+            remainingTime -= Time.deltaTime;
         }
         IsReady = true;
-        currentTimeValue = 0;
+        remainingTime = 0;
     }
 }

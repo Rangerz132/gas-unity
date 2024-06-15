@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e117d64f7372ab04496c97d730c1a1a0, type: 3}
-  m_Name: HealingWaveTargeting
+  m_Name: HealingWaveClickZoneTargeting
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}

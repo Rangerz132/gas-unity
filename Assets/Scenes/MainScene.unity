@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -467,6 +467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 297046303}
   - component: {fileID: 297046304}
+  - component: {fileID: 297046305}
   m_Layer: 5
   m_Name: AbilitySlot (2)
   m_TagString: Untagged
@@ -504,6 +505,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297046302}
   m_CullTransparentMesh: 1
+--- !u!114 &297046305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297046302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c26d4b6ac630f469f228be0c556f19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 551705567}
+  overlayCooldownIcon: {fileID: 41142378}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -844,6 +859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 498661934}
   - component: {fileID: 498661935}
+  - component: {fileID: 498661936}
   m_Layer: 5
   m_Name: AbilitySlot (3)
   m_TagString: Untagged
@@ -881,6 +897,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498661933}
   m_CullTransparentMesh: 1
+--- !u!114 &498661936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498661933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c26d4b6ac630f469f228be0c556f19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 167078093}
+  overlayCooldownIcon: {fileID: 2042416393}
 --- !u!1 &499334953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,6 +1267,7 @@ GameObject:
   - component: {fileID: 630465604}
   - component: {fileID: 630465606}
   - component: {fileID: 630465607}
+  - component: {fileID: 630465608}
   m_Layer: 5
   m_Name: AbilityPanel
   m_TagString: Untagged
@@ -1343,6 +1374,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 1
   m_VerticalFit: 0
+--- !u!114 &630465608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630465602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389c283c2c3b8f642b87235d0b47a8ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityManager: {fileID: 1118900370}
+  abilitySlots:
+  - {fileID: 894770201}
+  - {fileID: 2054587472}
+  - {fileID: 297046305}
+  - {fileID: 498661936}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1477,6 +1526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 894770198}
   - component: {fileID: 894770200}
+  - component: {fileID: 894770201}
   m_Layer: 5
   m_Name: AbilitySlot
   m_TagString: Untagged
@@ -1514,6 +1564,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894770197}
   m_CullTransparentMesh: 1
+--- !u!114 &894770201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894770197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c26d4b6ac630f469f228be0c556f19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 265776562}
+  overlayCooldownIcon: {fileID: 355958536}
 --- !u!1 &1058448661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,6 +1716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Abilities>k__BackingField:
   - {fileID: 11400000, guid: a4b05cf45169b53408d87707982750b7, type: 2}
+  - {fileID: 11400000, guid: ff62e6f9544023c428234125faf6c78d, type: 2}
 --- !u!114 &1118900371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2592,7 +2657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2627,6 +2692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2054587470}
   - component: {fileID: 2054587471}
+  - component: {fileID: 2054587472}
   m_Layer: 5
   m_Name: AbilitySlot (1)
   m_TagString: Untagged
@@ -2664,6 +2730,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054587469}
   m_CullTransparentMesh: 1
+--- !u!114 &2054587472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054587469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c26d4b6ac630f469f228be0c556f19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 1058448663}
+  overlayCooldownIcon: {fileID: 228076490}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

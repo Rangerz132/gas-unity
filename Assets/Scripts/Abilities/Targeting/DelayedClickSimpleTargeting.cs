@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[CreateAssetMenu(fileName = "DelayClickTargeting", menuName = "Abilities/Targeting/Delay Click", order = 0)]
-public class DelayedClickTargeting : TargetingStrategy
+[CreateAssetMenu(fileName = "DelayClickSimpleTargeting", menuName = "Abilities/Targeting/Delay Click Simple", order = 0)]
+public class DelayedClickSimpleTargeting : TargetingStrategy
 {
     [SerializeField] private Texture2D cursorTexture;
     [SerializeField] private Vector2 cursorHotspot;

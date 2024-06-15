@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bee493eed6ef33d4f9fef09faf5dd48b, type: 3}
-  m_Name: HealingWaveSpawnEffect
+  m_Script: {fileID: 11500000, guid: b5b39abfc6cb38540a8b0c76c5ae1572, type: 3}
+  m_Name: DazeTimerCooldown
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 5640737727654945505, guid: c66432cdc609d6d498927a42926dbebb,
-    type: 3}
-  destroyDelay: 2
-  offset: {x: 0, y: 0.1, z: 0}
+  remainingTime: 2.932223
+  timeValue: 10

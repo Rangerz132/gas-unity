@@ -9,14 +9,12 @@ public class StackCooldown : CooldownStrategy
     [SerializeField] private int stackAmount;
     [SerializeField] private float stackRechargeTime;
     private int currentStack;
-    private float remainingRechargeTime;
-    private bool isRecharging;
 
     private void OnEnable()
     {
         currentStack = stackAmount;
         IsReady = currentStack > 0;
-        isRecharging = false;
+        IsRecharging = false;
     }
 
     public override void StartCooldown(AbilityData data)
@@ -25,7 +23,7 @@ public class StackCooldown : CooldownStrategy
         {
             currentStack--;
             IsReady = currentStack > 0;
-            if (!isRecharging)
+            if (!IsRecharging)
             {
                 data.StartCoroutine(Cooldown());
             }
@@ -34,19 +32,19 @@ public class StackCooldown : CooldownStrategy
 
     private IEnumerator Cooldown()
     {
-        isRecharging = true;
+        IsRecharging = true;
         while (currentStack < stackAmount)
         {
-            remainingRechargeTime = stackRechargeTime;
-            while (remainingRechargeTime > 0)
+            remainingTime = stackRechargeTime;
+            while (remainingTime > 0)
             {
                 yield return null;
-                remainingRechargeTime -= Time.deltaTime;
+                remainingTime -= Time.deltaTime;
             }
             currentStack++;
             IsReady = true;
         }
-        isRecharging = false;
+        IsRecharging = false;
     }
 }
 
