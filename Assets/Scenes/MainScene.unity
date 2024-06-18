@@ -517,6 +517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c26d4b6ac630f469f228be0c556f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ability: {fileID: 0}
+  abilityCooldownTime: 0
   icon: {fileID: 551705567}
   overlayCooldownIcon: {fileID: 41142378}
 --- !u!1 &330585543
@@ -909,6 +911,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c26d4b6ac630f469f228be0c556f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ability: {fileID: 0}
+  abilityCooldownTime: 0
   icon: {fileID: 167078093}
   overlayCooldownIcon: {fileID: 2042416393}
 --- !u!1 &499334953
@@ -1576,6 +1580,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c26d4b6ac630f469f228be0c556f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ability: {fileID: 0}
+  abilityCooldownTime: 0
   icon: {fileID: 265776562}
   overlayCooldownIcon: {fileID: 355958536}
 --- !u!1 &1058448661
@@ -1700,7 +1706,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564eb6a88f886834db13d534f317b739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 1118900371}
+  <Health>k__BackingField: {fileID: 0}
+  <Animator>k__BackingField: {fileID: 0}
   <AbilityManager>k__BackingField: {fileID: 1118900370}
 --- !u!114 &1118900370
 MonoBehaviour:
@@ -2139,7 +2146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91aa2f8a7bff7d441a473921157073ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 1553863258}
+  <Health>k__BackingField: {fileID: 0}
+  <Animator>k__BackingField: {fileID: 0}
 --- !u!1 &1632554056
 GameObject:
   m_ObjectHideFlags: 0
@@ -2446,7 +2454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91aa2f8a7bff7d441a473921157073ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 1782867027}
+  <Health>k__BackingField: {fileID: 0}
+  <Animator>k__BackingField: {fileID: 0}
 --- !u!1 &1959940570
 GameObject:
   m_ObjectHideFlags: 0
@@ -2531,7 +2540,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91aa2f8a7bff7d441a473921157073ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 1959940573}
+  <Health>k__BackingField: {fileID: 0}
+  <Animator>k__BackingField: {fileID: 0}
 --- !u!1 &2003946294
 GameObject:
   m_ObjectHideFlags: 0
@@ -2742,6 +2752,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c26d4b6ac630f469f228be0c556f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ability: {fileID: 0}
+  abilityCooldownTime: 0
   icon: {fileID: 1058448663}
   overlayCooldownIcon: {fileID: 228076490}
 --- !u!1660057539 &9223372036854775807
