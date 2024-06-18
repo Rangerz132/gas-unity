@@ -1,9 +1,12 @@
 using UnityEngine;
+using System;
 
 public class Health : MonoBehaviour
 {
     public float currentHealth;
     public float maxHealth;
+    public static Action OnTakeDamage;
+    public static Action OnHeal;
 
     /// <summary>
     /// Deal damage to entity
@@ -16,6 +19,8 @@ public class Health : MonoBehaviour
         {
             currentHealth = 0;
         }
+
+        OnTakeDamage?.Invoke();
     }
 
     /// <summary>
@@ -29,5 +34,7 @@ public class Health : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+
+        OnTakeDamage?.Invoke();
     }
 }
