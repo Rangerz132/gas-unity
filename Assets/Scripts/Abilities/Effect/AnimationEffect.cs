@@ -12,5 +12,6 @@ public class AnimationEffect : EffectStrategy
     {
         CharacterBase character = data.User.GetComponent<CharacterBase>();
         character.Animator.SetTrigger(animationTrigger);
+        finished();
     }
 }
