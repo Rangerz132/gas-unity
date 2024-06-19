@@ -4,14 +4,14 @@ using UnityEngine;
 using System;
 
 [CreateAssetMenu(fileName = "DelayClickZoneTargeting", menuName = "Abilities/Targeting/Delay Click Zone", order = 0)]
-public class DelayedClickZloneTargeting : TargetingStrategy
+public class DelayedClickZoneTargeting : TargetingStrategy
 {
     [SerializeField] private Texture2D cursorTexture;
     [SerializeField] private Vector2 cursorHotspot;
     [SerializeField] private LayerMask layerMask;
-    [SerializeField] private float areaRadius;
     [SerializeField] private Vector3 offset;
     [SerializeField] private GameObject targetingZone;
+    [SerializeField] private ZoneStrategy zoneStrategy;
     private GameObject targetingZoneInstance = null;
     private Vector3 targetPosition;
 
@@ -20,7 +20,7 @@ public class DelayedClickZloneTargeting : TargetingStrategy
         PlayerController playerController = data.User.GetComponent<PlayerController>();
         playerController.StartCoroutine(Targeting(data, playerController, finished));
 
-        playerController.GizmoDrawer.SetGizmoDrawAction(DrawGizmos);
+        playerController.GizmoDrawer.SetGizmoDrawAction((Vector3 position) => zoneStrategy.DrawGizmos(targetPosition));
     }
 
     /// <summary>
@@ -40,7 +40,7 @@ public class DelayedClickZloneTargeting : TargetingStrategy
             targetingZoneInstance = Instantiate(targetingZone);
 
             // Scale targeting zone
-            targetingZoneInstance.transform.localScale = new Vector3(areaRadius, areaRadius, areaRadius);
+            targetingZoneInstance.transform.localScale = new Vector3(zoneStrategy.Size, zoneStrategy.Size, zoneStrategy.Size);
         }
         else
         {
@@ -64,7 +64,7 @@ public class DelayedClickZloneTargeting : TargetingStrategy
                 targetingZoneInstance.transform.position = raycastHit.point + offset;
 
                 targetPosition = targetingZoneInstance.transform.position;
-
+                playerController.GizmoDrawer.SetGizmoPosition(targetPosition);
 
                 if (Input.GetMouseButtonDown(0))
                 {
@@ -74,7 +74,7 @@ public class DelayedClickZloneTargeting : TargetingStrategy
                     //playerController.enabled = true;
                     targetingZoneInstance.SetActive(false);
                     data.targetedPoints = raycastHit.point;
-                    data.targets = GetGameObjectsInRadius(raycastHit.point);
+                    data.targets = zoneStrategy.GetGameObjectsInZone(raycastHit.point);
                     finished();
 
                     // Stop Coroutine
@@ -85,25 +85,5 @@ public class DelayedClickZloneTargeting : TargetingStrategy
             // Run every frame
             yield return null;
         }
-    }
-
-    /// <summary>
-    /// Get list of gameObjects in a certain radius
-    /// </summary>
-    /// <returns></returns>
-    private IEnumerable<GameObject> GetGameObjectsInRadius(Vector3 point)
-    {
-        RaycastHit[] raycastHits = Physics.SphereCastAll(point, areaRadius / 2, Vector3.up, 0);
-
-        foreach (var hit in raycastHits)
-        {
-            yield return hit.collider.gameObject;
-        }
-    }
-
-    public void DrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(targetPosition, areaRadius / 2);
     }
 }

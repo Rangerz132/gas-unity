@@ -17,9 +17,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
-  areaRadius: 8
+  areaSize: 8
   offset: {x: 0, y: 0.1, z: 0}
   targetingZone: {fileID: 6155760918174645704, guid: 28bb7c1629030424ead4802b8cb4d46e,
     type: 3}
-  testingZone: {fileID: 8876660832077295612, guid: 3f38cd079d7ac7d49862c50518122887,
-    type: 3}
+  zoneStrategy: {fileID: 11400000, guid: 9790d51974d5ef249acc698eabc7ef26, type: 2}
