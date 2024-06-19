@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b39abfc6cb38540a8b0c76c5ae1572, type: 3}
   m_Name: DazeTimerCooldown
   m_EditorClassIdentifier: 
-  remainingTime: 2.932223
-  timeValue: 10
+  remainingTime: 0
+  timeValue: 5

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: HealingWaveTimerCooldown
   m_EditorClassIdentifier: 
   remainingTime: 0
-  timeValue: 20
+  timeValue: 5

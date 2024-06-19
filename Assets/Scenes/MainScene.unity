@@ -492,6 +492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Health>k__BackingField: {fileID: 161552583}
   <Animator>k__BackingField: {fileID: 0}
+  <GizmoDrawer>k__BackingField: {fileID: 0}
 --- !u!136 &161552585
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2855,6 +2856,7 @@ GameObject:
   - component: {fileID: 1118900369}
   - component: {fileID: 1118900370}
   - component: {fileID: 1118900371}
+  - component: {fileID: 1118900372}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2892,6 +2894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Health>k__BackingField: {fileID: 1118900371}
   <Animator>k__BackingField: {fileID: 0}
+  <GizmoDrawer>k__BackingField: {fileID: 1118900372}
   <AbilityManager>k__BackingField: {fileID: 1118900370}
 --- !u!114 &1118900370
 MonoBehaviour:
@@ -2922,6 +2925,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 100
   maxHealth: 100
+--- !u!114 &1118900372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118900367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c16e1471425a544b0b22d5b34ba3a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1225104027
 GameObject:
   m_ObjectHideFlags: 0
@@ -3705,6 +3720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Health>k__BackingField: {fileID: 1629795619}
   <Animator>k__BackingField: {fileID: 0}
+  <GizmoDrawer>k__BackingField: {fileID: 0}
 --- !u!136 &1629795621
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4009,6 +4025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Health>k__BackingField: {fileID: 1959940573}
   <Animator>k__BackingField: {fileID: 0}
+  <GizmoDrawer>k__BackingField: {fileID: 0}
 --- !u!1 &1982866142
 GameObject:
   m_ObjectHideFlags: 0

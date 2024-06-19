@@ -16,4 +16,5 @@ public class AbilityData
     public void StartCoroutine(IEnumerator coroutine) {
         User.GetComponent<MonoBehaviour>().StartCoroutine(coroutine);
     }
+
 }

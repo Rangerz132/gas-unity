@@ -13,11 +13,14 @@ public class DelayedClickZloneTargeting : TargetingStrategy
     [SerializeField] private Vector3 offset;
     [SerializeField] private GameObject targetingZone;
     private GameObject targetingZoneInstance = null;
+    private Vector3 targetPosition;
 
     public override void StartTargeting(AbilityData data, Action finished)
     {
         PlayerController playerController = data.User.GetComponent<PlayerController>();
         playerController.StartCoroutine(Targeting(data, playerController, finished));
+
+        playerController.GizmoDrawer.SetGizmoDrawAction(DrawGizmos);
     }
 
     /// <summary>
@@ -56,9 +59,12 @@ public class DelayedClickZloneTargeting : TargetingStrategy
             float maxDistance = 1000;
 
             if (Physics.Raycast(ray, out raycastHit, maxDistance, layerMask))
-            {   
+            {
                 // Update targeting zone position
                 targetingZoneInstance.transform.position = raycastHit.point + offset;
+
+                targetPosition = targetingZoneInstance.transform.position;
+
 
                 if (Input.GetMouseButtonDown(0))
                 {
@@ -87,11 +93,17 @@ public class DelayedClickZloneTargeting : TargetingStrategy
     /// <returns></returns>
     private IEnumerable<GameObject> GetGameObjectsInRadius(Vector3 point)
     {
-        RaycastHit[] raycastHits = Physics.SphereCastAll(point, areaRadius, Vector3.up, 0);
+        RaycastHit[] raycastHits = Physics.SphereCastAll(point, areaRadius / 2, Vector3.up, 0);
 
         foreach (var hit in raycastHits)
         {
             yield return hit.collider.gameObject;
         }
+    }
+
+    public void DrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(targetPosition, areaRadius / 2);
     }
 }
