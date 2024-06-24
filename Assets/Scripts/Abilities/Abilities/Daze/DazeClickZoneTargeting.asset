@@ -20,4 +20,4 @@ MonoBehaviour:
   offset: {x: 0, y: 0.1, z: 0}
   targetingZone: {fileID: 6155760918174645704, guid: 28bb7c1629030424ead4802b8cb4d46e,
     type: 3}
-  zoneStrategy: {fileID: 11400000, guid: 384938750bb9d3d4cad6c810fcf38b68, type: 2}
+  zoneStrategy: {fileID: 11400000, guid: 5732c1256ff176a4aa58c2b2c9989313, type: 2}
