@@ -24,5 +24,7 @@ public class HealEffect : EffectStrategy
                 health.Heal(data.User, currentValue);
             }
         }
+
+        finished();
     }
 }

@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f588c7ec9c4bd6d40a07e1040786e5f4, type: 3}
-  m_Name: DazeSpawnTargetPrefabEffect
+  m_Script: {fileID: 11500000, guid: 0babde2bc4ef1034481ce376bb405a21, type: 3}
+  m_Name: FireballProjectilePrefabEffect
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 4222431370210445677, guid: 97d3406337b4f1347afd05d9dca0213c,
+  projectilePrefabToSpawn: {fileID: -5540722873816153026, guid: 123414d0e23878e4c8d3ef0e2e1582fe,
     type: 3}
-  destroyDelay: 3.5

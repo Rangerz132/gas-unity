@@ -24,5 +24,7 @@ public class DamageEffect : EffectStrategy
                 health.TakeDamage(data.User, currentValue);
             }
         }
+
+        finished();
     }
 }

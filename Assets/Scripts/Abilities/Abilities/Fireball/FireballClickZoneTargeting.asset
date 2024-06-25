@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e117d64f7372ab04496c97d730c1a1a0, type: 3}
-  m_Name: DazeClickZoneTargeting
+  m_Name: FireballClickZoneTargeting
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -20,4 +20,4 @@ MonoBehaviour:
   offset: {x: 0, y: 0.1, z: 0}
   targetingZone: {fileID: 6155760918174645704, guid: 248d3a77193c4b046b27bc4cae92ad53,
     type: 3}
-  zoneStrategy: {fileID: 11400000, guid: 5732c1256ff176a4aa58c2b2c9989313, type: 2}
+  zoneStrategy: {fileID: 11400000, guid: 01bc985619ac4624995a4bdfed2935f9, type: 2}

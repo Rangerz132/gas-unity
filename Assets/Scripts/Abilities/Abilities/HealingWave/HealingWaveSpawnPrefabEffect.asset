@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bee493eed6ef33d4f9fef09faf5dd48b, type: 3}
   m_Name: HealingWaveSpawnPrefabEffect
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 5640737727654945505, guid: c66432cdc609d6d498927a42926dbebb,
+  prefabToSpawn: {fileID: 6411188210264399511, guid: b28aa718e0cbe064f845a40b497c9e68,
     type: 3}
   destroyDelay: 2
   offset: {x: 0, y: 0.1, z: 0}
