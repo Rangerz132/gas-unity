@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0babde2bc4ef1034481ce376bb405a21, type: 3}
   m_Name: FireballProjectilePrefabEffect
   m_EditorClassIdentifier: 
-  projectilePrefabToSpawn: {fileID: -5540722873816153026, guid: 123414d0e23878e4c8d3ef0e2e1582fe,
+  projectilePrefabToSpawn: {fileID: 4560504151982810472, guid: 123414d0e23878e4c8d3ef0e2e1582fe,
     type: 3}
+  useTargetPoint: 0

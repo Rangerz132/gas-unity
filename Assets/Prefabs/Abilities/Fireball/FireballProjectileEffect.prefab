@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5349338973470456140}
-  - component: {fileID: -5540722873816153026}
+  - component: {fileID: 4560504151982810472}
   - component: {fileID: 8334185264663782015}
   m_Layer: 0
   m_Name: FireballProjectileEffect
@@ -66,7 +66,7 @@ Transform:
   - {fileID: 3076096253280191112}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-5540722873816153026
+--- !u!114 &4560504151982810472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,14 +75,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7208280090647399705}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deb9ab8b851104740bc126c975860fd7, type: 3}
+  m_Script: {fileID: 11500000, guid: cf27c1226120e044b93ea959532d787c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 2
+  lifetime: 10
   hitPrefabToSpawn: {fileID: 1645533537697032005, guid: 2eae955d6e3abaf41883aebd2ea33ab2,
     type: 3}
-  collisionEffectStrategies:
-  - {fileID: 11400000, guid: 3ab55babe95579942ae7f887a101620e, type: 2}
+  collisionEffectStrategies: []
   speed: 30
 --- !u!65 &8334185264663782015
 BoxCollider:

@@ -6,19 +6,26 @@ public class LinearProjectile : Projectile
 {
     [SerializeField] private float speed;
 
+    private Vector3 direction;
+
+    void Start()
+    {
+        Aim();
+    }
+
     void Update()
     {
         Move();
-        Aim();
     }
 
     public override void Move()
     {
-        transform.Translate(transform.forward * speed * Time.deltaTime);
+        transform.position += direction * speed * Time.deltaTime;
     }
 
     public override void Aim()
     {
-        transform.LookAt(targetPosition);
+        direction = (targetPosition - transform.position).normalized;
+        transform.rotation = Quaternion.LookRotation(direction);
     }
 }
