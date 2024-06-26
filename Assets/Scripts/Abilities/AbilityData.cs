@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AbilityData 
+public class AbilityData
 {
     public GameObject User { get; private set; }
     public IEnumerable<GameObject> targets;
@@ -13,8 +13,14 @@ public class AbilityData
         this.User = user;
     }
 
-    public void StartCoroutine(IEnumerator coroutine) {
+    public void StartCoroutine(IEnumerator coroutine)
+    {
         User.GetComponent<MonoBehaviour>().StartCoroutine(coroutine);
+    }
+
+    public void SetTargets(List<GameObject> gameObjects)
+    {
+        targets = gameObjects;
     }
 
 }

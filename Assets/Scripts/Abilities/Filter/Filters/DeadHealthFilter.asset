@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2858924c362f5b043bc30f4fab7d7939, type: 3}
   m_Name: DeadHealthFilter
   m_EditorClassIdentifier: 
-  valueType: 3
+  valueType: 1
   value: 0
   isPercent: 0

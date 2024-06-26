@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[CreateAssetMenu(fileName = "DelayClickSimpleTargeting", menuName = "Abilities/Targeting/Delay Click Simple", order = 0)]
-public class DelayedClickSimpleTargeting : TargetingStrategy
+[CreateAssetMenu(fileName = "DelayClickDirectionalTargeting", menuName = "Abilities/Targeting/Delay Click Directional", order = 0)]
+public class DirectionalTargeting : TargetingStrategy
 {
     [SerializeField] private Texture2D cursorTexture;
     [SerializeField] private Vector2 cursorHotspot;
     [SerializeField] private LayerMask layerMask;
-    [SerializeField] private float areaRadius;
-    [SerializeField] private Vector3 offset;
-    [SerializeField] private GameObject targetingZone;
-    private GameObject targetingZoneInstance = null;
+    [SerializeField] private float offset;
 
     public override void StartTargeting(AbilityData data, Action finished)
     {
@@ -29,22 +26,6 @@ public class DelayedClickSimpleTargeting : TargetingStrategy
     /// <returns></returns>
     private IEnumerator Targeting(AbilityData data, PlayerController playerController, Action finished)
     {
-        //playerController.enabled = false;
-
-        if (targetingZoneInstance == null)
-        {
-            // Instantiate targeting zone
-            targetingZoneInstance = Instantiate(targetingZone);
-
-            // Scale targeting zone
-            targetingZoneInstance.transform.localScale = new Vector3(areaRadius, areaRadius, areaRadius);
-        }
-        else
-        {
-            targetingZoneInstance.SetActive(true);
-        }
-
-
         while (true)
         {
             // Change cursor while targeting (aiming)
@@ -56,19 +37,13 @@ public class DelayedClickSimpleTargeting : TargetingStrategy
             float maxDistance = 1000;
 
             if (Physics.Raycast(ray, out raycastHit, maxDistance, layerMask))
-            {   
-                // Update targeting zone position
-                targetingZoneInstance.transform.position = raycastHit.point + offset;
-
+            {
                 if (Input.GetMouseButtonDown(0))
                 {
                     // Wait to completly finish the click frame
                     yield return new WaitWhile(() => Input.GetMouseButton(0));
 
-                    //playerController.enabled = true;
-                    targetingZoneInstance.SetActive(false);
-                    data.targetedPoints = raycastHit.point;
-                    data.targets = GetGameObjectsInRadius(raycastHit.point);
+                    data.targetedPoints = raycastHit.point + ray.direction * offset / ray.direction.y;
                     finished();
 
                     // Stop Coroutine
@@ -80,18 +55,5 @@ public class DelayedClickSimpleTargeting : TargetingStrategy
             yield return null;
         }
     }
-
-    /// <summary>
-    /// Get list of gameObjects in a certain radius
-    /// </summary>
-    /// <returns></returns>
-    private IEnumerable<GameObject> GetGameObjectsInRadius(Vector3 point)
-    {
-        RaycastHit[] raycastHits = Physics.SphereCastAll(point, areaRadius, Vector3.up, 0);
-
-        foreach (var hit in raycastHits)
-        {
-            yield return hit.collider.gameObject;
-        }
-    }
 }
+

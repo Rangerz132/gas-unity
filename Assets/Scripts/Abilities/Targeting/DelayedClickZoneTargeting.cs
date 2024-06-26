@@ -32,7 +32,6 @@ public class DelayedClickZoneTargeting : TargetingStrategy
     /// <returns></returns>
     private IEnumerator Targeting(AbilityData data, PlayerController playerController, Action finished)
     {
-        //playerController.enabled = false;
 
         if (targetingZoneInstance == null)
         {

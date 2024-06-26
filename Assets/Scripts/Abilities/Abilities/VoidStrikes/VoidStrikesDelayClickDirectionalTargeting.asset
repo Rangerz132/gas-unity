@@ -9,8 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5b39abfc6cb38540a8b0c76c5ae1572, type: 3}
-  m_Name: FireballCooldown
+  m_Script: {fileID: 11500000, guid: 754f8d147b9c3b94f878cb6bca4fb6e1, type: 3}
+  m_Name: VoidStrikesDelayClickDirectionalTargeting
   m_EditorClassIdentifier: 
-  remainingTime: 0
-  timeValue: 2
+  cursorTexture: {fileID: 0}
+  cursorHotspot: {x: 0, y: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  offset: 1

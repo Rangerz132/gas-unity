@@ -24,6 +24,12 @@ public abstract class Projectile : MonoBehaviour
         this.targetPosition = target.transform.position;
     }
 
+    public void SetData(AbilityData data, Vector3 targetPosition)
+    {
+        this.data = data;
+        this.targetPosition = targetPosition;
+    }
+
     private void DieOverlifetime()
     {
         lifetime -= Time.deltaTime;
@@ -36,6 +42,10 @@ public abstract class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        List<GameObject> targets = new List<GameObject>();
+        targets.Add(other.gameObject);
+        data.SetTargets(targets);
+
         foreach (EffectStrategy collisionEffect in collisionEffectStrategies)
         {
             collisionEffect.StartEffect(data, EffectFinished);
@@ -45,6 +55,7 @@ public abstract class Projectile : MonoBehaviour
 
         Destroy(gameObject);
     }
+
 
     public virtual void Move() { }
 

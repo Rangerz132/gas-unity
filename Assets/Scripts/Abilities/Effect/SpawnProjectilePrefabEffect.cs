@@ -7,8 +7,30 @@ using UnityEngine;
 public class SpawnProjectilePrefabEffect : EffectStrategy
 {
     [SerializeField] private Projectile projectilePrefabToSpawn;
+    [SerializeField] private bool useTargetPoint;
 
     public override void StartEffect(AbilityData data, Action finished)
+    {
+        if (useTargetPoint)
+        {
+            SpawnProjectileForTargetPoint(data);
+        }
+        else
+        {
+            SpawnProjectileForTargets(data);
+        }
+
+        finished();
+    }
+
+    private void SpawnProjectileForTargetPoint(AbilityData data)
+    {
+        Projectile projectileInstance = Instantiate(projectilePrefabToSpawn);
+        projectileInstance.transform.position = data.User.transform.position;
+        projectileInstance.SetData(data, data.targetedPoints);
+    }
+
+    private void SpawnProjectileForTargets(AbilityData data)
     {
         foreach (GameObject target in data.targets)
         {
@@ -16,7 +38,5 @@ public class SpawnProjectilePrefabEffect : EffectStrategy
             projectileInstance.transform.position = data.User.transform.position;
             projectileInstance.SetData(data, target);
         }
-
-        finished();
     }
 }

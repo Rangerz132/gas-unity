@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5b39abfc6cb38540a8b0c76c5ae1572, type: 3}
-  m_Name: FireballCooldown
+  m_Script: {fileID: 11500000, guid: 0babde2bc4ef1034481ce376bb405a21, type: 3}
+  m_Name: VoidStrikesSpawnProjectilePrefabEffect
   m_EditorClassIdentifier: 
-  remainingTime: 0
-  timeValue: 2
+  projectilePrefabToSpawn: {fileID: 698176893815572272, guid: edb2b5dd801418c41b0f08a873022471,
+    type: 3}
+  useTargetPoint: 1
