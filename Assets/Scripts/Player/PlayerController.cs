@@ -37,5 +37,11 @@ public class PlayerController : CharacterBase
         {
             AbilityManager.Abilities[3].Use(gameObject);
         }
+
+        // Use ability 05
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            AbilityManager.Abilities[4].Use(gameObject);
+        }
     }
 }
