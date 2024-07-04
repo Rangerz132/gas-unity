@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ShurikenBarrageAbility
   m_EditorClassIdentifier: 
   id: shurikenBarrage
-  displayName: ShurikenBarrage
-  description: 
+  displayName: Shuriken Barrage
+  description: Unleashes a barrage of three shurikens, dealing damage.
   icon: {fileID: 21300000, guid: b946c5ddec1bf154d8adf48e3634c4e4, type: 3}
   targetingStrategy: {fileID: 11400000, guid: 30c8b7b587a89444da4f150f57b58d52, type: 2}
   <CooldownStrategy>k__BackingField: {fileID: 11400000, guid: 806316c0415d39d4a9184e2bafd362a1,

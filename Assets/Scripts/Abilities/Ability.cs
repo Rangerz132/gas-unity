@@ -7,7 +7,7 @@ public class Ability : ScriptableObject
 {
     public string id;
     public string displayName;
-    public string description;
+    [TextArea] public string description;
     public Sprite icon;
 
     [SerializeField] private TargetingStrategy targetingStrategy;
