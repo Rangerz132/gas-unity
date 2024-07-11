@@ -11,7 +11,6 @@ public abstract class Projectile : MonoBehaviour
     [SerializeField] private GameObject hitPrefabToSpawn;
     [SerializeField] protected EffectStrategy[] collisionEffectStrategies;
 
-
     private void Update()
     {
         DieOverlifetime();
@@ -42,6 +41,8 @@ public abstract class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Vector3 closestPoint = other.ClosestPoint(transform.position);
+
         List<GameObject> targets = new List<GameObject>();
         targets.Add(other.gameObject);
         data.SetTargets(targets);
@@ -50,8 +51,8 @@ public abstract class Projectile : MonoBehaviour
         {
             collisionEffect.StartEffect(data, EffectFinished);
         }
-
-        Instantiate(hitPrefabToSpawn, other.gameObject.transform.position, Quaternion.identity);
+       
+        Instantiate(hitPrefabToSpawn, closestPoint, Quaternion.identity);
 
         Destroy(gameObject);
     }
