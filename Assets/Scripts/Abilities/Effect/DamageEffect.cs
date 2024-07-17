@@ -6,9 +6,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "DamageEffect", menuName = "Abilities/Effect/Damage", order = 0)]
 public class DamageEffect : EffectStrategy
 {
+    [Header("Damage Value")]
     [SerializeField] private float damageValue;
     [SerializeField] private bool isPercent;
-    private float currentValue;
+    public float currentValue;
+
+    [Header("Pop")]
+    [SerializeField] private HealthPop healthPop;
+    [SerializeField] private Vector3 healthOffset;
 
     public override void StartEffect(AbilityData data, Action finished)
     {
@@ -22,6 +27,11 @@ public class DamageEffect : EffectStrategy
 
                 // Do damage
                 health.TakeDamage(data.User, currentValue);
+
+                if (healthPop) {
+                    HealthPop healthPopInstance = Instantiate(healthPop);
+                    healthPopInstance.Initialize(currentValue.ToString(), health.gameObject.transform.position + healthOffset);
+                }
             }
         }
 
