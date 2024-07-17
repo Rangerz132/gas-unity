@@ -16,4 +16,4 @@ MonoBehaviour:
   isPercent: 0
   currentValue: 10
   healthPop: {fileID: 53673459278396125, guid: 92b7e7c7c0a08d647b0f193b886a50b3, type: 3}
-  healthOffset: {x: 0, y: 0, z: 0}
+  healthOffset: {x: 0, y: 2, z: 0}

@@ -47,7 +47,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMeshPro: {fileID: 4981204916671788367}
-  movementSpeed: 1
+  movementValue: {x: 0, y: 2, z: 0}
+  movementDuration: 3
+  scaleValue: {x: 1.05, y: 1.05, z: 1.05}
+  scaleDuration: 0.15
+  alphaDelay: 0.5
+  alphaDuration: 0.5
 --- !u!114 &5101497821174973437
 MonoBehaviour:
   m_ObjectHideFlags: 0
