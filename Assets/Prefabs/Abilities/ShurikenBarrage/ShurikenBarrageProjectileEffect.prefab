@@ -83,6 +83,7 @@ MonoBehaviour:
     type: 3}
   collisionEffectStrategies:
   - {fileID: 11400000, guid: 911694a189e2e564c8bf4c6a4a7385b5, type: 2}
+  - {fileID: 11400000, guid: a4919afe16c47fa47ac1edd26a5f7cb3, type: 2}
   speed: 20
 --- !u!65 &1403704437415848212
 BoxCollider:

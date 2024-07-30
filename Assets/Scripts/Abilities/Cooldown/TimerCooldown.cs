@@ -8,7 +8,6 @@ public class TimerCooldown : CooldownStrategy
 {
     [SerializeField] private float timeValue;
 
-
     private void OnEnable()
     {
         remainingTime = 0;
