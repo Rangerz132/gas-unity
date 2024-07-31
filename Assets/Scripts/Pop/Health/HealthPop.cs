@@ -4,8 +4,9 @@ using UnityEngine;
 using TMPro;
 using DG.Tweening;
 
-public class HealthPop : MonoBehaviour, IPoolable
+public class HealthPop : MonoBehaviour
 {
+    [field:SerializeField] public HealthPopType Type { get; private set; }
     [SerializeField] private TextMeshPro textMeshPro;
 
     [Header("Tween Movement")]
@@ -20,36 +21,28 @@ public class HealthPop : MonoBehaviour, IPoolable
     [SerializeField] private float alphaDelay;
     [SerializeField] private float alphaDuration;
 
+
+   private Vector3 initialPosition;
+
     public void Initialize(string textValue, Vector3 position)
     {
         textMeshPro.text = textValue;
         transform.position = position;
+        initialPosition = position;
 
         transform.DOScale(scaleValue, scaleDuration).SetLoops(2, LoopType.Yoyo).SetEase(Ease.InOutSine);
-        transform.DOMove(position + movementValue, movementDuration).SetEase(Ease.InOutSine);
-        textMeshPro.DOFaceFade(0, alphaDuration).SetDelay(alphaDelay).OnComplete(() => { Release(); });
+        textMeshPro.DOFade(0, alphaDuration).SetDelay(alphaDelay);
+        transform.DOMove(position + movementValue, movementDuration).SetEase(Ease.InOutSine).OnComplete(() => { Reset(); GetComponent<PooledHealtPop>().ReturnToPool(); });
     }
 
-
-    void Update()
+    private void Reset()
     {
-
-    }
-
-    public void Fire()
-    {
-       
-    }
-
-    public void SetPoolManager()
-    {
+        // Reset color
+        Color color = textMeshPro.color;
+        color.a = 1;
+        textMeshPro.color = color;
         
+        // Reset position
+        transform.position = initialPosition;
     }
-
-    public void Release()
-    {
-       
-    }
-
-
 }

@@ -30,8 +30,11 @@ public class HealEffect : EffectStrategy
 
                 if (healthPop)
                 {
-                    HealthPop healthPopInstance = Instantiate(healthPop);
+                    GameObject healthPopGameObject = HealthPopPoolManager.OnGetHealthPop?.Invoke(HealthPopType.Heal);
+                    HealthPop healthPopInstance = healthPopGameObject.GetComponent<HealthPop>();
                     healthPopInstance.Initialize(currentValue.ToString(), health.gameObject.transform.position + healthOffset);
+
+                
                 }
             }
         }

@@ -29,7 +29,9 @@ public class DamageEffect : EffectStrategy
                 health.TakeDamage(data.User, currentValue);
 
                 if (healthPop) {
-                    HealthPop healthPopInstance = Instantiate(healthPop);
+
+                    GameObject healthPopGameObject = HealthPopPoolManager.OnGetHealthPop?.Invoke(HealthPopType.Damage);
+                    HealthPop healthPopInstance = healthPopGameObject.GetComponent<HealthPop>();
                     healthPopInstance.Initialize(currentValue.ToString(), health.gameObject.transform.position + healthOffset);
                 }
             }
