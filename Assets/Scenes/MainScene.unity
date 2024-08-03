@@ -5653,7 +5653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8afccfd25714d041a838a75d2f1d24f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPopInfos:
+  poolInfos:
   - type: 0
     prefab: {fileID: 3069894143308791422, guid: 534043b0271e5434b9cfbb00c0ef0bcd,
       type: 3}

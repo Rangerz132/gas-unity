@@ -32,7 +32,7 @@ public class HealthPop : MonoBehaviour
 
         transform.DOScale(scaleValue, scaleDuration).SetLoops(2, LoopType.Yoyo).SetEase(Ease.InOutSine);
         textMeshPro.DOFade(0, alphaDuration).SetDelay(alphaDelay);
-        transform.DOMove(position + movementValue, movementDuration).SetEase(Ease.InOutSine).OnComplete(() => { Reset(); GetComponent<PooledHealtPop>().ReturnToPool(); });
+        transform.DOMove(position + movementValue, movementDuration).SetEase(Ease.InOutSine).OnComplete(() => { Reset(); GetComponent<PooledObject>().ReturnToPool(); });
     }
 
     private void Reset()
