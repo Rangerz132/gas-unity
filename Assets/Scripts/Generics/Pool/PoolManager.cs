@@ -10,11 +10,11 @@ public class PoolManager<TEnum> : MonoBehaviour where TEnum : Enum
     {
         public TEnum type;
         public GameObject prefab;
+        public int defaultPoolSize = 20;
+        public int maxPoolSize = 100;
     }
 
     [SerializeField] private List<PoolInfo> poolInfos;
-    [SerializeField] private int defaultPoolSize = 20;
-    [SerializeField] private int maxPoolSize = 100;
 
     private Dictionary<TEnum, ObjectPool<GameObject>> objectPools;
 
@@ -34,11 +34,11 @@ public class PoolManager<TEnum> : MonoBehaviour where TEnum : Enum
                 OnReleaseObjectToPool,
                 OnDestroyPooledObject,
                 true,
-                defaultPoolSize,
-                maxPoolSize
+                info.defaultPoolSize,
+                info.maxPoolSize
             );
 
-            for (int i = 0; i < defaultPoolSize; i++)
+            for (int i = 0; i < info.defaultPoolSize; i++)
             {
                 GameObject obj = CreatePooledObject(info.type);
                 objectPools[info.type].Release(obj);

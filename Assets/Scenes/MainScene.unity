@@ -994,17 +994,23 @@ MonoBehaviour:
   - type: 0
     prefab: {fileID: 1645533537697032005, guid: 2eae955d6e3abaf41883aebd2ea33ab2,
       type: 3}
+    defaultPoolSize: 10
+    maxPoolSize: 20
   - type: 1
     prefab: {fileID: 6097657545718270641, guid: 6f2d336ddab8f5749b71960afaaea7a3,
       type: 3}
+    defaultPoolSize: 10
+    maxPoolSize: 20
   - type: 2
     prefab: {fileID: 3782944953309871444, guid: b3c1712461a9b874cb9ecfa680ceb0d4,
       type: 3}
+    defaultPoolSize: 10
+    maxPoolSize: 20
   - type: 3
     prefab: {fileID: 5550657851722893818, guid: d7722e50b3d39c04e988faf279dc2d38,
       type: 3}
-  defaultPoolSize: 20
-  maxPoolSize: 100
+    defaultPoolSize: 10
+    maxPoolSize: 20
 --- !u!1 &220754870
 GameObject:
   m_ObjectHideFlags: 0
@@ -2930,17 +2936,23 @@ MonoBehaviour:
   - type: 0
     prefab: {fileID: 7208280090647399705, guid: 123414d0e23878e4c8d3ef0e2e1582fe,
       type: 3}
+    defaultPoolSize: 10
+    maxPoolSize: 20
   - type: 1
     prefab: {fileID: 8117745015550210390, guid: 5e4b31dbcd04fd94d9ed2ba46eb72a1d,
       type: 3}
+    defaultPoolSize: 10
+    maxPoolSize: 20
   - type: 2
     prefab: {fileID: 8659842215292937890, guid: 60c4589d236632b4badf5903af84fc44,
       type: 3}
+    defaultPoolSize: 10
+    maxPoolSize: 20
   - type: 3
     prefab: {fileID: 7369356232336804603, guid: edb2b5dd801418c41b0f08a873022471,
       type: 3}
-  defaultPoolSize: 10
-  maxPoolSize: 100
+    defaultPoolSize: 10
+    maxPoolSize: 20
 --- !u!1 &498661933
 GameObject:
   m_ObjectHideFlags: 0
@@ -5775,11 +5787,13 @@ MonoBehaviour:
   - type: 0
     prefab: {fileID: 3069894143308791422, guid: 534043b0271e5434b9cfbb00c0ef0bcd,
       type: 3}
+    defaultPoolSize: 10
+    maxPoolSize: 20
   - type: 1
     prefab: {fileID: 3069894143308791422, guid: 92b7e7c7c0a08d647b0f193b886a50b3,
       type: 3}
-  defaultPoolSize: 10
-  maxPoolSize: 20
+    defaultPoolSize: 10
+    maxPoolSize: 20
 --- !u!1 &1066347436
 GameObject:
   m_ObjectHideFlags: 0
@@ -7765,11 +7779,11 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_ImpulseDuration: 0.05
+    m_ImpulseDuration: 0.1
     m_ImpulseType: 3
     m_DissipationRate: 0
     m_RawSignal: {fileID: 11400000, guid: a70fe953eb49f834eba83064cd283a45, type: 2}
-    m_AmplitudeGain: 0.05
+    m_AmplitudeGain: 0.1
     m_FrequencyGain: 1
     m_RepeatMode: 0
     m_Randomize: 1
@@ -7786,9 +7800,9 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      m_AttackTime: 0.05
+      m_AttackTime: 0.01
       m_SustainTime: 0.1
-      m_DecayTime: 0.1
+      m_DecayTime: 0.2
       m_ScaleWithImpact: 1
       m_HoldForever: 0
     m_ImpactRadius: 100
