@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : CharacterBase
 {
+    
     [field: SerializeField] public AbilityManager AbilityManager { get; private set; }
 
     void Start()
