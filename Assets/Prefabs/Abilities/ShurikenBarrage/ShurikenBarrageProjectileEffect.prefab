@@ -78,7 +78,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb9ab8b851104740bc126c975860fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 5
+  <Type>k__BackingField: 2
+  lifetime: 2
   hitPrefabToSpawn: {fileID: 3782944953309871444, guid: b3c1712461a9b874cb9ecfa680ceb0d4,
     type: 3}
   collisionEffectStrategies:

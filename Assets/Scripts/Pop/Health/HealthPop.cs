@@ -4,6 +4,13 @@ using UnityEngine;
 using TMPro;
 using DG.Tweening;
 
+public enum HealthPopType
+{
+    Heal,
+    Damage,
+}
+
+
 public class HealthPop : MonoBehaviour
 {
     [field:SerializeField] public HealthPopType Type { get; private set; }

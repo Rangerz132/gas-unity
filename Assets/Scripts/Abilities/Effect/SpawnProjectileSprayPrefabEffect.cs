@@ -28,7 +28,8 @@ public class SpawnProjectileSprayPrefabEffect : EffectStrategy
             Quaternion rotation = Quaternion.AngleAxis(currentAngle, Vector3.up);
 
             // Spawn projectile
-            Projectile projectileInstance = Instantiate(projectilePrefabToSpawn);
+            GameObject projectileGameObject = ProjectilePoolManager.OnGetProjectile?.Invoke(projectilePrefabToSpawn.Type);
+            Projectile projectileInstance = projectileGameObject.GetComponent<Projectile>();
             projectileInstance.transform.position = data.User.transform.position;
 
             // Apply the rotation to the direction to get the new target point
@@ -37,8 +38,6 @@ public class SpawnProjectileSprayPrefabEffect : EffectStrategy
             // Update targetedPoints with the new target point
             projectileInstance.SetData(data, newTargetPoint);
         }
-
-
 
         finished();
     }

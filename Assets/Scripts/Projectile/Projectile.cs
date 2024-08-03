@@ -2,8 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ProjectileType
+{
+    Fireball,
+    LeafGrenade,
+    Shuriken,
+    VoidStrike,
+}
+
 public abstract class Projectile : MonoBehaviour
 {
+    [field: SerializeField] public ProjectileType Type { get; private set; }
+
     protected AbilityData data;
     protected GameObject target;
     protected Vector3 targetPosition;
@@ -35,7 +45,7 @@ public abstract class Projectile : MonoBehaviour
 
         if (lifetime <= 0)
         {
-            Destroy(gameObject);
+            GetComponent<PooledObject>().ReturnToPool();
         }
     }
 
@@ -54,7 +64,7 @@ public abstract class Projectile : MonoBehaviour
        
         Instantiate(hitPrefabToSpawn, closestPoint, Quaternion.identity);
 
-        Destroy(gameObject);
+        GetComponent<PooledObject>().ReturnToPool();
     }
 
 

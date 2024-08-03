@@ -2823,6 +2823,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426090695}
   m_CullTransparentMesh: 1
+--- !u!1 &434119104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 434119105}
+  - component: {fileID: 434119106}
+  m_Layer: 0
+  m_Name: ProjectilePoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &434119105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434119104}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1604093008}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &434119106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434119104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec29dd3d43868224ca4260b8fda68121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolInfos:
+  - type: 0
+    prefab: {fileID: 7208280090647399705, guid: 123414d0e23878e4c8d3ef0e2e1582fe,
+      type: 3}
+  - type: 1
+    prefab: {fileID: 8117745015550210390, guid: 5e4b31dbcd04fd94d9ed2ba46eb72a1d,
+      type: 3}
+  - type: 2
+    prefab: {fileID: 8659842215292937890, guid: 60c4589d236632b4badf5903af84fc44,
+      type: 3}
+  - type: 3
+    prefab: {fileID: 7369356232336804603, guid: edb2b5dd801418c41b0f08a873022471,
+      type: 3}
+  defaultPoolSize: 10
+  maxPoolSize: 100
 --- !u!1 &498661933
 GameObject:
   m_ObjectHideFlags: 0
@@ -8285,6 +8344,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1065856038}
+  - {fileID: 434119105}
   m_Father: {fileID: 1309640055}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1605488970

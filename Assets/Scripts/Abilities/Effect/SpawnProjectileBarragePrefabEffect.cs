@@ -25,9 +25,10 @@ public class SpawnProjectileBarragePrefabEffect : EffectStrategy
 
             // Calculate the spawn position with the offset
             Vector3 spawnPosition = data.User.transform.position + orthogonalDirection * offset;
-
+       
             // Spawn projectile
-            Projectile projectileInstance = Instantiate(projectilePrefabToSpawn);
+            GameObject projectileGameObject = ProjectilePoolManager.OnGetProjectile?.Invoke(projectilePrefabToSpawn.Type);
+            Projectile projectileInstance = projectileGameObject.GetComponent<Projectile>();
             projectileInstance.transform.position = spawnPosition;
 
             // Calculate the new target point with the same offset
