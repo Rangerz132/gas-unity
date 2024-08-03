@@ -36,6 +36,7 @@ public class SpawnProjectileBarragePrefabEffect : EffectStrategy
 
             // Update targetedPoints with the new target point
             projectileInstance.SetData(data, newTargetPoint);
+            projectileInstance.Aim();
         }
 
         finished();

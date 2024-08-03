@@ -25,11 +25,12 @@ public class SpawnProjectilePrefabEffect : EffectStrategy
 
     private void SpawnProjectileForTargetPoint(AbilityData data)
     {
-        // Spawn projectile
         GameObject projectileGameObject = ProjectilePoolManager.OnGetProjectile?.Invoke(projectilePrefabToSpawn.Type);
+        
         Projectile projectileInstance = projectileGameObject.GetComponent<Projectile>();
         projectileInstance.transform.position = data.User.transform.position;
         projectileInstance.SetData(data, data.targetedPoints);
+        projectileInstance.Aim();
     }
 
     private void SpawnProjectileForTargets(AbilityData data)
@@ -40,6 +41,7 @@ public class SpawnProjectilePrefabEffect : EffectStrategy
             Projectile projectileInstance = projectileGameObject.GetComponent<Projectile>();
             projectileInstance.transform.position = data.User.transform.position;
             projectileInstance.SetData(data, target);
+            projectileInstance.Aim();
         }
     }
 }

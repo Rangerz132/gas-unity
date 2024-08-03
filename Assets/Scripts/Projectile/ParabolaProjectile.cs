@@ -10,13 +10,9 @@ public class ParabolaProjectile : Projectile
     private float traveledDistance;
     private float totalDistance;
 
-    void Start()
+    protected override void Update()
     {
-        Aim();
-    }
-
-    void Update()
-    {
+        base.Update();
         Move();
     }
 

@@ -82,6 +82,7 @@ MonoBehaviour:
   lifetime: 2
   hitPrefabToSpawn: {fileID: -4342203123872336854, guid: 2eae955d6e3abaf41883aebd2ea33ab2,
     type: 3}
+  spawnHitOnDie: 1
   collisionEffectStrategies:
   - {fileID: 11400000, guid: 3ab55babe95579942ae7f887a101620e, type: 2}
   - {fileID: 11400000, guid: cdee6b919ea14e243a35fbc1fb0c8d7e, type: 2}

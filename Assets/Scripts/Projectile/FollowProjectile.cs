@@ -6,8 +6,10 @@ public class FollowProjectile : Projectile
 {
     [SerializeField] private float speed;
 
-    void Update()
+
+    protected override void Update()
     {
+        base.Update();
         Move();
         Aim();
     }

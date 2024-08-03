@@ -5,16 +5,11 @@ using UnityEngine;
 public class LinearProjectile : Projectile
 {
     [SerializeField] private float speed;
-
     private Vector3 direction;
 
-    void Start()
+    protected override void Update()
     {
-        Aim();
-    }
-
-    void  Update()
-    {
+        base.Update();
         Move();
     }
 
