@@ -13,7 +13,7 @@ public enum HealthPopType
 
 public class HealthPop : MonoBehaviour
 {
-    [field:SerializeField] public HealthPopType Type { get; private set; }
+    [field: SerializeField] public HealthPopType Type { get; private set; }
     [SerializeField] private TextMeshPro textMeshPro;
 
     [Header("Tween Movement")]
@@ -29,7 +29,7 @@ public class HealthPop : MonoBehaviour
     [SerializeField] private float alphaDuration;
 
 
-   private Vector3 initialPosition;
+    private Vector3 initialPosition;
 
     public void Initialize(string textValue, Vector3 position)
     {
@@ -48,7 +48,7 @@ public class HealthPop : MonoBehaviour
         Color color = textMeshPro.color;
         color.a = 1;
         textMeshPro.color = color;
-        
+
         // Reset position
         transform.position = initialPosition;
     }

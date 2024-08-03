@@ -18,8 +18,14 @@ public abstract class Projectile : MonoBehaviour
     protected GameObject target;
     protected Vector3 targetPosition;
     [SerializeField] private float lifetime;
-    [SerializeField] private GameObject hitPrefabToSpawn;
+    private float currentLifeTime;
+    [SerializeField] private Hit hitPrefabToSpawn;
     [SerializeField] protected EffectStrategy[] collisionEffectStrategies;
+
+    private void OnEnable()
+    {
+        currentLifeTime = lifetime;
+    }
 
     private void Update()
     {
@@ -41,9 +47,9 @@ public abstract class Projectile : MonoBehaviour
 
     private void DieOverlifetime()
     {
-        lifetime -= Time.deltaTime;
+        currentLifeTime -= Time.deltaTime;
 
-        if (lifetime <= 0)
+        if (currentLifeTime <= 0)
         {
             GetComponent<PooledObject>().ReturnToPool();
         }
@@ -61,8 +67,11 @@ public abstract class Projectile : MonoBehaviour
         {
             collisionEffect.StartEffect(data, EffectFinished);
         }
-       
-        Instantiate(hitPrefabToSpawn, closestPoint, Quaternion.identity);
+
+        // Spawn hit effect
+        GameObject hitGameObject = HitPoolManager.OnGetHit?.Invoke(hitPrefabToSpawn.Type);
+        Hit hitInstance = hitGameObject.GetComponent<Hit>();
+        hitInstance.transform.position = closestPoint;
 
         GetComponent<PooledObject>().ReturnToPool();
     }

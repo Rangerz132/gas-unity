@@ -946,6 +946,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167078091}
   m_CullTransparentMesh: 1
+--- !u!1 &206495637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 206495638}
+  - component: {fileID: 206495639}
+  m_Layer: 0
+  m_Name: HitPoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &206495638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206495637}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1604093008}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &206495639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206495637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28730b06d269264a9ba9d65ec1d4bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolInfos:
+  - type: 0
+    prefab: {fileID: 1645533537697032005, guid: 2eae955d6e3abaf41883aebd2ea33ab2,
+      type: 3}
+  - type: 1
+    prefab: {fileID: 6097657545718270641, guid: 6f2d336ddab8f5749b71960afaaea7a3,
+      type: 3}
+  - type: 2
+    prefab: {fileID: 3782944953309871444, guid: b3c1712461a9b874cb9ecfa680ceb0d4,
+      type: 3}
+  - type: 3
+    prefab: {fileID: 5550657851722893818, guid: d7722e50b3d39c04e988faf279dc2d38,
+      type: 3}
+  defaultPoolSize: 20
+  maxPoolSize: 100
 --- !u!1 &220754870
 GameObject:
   m_ObjectHideFlags: 0
@@ -7706,11 +7765,11 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_ImpulseDuration: 0.1
+    m_ImpulseDuration: 0.05
     m_ImpulseType: 3
     m_DissipationRate: 0
-    m_RawSignal: {fileID: 11400000, guid: 5b98596f24b276049b9ce34baaf4e1e7, type: 2}
-    m_AmplitudeGain: 0.15
+    m_RawSignal: {fileID: 11400000, guid: a70fe953eb49f834eba83064cd283a45, type: 2}
+    m_AmplitudeGain: 0.05
     m_FrequencyGain: 1
     m_RepeatMode: 0
     m_Randomize: 1
@@ -7729,7 +7788,7 @@ MonoBehaviour:
         m_RotationOrder: 4
       m_AttackTime: 0.05
       m_SustainTime: 0.1
-      m_DecayTime: 0.3
+      m_DecayTime: 0.1
       m_ScaleWithImpact: 1
       m_HoldForever: 0
     m_ImpactRadius: 100
@@ -8345,6 +8404,7 @@ Transform:
   m_Children:
   - {fileID: 1065856038}
   - {fileID: 434119105}
+  - {fileID: 206495638}
   m_Father: {fileID: 1309640055}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1605488970

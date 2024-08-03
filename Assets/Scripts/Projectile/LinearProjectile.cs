@@ -13,7 +13,7 @@ public class LinearProjectile : Projectile
         Aim();
     }
 
-    void Update()
+    void  Update()
     {
         Move();
     }

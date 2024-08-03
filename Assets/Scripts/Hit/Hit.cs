@@ -2,9 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum HitType
+{
+    Fire,
+    Leaf,
+    Wind,
+    Void,
+}
+
 public class Hit : MonoBehaviour
 {
+    [field: SerializeField] public HitType Type { get; private set; }
     [SerializeField] private float lifetime;
+    private float currentLifeTime;
+
+    private void OnEnable()
+    {
+        currentLifeTime = lifetime;
+    }
 
     private void Update()
     {
@@ -13,11 +28,12 @@ public class Hit : MonoBehaviour
 
     private void DieOverlifetime()
     {
-        lifetime -= Time.deltaTime;
+        currentLifeTime -= Time.deltaTime;
 
-        if (lifetime <= 0)
+        if (currentLifeTime <= 0)
         {
-            Destroy(gameObject);
+            GetComponent<PooledObject>().ReturnToPool();
         }
     }
+
 }

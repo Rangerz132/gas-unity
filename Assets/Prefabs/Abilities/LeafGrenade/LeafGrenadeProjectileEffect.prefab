@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Type>k__BackingField: 1
   lifetime: 2
-  hitPrefabToSpawn: {fileID: 6097657545718270641, guid: 6f2d336ddab8f5749b71960afaaea7a3,
+  hitPrefabToSpawn: {fileID: 3591357520972924202, guid: 6f2d336ddab8f5749b71960afaaea7a3,
     type: 3}
   collisionEffectStrategies:
   - {fileID: 11400000, guid: 8354f9d7fa597bd499381a1499b34a50, type: 2}
