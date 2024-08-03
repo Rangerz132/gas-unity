@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "AnimationEffect", menuName = "Abilities/Effect/Animation", order = 0)]
-public class AnimationEffect : EffectStrategy
+[CreateAssetMenu(fileName = "AnimationEffect", menuName = "Abilities/Effect/Animation/Animation Trigger", order = 0)]
+public class AnimationTriggerEffect : EffectStrategy
 {
     [SerializeField] private string animationTrigger;
  

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "HealEffect", menuName = "Abilities/Effect/Heal", order = 0)]
+[CreateAssetMenu(fileName = "HealEffect", menuName = "Abilities/Effect/Health/Heal", order = 0)]
 public class HealEffect : EffectStrategy
 {
     [Header("Damage Value")]

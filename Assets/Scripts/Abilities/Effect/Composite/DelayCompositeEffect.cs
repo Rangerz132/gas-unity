@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "DelayCompositeEffect", menuName = "Abilities/Effect/Delay Composite", order = 0)]
+[CreateAssetMenu(fileName = "DelayCompositeEffect", menuName = "Abilities/Effect/Composite/Delay Composite", order = 0)]
 public class DelayCompositeEffect : EffectStrategy
 {
     [SerializeField] private float delay = 0;

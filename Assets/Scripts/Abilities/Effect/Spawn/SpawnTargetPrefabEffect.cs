@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SpawnTargetPrefabEffect", menuName = "Abilities/Effect/Spawn Target Prefab", order = 0)]
+[CreateAssetMenu(fileName = "SpawnTargetPrefabEffect", menuName = "Abilities/Effect/Spawn/Spawn Target Prefab", order = 0)]
 public class SpawnTargetPrefabEffect : EffectStrategy
 {
     [SerializeField] private GameObject prefabToSpawn;

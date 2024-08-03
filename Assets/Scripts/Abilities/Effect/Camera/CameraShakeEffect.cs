@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "CameraShakeEffect", menuName = "Abilities/Effect/Camera Shake", order = 0)]
+[CreateAssetMenu(fileName = "CameraShakeEffect", menuName = "Abilities/Effect/Camera/Camera Shake", order = 0)]
 public class CameraShakeEffect : EffectStrategy
 {
     [SerializeField] private float amplitudeGain;

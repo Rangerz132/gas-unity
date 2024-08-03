@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SpawnProjectileBarragePrefabEffect", menuName = "Abilities/Effect/Spawn Projectile Barrage Prefab", order = 0)]
+[CreateAssetMenu(fileName = "SpawnProjectileBarragePrefabEffect", menuName = "Abilities/Effect/Spawn/Spawn Projectile Barrage Prefab", order = 0)]
 public class SpawnProjectileBarragePrefabEffect : EffectStrategy
 {
     [SerializeField] private Projectile projectilePrefabToSpawn;
