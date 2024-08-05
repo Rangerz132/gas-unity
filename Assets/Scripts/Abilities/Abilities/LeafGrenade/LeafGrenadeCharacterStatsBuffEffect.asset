@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03e0368a330bfc4482c7f13a4eaca7d, type: 3}
+  m_Name: LeafGrenadeCharacterStatsBuffEffect
+  m_EditorClassIdentifier: 
+  value: 30
+  statModifierType: 100
+  order: 0
+  characterStatType: 0
+  cooldownStrategy: {fileID: 11400000, guid: 84a78bcc5fbe44240acdc4bd53d42da1, type: 2}

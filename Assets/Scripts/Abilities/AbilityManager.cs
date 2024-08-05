@@ -11,12 +11,6 @@ public class AbilityManager : MonoBehaviour
 
     public event Action<Ability> OnAbilityUsed;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     public void Update()
     {
         UpdateCooldowns();
