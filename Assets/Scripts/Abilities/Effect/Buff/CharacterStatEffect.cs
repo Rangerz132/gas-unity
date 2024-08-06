@@ -15,10 +15,6 @@ public class CharacterStatsBuffEffect : EffectStrategy
     [Header("Character Stat")]
     public CharacterStatType characterStatType;
 
-    [Header("Cooldown")]
-    public CooldownStrategy cooldownStrategy;
-
-
     public override void StartEffect(AbilityData data, Action finished)
     {
         StatModifier statModifier = new StatModifier(value, statModifierType, order, data.User);

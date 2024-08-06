@@ -7855,7 +7855,7 @@ MonoBehaviour:
     m_ImpulseType: 3
     m_DissipationRate: 0
     m_RawSignal: {fileID: 11400000, guid: a70fe953eb49f834eba83064cd283a45, type: 2}
-    m_AmplitudeGain: 0.15
+    m_AmplitudeGain: 0.1
     m_FrequencyGain: 1
     m_RepeatMode: 0
     m_Randomize: 1
@@ -7874,7 +7874,7 @@ MonoBehaviour:
         m_RotationOrder: 4
       m_AttackTime: 0.01
       m_SustainTime: 0.1
-      m_DecayTime: 0.3
+      m_DecayTime: 0.2
       m_ScaleWithImpact: 1
       m_HoldForever: 0
     m_ImpactRadius: 100

@@ -39,4 +39,21 @@ public class CharacterStats : MonoBehaviour
             }
         }
     }
+
+    public float GetStatValue(CharacterStatType statType)
+    {
+        if (Stats.TryGetValue(statType, out Stat stat))
+        {
+            return stat.Value;
+        }
+        else {
+            // Add new Stat
+            Stat newStat = new Stat();
+            CharacterStatInfo characterStatInfo = new CharacterStatInfo();
+            characterStatInfo.type = statType;
+            characterStatInfo.stat = newStat;
+            Stats.Add(characterStatInfo.type, characterStatInfo.stat);
+            return newStat.Value;
+        }
+    }
 }
