@@ -23,7 +23,7 @@ public class DamageEffect : EffectStrategy
             if (target.TryGetComponent<Health>(out Health health))
             {
                 // Transform current value in percentile if needed
-                currentValue = isPercent ? damageValue * health.maxHealth / 100 : damageValue;
+                currentValue = isPercent ? damageValue * health.MaxHealth / 100 : damageValue;
 
                 // Do damage
                 health.TakeDamage(data.User, currentValue);

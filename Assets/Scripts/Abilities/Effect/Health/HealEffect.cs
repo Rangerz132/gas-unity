@@ -23,7 +23,7 @@ public class HealEffect : EffectStrategy
             if (target.TryGetComponent<Health>(out Health health))
             {
                 // Transform current value in percentile if needed
-                currentValue = isPercent ? healValue * health.maxHealth / 100 : healValue;
+                currentValue = isPercent ? healValue * health.MaxHealth / 100 : healValue;
 
                 // Heal
                 health.Heal(data.User, currentValue);

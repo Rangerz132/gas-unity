@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c67689bc582084e9c1dc6c8336dbf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Type>k__BackingField: 0
   textMeshPro: {fileID: 4981204916671788367}
   movementValue: {x: 0, y: 2, z: 0}
   movementDuration: 3
@@ -174,8 +175,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278255360
-  m_fontColor: {r: 0, g: 1, b: 0, a: 1}
+    rgba: 4285071104
+  m_fontColor: {r: 0, g: 1, b: 0.40784314, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

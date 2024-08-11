@@ -5,13 +5,30 @@ using System;
 
 public enum CharacterStatType
 {
-    Vitality,
+    Constitution,
     Endurance,
     Strength,
     Dexterity,
     Intelligence,
     Luck,
     Charisma
+}
+
+public enum DerivedCharacterStatType
+{
+    MaxHealth,
+    MagicDamage,
+    PhysicalDamage,
+    Accuracy,
+    Evasion,
+    CriticalHitChance,
+    ManaPool,
+    StaminaPool,
+    MovementSpeed,
+    AttackSpeed,
+    MagicResistance,
+    PhysicalResistance,
+    Regeneration
 }
 
 [Serializable]
@@ -23,11 +40,32 @@ public class CharacterStatInfo
 
 public class CharacterStats : MonoBehaviour
 {
+    // Stats
     [SerializeField] private List<CharacterStatInfo> statInfos;
-
     public Dictionary<CharacterStatType, Stat> Stats { get; private set; }
 
-    void Start()
+    // Stat Effects
+    private List<IStatEffect> statEffects = new List<IStatEffect>();
+    private Dictionary<DerivedCharacterStatType, float> derivedStats = new Dictionary<DerivedCharacterStatType, float>();
+
+    public event Action<DerivedCharacterStatType, float> OnDerivedStatChanged;
+
+
+    void Awake()
+    {
+        InitializeStats();
+        InitializeEffects();
+        ApplyAllEffects();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            ApplyAllEffects();
+        }
+    }
+
+    private void InitializeStats()
     {
         Stats = new Dictionary<CharacterStatType, Stat>();
 
@@ -40,6 +78,11 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
+    private void InitializeEffects()
+    {
+        statEffects.Add(new ConstitutionHealthEffect(10));
+    }
+
     public float GetStatValue(CharacterStatType statType)
     {
         if (Stats.TryGetValue(statType, out Stat stat))
@@ -47,13 +90,39 @@ public class CharacterStats : MonoBehaviour
             return stat.Value;
         }
         else {
-            // Add new Stat
             Stat newStat = new Stat();
             CharacterStatInfo characterStatInfo = new CharacterStatInfo();
             characterStatInfo.type = statType;
             characterStatInfo.stat = newStat;
             Stats.Add(characterStatInfo.type, characterStatInfo.stat);
             return newStat.Value;
+        }
+    }
+
+    public float GetDerivedStatValue(DerivedCharacterStatType statType)
+    {
+        return derivedStats.TryGetValue(statType, out float value) ? value : 0f;
+    }
+
+    public void SetDerivedStatValue(DerivedCharacterStatType statType, float value)
+    {
+        if (derivedStats.ContainsKey(statType))
+        {
+            derivedStats[statType] = value;
+        }
+        else
+        {
+            derivedStats.Add(statType, value);
+        }
+
+        OnDerivedStatChanged?.Invoke(statType, value);
+    }
+
+    public void ApplyAllEffects()
+    {
+        foreach (var effect in statEffects)
+        {
+            effect.ApplyEffect(this);
         }
     }
 }

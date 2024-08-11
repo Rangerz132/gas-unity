@@ -14,12 +14,14 @@ public class HealthBar : MonoBehaviour
     {
         Health.OnTakeDamage += UpdateHealth;
         Health.OnHeal += UpdateHealth;
+        Health.OnMaxHealChange += UpdateHealth;
     }
 
     private void OnDisable()
     {
         Health.OnTakeDamage -= UpdateHealth;
         Health.OnHeal -= UpdateHealth;
+        Health.OnMaxHealChange -= UpdateHealth;
     }
 
     void Start()
@@ -32,9 +34,9 @@ public class HealthBar : MonoBehaviour
     /// </summary>
     public void UpdateHealth()
     {
-        float fillAmount = health.currentHealth / health.maxHealth;
+        float fillAmount = health.CurrentHealth / health.MaxHealth;
         healtBar.fillAmount = fillAmount;
 
-        healtText.text = $"{health.currentHealth} / {health.maxHealth}";
+        healtText.text = $"{health.CurrentHealth} / {health.MaxHealth}";
     }
 }

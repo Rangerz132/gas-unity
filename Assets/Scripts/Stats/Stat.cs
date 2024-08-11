@@ -87,6 +87,8 @@ public class Stat
             }
         }
 
-        return (float)Mathf.Round(finalValue);
+        return Mathf.Round(finalValue);
     }
+
+
 }
