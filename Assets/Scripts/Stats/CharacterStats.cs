@@ -47,7 +47,6 @@ public class CharacterStats : MonoBehaviour
     // Stat Effects
     private List<IStatEffect> statEffects = new List<IStatEffect>();
     private Dictionary<DerivedCharacterStatType, float> derivedStats = new Dictionary<DerivedCharacterStatType, float>();
-
     public event Action<DerivedCharacterStatType, float> OnDerivedStatChanged;
 
 
@@ -55,13 +54,12 @@ public class CharacterStats : MonoBehaviour
     {
         InitializeStats();
         InitializeEffects();
-        ApplyAllEffects();
-    }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            ApplyAllEffects();
+
+        foreach (CharacterStatInfo info in statInfos)
+        {
+            info.stat.OnBaseValueChanged += ApplyAllEffects;
+            info.stat.OnValueChanged += ApplyAllEffects;
         }
     }
 
@@ -78,6 +76,7 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
+
     private void InitializeEffects()
     {
         statEffects.Add(new ConstitutionHealthEffect(10));
@@ -89,12 +88,14 @@ public class CharacterStats : MonoBehaviour
         {
             return stat.Value;
         }
-        else {
+        else
+        {
             Stat newStat = new Stat();
             CharacterStatInfo characterStatInfo = new CharacterStatInfo();
             characterStatInfo.type = statType;
             characterStatInfo.stat = newStat;
             Stats.Add(characterStatInfo.type, characterStatInfo.stat);
+
             return newStat.Value;
         }
     }

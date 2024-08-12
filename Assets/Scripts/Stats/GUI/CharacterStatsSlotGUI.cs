@@ -6,7 +6,6 @@ using TMPro;
 
 public class CharacterStatsSlotGUI : MonoBehaviour
 {
-    private CharacterStatsManagerGUI characterStatsManagerGUI;
     private Stat stat;
     [SerializeField] private TextMeshProUGUI statName;
     [SerializeField] private TextMeshProUGUI statValue;
@@ -14,10 +13,8 @@ public class CharacterStatsSlotGUI : MonoBehaviour
     [SerializeField] private CharacterStatsSlotButtonGUI characterStatsButtonIncrease;
 
 
-    public void SetCharacterStatsInfo(CharacterStatsManagerGUI characterStatsManagerGUI, CharacterStatType characterStatType, Stat stat)
+    public void SetCharacterStatsInfo(CharacterStatType characterStatType, Stat stat)
     {
-        // Set stat
-        this.characterStatsManagerGUI = characterStatsManagerGUI;
         this.stat = stat;
 
         // Update text value
@@ -48,11 +45,5 @@ public class CharacterStatsSlotGUI : MonoBehaviour
         {
             characterStatsButtonDecrease.EnableButton();
         }
-
-    }
-
-    public void updateStatEffect()
-    {
-        characterStatsManagerGUI.characterStats.ApplyAllEffects();
     }
 }

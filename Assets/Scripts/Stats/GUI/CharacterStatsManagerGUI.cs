@@ -17,11 +17,9 @@ public class CharacterStatsManagerGUI : MonoBehaviour
     {
         foreach (KeyValuePair<CharacterStatType, Stat> kvp in characterStats.Stats)
         {
-            // Instantiate characterStatsSlotGUIPrefab
             CharacterStatsSlotGUI characterStatsSlotGUIInstance = Instantiate(characterStatsSlotGUIPrefab);
             characterStatsSlotGUIInstance.gameObject.transform.SetParent(gameObject.transform);
-
-            characterStatsSlotGUIInstance.SetCharacterStatsInfo(this,kvp.Key, kvp.Value);
+            characterStatsSlotGUIInstance.SetCharacterStatsInfo(kvp.Key, kvp.Value);
         }
     }
 }

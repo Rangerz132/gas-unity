@@ -39,7 +39,6 @@ public class CharacterStatsSlotButtonGUI : MonoBehaviour, IPointerClickHandler
 
         characterStatsSlotGUI.SetStatValue();
         characterStatsSlotGUI.SetButtonInteractivity();
-        characterStatsSlotGUI.updateStatEffect();
     }
 
     public void DisableButton()
