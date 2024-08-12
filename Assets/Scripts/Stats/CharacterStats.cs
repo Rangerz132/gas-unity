@@ -11,7 +11,8 @@ public enum CharacterStatType
     Dexterity,
     Intelligence,
     Luck,
-    Charisma
+    Charisma,
+    Wisdom
 }
 
 public enum DerivedCharacterStatType
@@ -28,7 +29,8 @@ public enum DerivedCharacterStatType
     AttackSpeed,
     MagicResistance,
     PhysicalResistance,
-    Regeneration
+    Regeneration,
+    AbilityCooldown
 }
 
 [Serializable]
@@ -76,10 +78,10 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
-
     private void InitializeEffects()
     {
-        statEffects.Add(new ConstitutionHealthEffect(10));
+        statEffects.Add(new ConstitutionMaxHealthEffect(10f));
+        statEffects.Add(new WisdomCooldownAbilityEffect(0.5f));
     }
 
     public float GetStatValue(CharacterStatType statType)

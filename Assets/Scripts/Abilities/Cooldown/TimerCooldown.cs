@@ -6,12 +6,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "TimerCooldown", menuName = "Abilities/Cooldown/Timer", order = 0)]
 public class TimerCooldown : CooldownStrategy
 {
-    [SerializeField] private float timeValue;
-
     private void OnEnable()
     {
         remainingTime = 0;
         IsReady = remainingTime <= 0;
+        rechargeTime = baseRechargeTime;
     }
 
     public override void StartCooldown(AbilityData data)
@@ -22,7 +21,7 @@ public class TimerCooldown : CooldownStrategy
     public IEnumerator Cooldown()
     {
         IsReady = false;
-        remainingTime = timeValue;
+        remainingTime = rechargeTime;
         while (remainingTime > 0)
         {
             yield return null;

@@ -11,10 +11,54 @@ public class AbilityManager : MonoBehaviour
 
     public event Action<Ability> OnAbilityUsed;
 
+    private CharacterStats characterStats;
+
+    private void Awake()
+    {
+        characterStats = GetComponent<CharacterStats>();
+    }
+
+    private void OnEnable()
+    {
+        characterStats.OnDerivedStatChanged += HandleDerivedStatChanged;
+    }
+
+    private void OnDisable()
+    {
+        characterStats.OnDerivedStatChanged -= HandleDerivedStatChanged;
+    }
+
     public void Update()
     {
         UpdateCooldowns();
     }
+
+    private void HandleDerivedStatChanged(DerivedCharacterStatType statType, float newValue)
+    {
+        if (statType == DerivedCharacterStatType.AbilityCooldown)
+        {
+            UpdateAbilityCooldown();
+        }
+    }
+
+    /// <summary>
+    /// Set abilities cooldown based on character stats and base value
+    /// </summary>
+    private void UpdateAbilityCooldown()
+    {
+        float bonusCooldown = characterStats.GetDerivedStatValue(DerivedCharacterStatType.AbilityCooldown);
+
+        foreach (Ability ability in Abilities)
+        {
+            ability.CooldownStrategy.rechargeTime = ability.CooldownStrategy.baseRechargeTime - bonusCooldown;
+
+            if (ability.CooldownStrategy.rechargeTime <= 0)
+            {
+                ability.CooldownStrategy.rechargeTime = 0;
+            }
+        }
+    }
+
 
     /// <summary>
     /// Add the Ability to the list of AbilityCooldowns and assign the respective remaining time

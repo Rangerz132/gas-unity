@@ -24,8 +24,7 @@ public class CharacterStatsBuffEffect : EffectStrategy
             // Add buff
             if (target.TryGetComponent<CharacterStats>(out CharacterStats characterStats))
             {
-                characterStats.Stats[characterStatType].AddModifier(statModifier);
-                Debug.Log(characterStats.Stats[characterStatType].Value);       
+                characterStats.Stats[characterStatType].AddModifier(statModifier);    
             }
         }
 

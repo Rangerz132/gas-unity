@@ -7,13 +7,13 @@ using UnityEngine;
 public class StackCooldown : CooldownStrategy
 {
     [SerializeField] private int stackAmount;
-    [SerializeField] private float stackRechargeTime;
     private int currentStack;
 
     private void OnEnable()
     {
         currentStack = stackAmount;
         IsReady = currentStack > 0;
+        rechargeTime = baseRechargeTime;
         IsRecharging = false;
     }
 
@@ -35,7 +35,7 @@ public class StackCooldown : CooldownStrategy
         IsRecharging = true;
         while (currentStack < stackAmount)
         {
-            remainingTime = stackRechargeTime;
+            remainingTime = rechargeTime;
             while (remainingTime > 0)
             {
                 yield return null;

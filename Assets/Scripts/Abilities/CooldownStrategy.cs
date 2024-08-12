@@ -6,7 +6,9 @@ public abstract class CooldownStrategy : ScriptableObject
 {
     public bool IsReady { get; protected set; } = true;
     public bool IsRecharging { get; protected set; } = false;
-
+    public float baseRechargeTime;
+    public float rechargeTime;
     public float remainingTime;
+
     public abstract void StartCooldown(AbilityData data);
 }

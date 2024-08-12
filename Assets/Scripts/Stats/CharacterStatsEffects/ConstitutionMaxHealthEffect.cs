@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConstitutionHealthEffect : IStatEffect
+public class ConstitutionMaxHealthEffect : IStatEffect
 {
     private float healthPerConstitutionPoint;
 
-    public ConstitutionHealthEffect(float healthPerConstitutionPoint)
+    public ConstitutionMaxHealthEffect(float healthPerConstitutionPoint)
     {
         this.healthPerConstitutionPoint = healthPerConstitutionPoint;
     }
