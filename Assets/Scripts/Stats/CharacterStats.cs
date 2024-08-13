@@ -51,7 +51,7 @@ public class DerivedCharacterStatEffect
 public class CharacterStats : MonoBehaviour
 {
     // Stats
-    [SerializeField] private List<CharacterStatInfo> statInfos;
+    [field: SerializeField] public List<CharacterStatInfo> StatInfos { get; private set; }
     public Dictionary<CharacterStatType, Stat> Stats { get; private set; }
 
     // Stat Effects
@@ -63,7 +63,7 @@ public class CharacterStats : MonoBehaviour
     {
         InitializeStats();
 
-        foreach (CharacterStatInfo info in statInfos)
+        foreach (CharacterStatInfo info in StatInfos)
         {
             info.stat.OnBaseValueChanged += ApplyAllEffects;
             info.stat.OnValueChanged += ApplyAllEffects;
@@ -74,7 +74,7 @@ public class CharacterStats : MonoBehaviour
     {
         Stats = new Dictionary<CharacterStatType, Stat>();
 
-        foreach (CharacterStatInfo info in statInfos)
+        foreach (CharacterStatInfo info in StatInfos)
         {
             if (!Stats.ContainsKey(info.statType))
             {
@@ -123,7 +123,7 @@ public class CharacterStats : MonoBehaviour
 
     public void ApplyAllEffects()
     {
-        foreach (var statInfo in statInfos)
+        foreach (var statInfo in StatInfos)
         {
             foreach (var effect in statInfo.derivedStatEffects)
             {

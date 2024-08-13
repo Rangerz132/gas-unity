@@ -874,6 +874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CharacterStats>k__BackingField: {fileID: 161552587}
+  <DamageManager>k__BackingField: {fileID: 0}
   <Health>k__BackingField: {fileID: 161552583}
   <Animator>k__BackingField: {fileID: 0}
   <GizmoDrawer>k__BackingField: {fileID: 0}
@@ -939,9 +940,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68ea9e7d874ed446a1c3a13c20328ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statInfos:
+  <StatInfos>k__BackingField:
   - statType: 0
-    derivedStatEffects: []
+    derivedStatEffects:
+    - derivedStatType: 0
+      effectPerPoint: 10
   - statType: 1
     derivedStatEffects: []
   - statType: 2
@@ -949,13 +952,17 @@ MonoBehaviour:
   - statType: 3
     derivedStatEffects: []
   - statType: 4
-    derivedStatEffects: []
+    derivedStatEffects:
+    - derivedStatType: 1
+      effectPerPoint: 1
   - statType: 5
     derivedStatEffects: []
   - statType: 6
     derivedStatEffects: []
   - statType: 7
-    derivedStatEffects: []
+    derivedStatEffects:
+    - derivedStatType: 13
+      effectPerPoint: 0.5
 --- !u!1 &167078091
 GameObject:
   m_ObjectHideFlags: 0
@@ -6432,6 +6439,7 @@ GameObject:
   - component: {fileID: 1118900369}
   - component: {fileID: 1118900373}
   - component: {fileID: 1118900370}
+  - component: {fileID: 1118900374}
   - component: {fileID: 1118900371}
   - component: {fileID: 1118900372}
   m_Layer: 7
@@ -6471,6 +6479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CharacterStats>k__BackingField: {fileID: 1118900373}
+  <DamageManager>k__BackingField: {fileID: 1118900374}
   <Health>k__BackingField: {fileID: 1118900371}
   <Animator>k__BackingField: {fileID: 0}
   <GizmoDrawer>k__BackingField: {fileID: 1118900372}
@@ -6531,7 +6540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68ea9e7d874ed446a1c3a13c20328ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statInfos:
+  <StatInfos>k__BackingField:
   - statType: 0
     derivedStatEffects:
     - derivedStatType: 0
@@ -6543,7 +6552,9 @@ MonoBehaviour:
   - statType: 3
     derivedStatEffects: []
   - statType: 4
-    derivedStatEffects: []
+    derivedStatEffects:
+    - derivedStatType: 1
+      effectPerPoint: 1
   - statType: 5
     derivedStatEffects: []
   - statType: 6
@@ -6552,6 +6563,18 @@ MonoBehaviour:
     derivedStatEffects:
     - derivedStatType: 13
       effectPerPoint: 0.5
+--- !u!114 &1118900374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118900367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407106b15affa0a489f6952103d7154b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1121180729
 GameObject:
   m_ObjectHideFlags: 0
@@ -9201,6 +9224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CharacterStats>k__BackingField: {fileID: 1629795623}
+  <DamageManager>k__BackingField: {fileID: 0}
   <Health>k__BackingField: {fileID: 1629795619}
   <Animator>k__BackingField: {fileID: 0}
   <GizmoDrawer>k__BackingField: {fileID: 0}
@@ -9266,9 +9290,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68ea9e7d874ed446a1c3a13c20328ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statInfos:
+  <StatInfos>k__BackingField:
   - statType: 0
-    derivedStatEffects: []
+    derivedStatEffects:
+    - derivedStatType: 0
+      effectPerPoint: 10
   - statType: 1
     derivedStatEffects: []
   - statType: 2
@@ -9276,13 +9302,17 @@ MonoBehaviour:
   - statType: 3
     derivedStatEffects: []
   - statType: 4
-    derivedStatEffects: []
+    derivedStatEffects:
+    - derivedStatType: 1
+      effectPerPoint: 1
   - statType: 5
     derivedStatEffects: []
   - statType: 6
     derivedStatEffects: []
   - statType: 7
-    derivedStatEffects: []
+    derivedStatEffects:
+    - derivedStatType: 13
+      effectPerPoint: 0.5
 --- !u!1 &1659143875
 GameObject:
   m_ObjectHideFlags: 0
@@ -10197,6 +10227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CharacterStats>k__BackingField: {fileID: 1959940576}
+  <DamageManager>k__BackingField: {fileID: 0}
   <Health>k__BackingField: {fileID: 1959940573}
   <Animator>k__BackingField: {fileID: 0}
   <GizmoDrawer>k__BackingField: {fileID: 0}
@@ -10239,9 +10270,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68ea9e7d874ed446a1c3a13c20328ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statInfos:
+  <StatInfos>k__BackingField:
   - statType: 0
-    derivedStatEffects: []
+    derivedStatEffects:
+    - derivedStatType: 0
+      effectPerPoint: 10
   - statType: 1
     derivedStatEffects: []
   - statType: 2
@@ -10249,13 +10282,17 @@ MonoBehaviour:
   - statType: 3
     derivedStatEffects: []
   - statType: 4
-    derivedStatEffects: []
+    derivedStatEffects:
+    - derivedStatType: 1
+      effectPerPoint: 1
   - statType: 5
     derivedStatEffects: []
   - statType: 6
     derivedStatEffects: []
   - statType: 7
-    derivedStatEffects: []
+    derivedStatEffects:
+    - derivedStatType: 13
+      effectPerPoint: 0.5
 --- !u!1 &1963759612
 GameObject:
   m_ObjectHideFlags: 0
