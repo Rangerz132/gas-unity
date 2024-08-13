@@ -940,14 +940,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statInfos:
-  - type: 0
-  - type: 1
-  - type: 2
-  - type: 3
-  - type: 4
-  - type: 5
-  - type: 6
-  - type: 7
+  - statType: 0
+    derivedStatEffects: []
+  - statType: 1
+    derivedStatEffects: []
+  - statType: 2
+    derivedStatEffects: []
+  - statType: 3
+    derivedStatEffects: []
+  - statType: 4
+    derivedStatEffects: []
+  - statType: 5
+    derivedStatEffects: []
+  - statType: 6
+    derivedStatEffects: []
+  - statType: 7
+    derivedStatEffects: []
 --- !u!1 &167078091
 GameObject:
   m_ObjectHideFlags: 0
@@ -6524,14 +6532,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statInfos:
-  - type: 0
-  - type: 1
-  - type: 2
-  - type: 3
-  - type: 4
-  - type: 5
-  - type: 6
-  - type: 7
+  - statType: 0
+    derivedStatEffects:
+    - derivedStatType: 0
+      effectPerPoint: 10
+  - statType: 1
+    derivedStatEffects: []
+  - statType: 2
+    derivedStatEffects: []
+  - statType: 3
+    derivedStatEffects: []
+  - statType: 4
+    derivedStatEffects: []
+  - statType: 5
+    derivedStatEffects: []
+  - statType: 6
+    derivedStatEffects: []
+  - statType: 7
+    derivedStatEffects:
+    - derivedStatType: 13
+      effectPerPoint: 0.5
 --- !u!1 &1121180729
 GameObject:
   m_ObjectHideFlags: 0
@@ -8288,7 +8308,7 @@ MonoBehaviour:
     m_ImpulseDuration: 0.1
     m_ImpulseType: 3
     m_DissipationRate: 0
-    m_RawSignal: {fileID: 11400000, guid: a70fe953eb49f834eba83064cd283a45, type: 2}
+    m_RawSignal: {fileID: 11400000, guid: 5b98596f24b276049b9ce34baaf4e1e7, type: 2}
     m_AmplitudeGain: 0.15
     m_FrequencyGain: 1
     m_RepeatMode: 0
@@ -8306,7 +8326,7 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      m_AttackTime: 0.01
+      m_AttackTime: 0.05
       m_SustainTime: 0.1
       m_DecayTime: 0.3
       m_ScaleWithImpact: 1
@@ -9247,14 +9267,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statInfos:
-  - type: 0
-  - type: 1
-  - type: 2
-  - type: 3
-  - type: 4
-  - type: 5
-  - type: 6
-  - type: 7
+  - statType: 0
+    derivedStatEffects: []
+  - statType: 1
+    derivedStatEffects: []
+  - statType: 2
+    derivedStatEffects: []
+  - statType: 3
+    derivedStatEffects: []
+  - statType: 4
+    derivedStatEffects: []
+  - statType: 5
+    derivedStatEffects: []
+  - statType: 6
+    derivedStatEffects: []
+  - statType: 7
+    derivedStatEffects: []
 --- !u!1 &1659143875
 GameObject:
   m_ObjectHideFlags: 0
@@ -10212,14 +10240,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statInfos:
-  - type: 0
-  - type: 1
-  - type: 2
-  - type: 3
-  - type: 4
-  - type: 5
-  - type: 6
-  - type: 7
+  - statType: 0
+    derivedStatEffects: []
+  - statType: 1
+    derivedStatEffects: []
+  - statType: 2
+    derivedStatEffects: []
+  - statType: 3
+    derivedStatEffects: []
+  - statType: 4
+    derivedStatEffects: []
+  - statType: 5
+    derivedStatEffects: []
+  - statType: 6
+    derivedStatEffects: []
+  - statType: 7
+    derivedStatEffects: []
 --- !u!1 &1963759612
 GameObject:
   m_ObjectHideFlags: 0

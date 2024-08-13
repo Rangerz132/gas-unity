@@ -36,8 +36,16 @@ public enum DerivedCharacterStatType
 [Serializable]
 public class CharacterStatInfo
 {
-    public CharacterStatType type;
+    public CharacterStatType statType;
     public Stat stat;
+    public List<DerivedCharacterStatEffect> derivedStatEffects = new List<DerivedCharacterStatEffect>();
+}
+
+[Serializable]
+public class DerivedCharacterStatEffect
+{
+    public DerivedCharacterStatType derivedStatType;
+    public float effectPerPoint;
 }
 
 public class CharacterStats : MonoBehaviour
@@ -47,7 +55,6 @@ public class CharacterStats : MonoBehaviour
     public Dictionary<CharacterStatType, Stat> Stats { get; private set; }
 
     // Stat Effects
-    private List<IStatEffect> statEffects = new List<IStatEffect>();
     private Dictionary<DerivedCharacterStatType, float> derivedStats = new Dictionary<DerivedCharacterStatType, float>();
     public event Action<DerivedCharacterStatType, float> OnDerivedStatChanged;
 
@@ -55,8 +62,6 @@ public class CharacterStats : MonoBehaviour
     void Awake()
     {
         InitializeStats();
-        InitializeEffects();
-
 
         foreach (CharacterStatInfo info in statInfos)
         {
@@ -71,18 +76,13 @@ public class CharacterStats : MonoBehaviour
 
         foreach (CharacterStatInfo info in statInfos)
         {
-            if (!Stats.ContainsKey(info.type))
+            if (!Stats.ContainsKey(info.statType))
             {
-                Stats.Add(info.type, info.stat);
+                Stats.Add(info.statType, info.stat);
             }
         }
     }
 
-    private void InitializeEffects()
-    {
-        statEffects.Add(new ConstitutionMaxHealthEffect(10f));
-        statEffects.Add(new WisdomCooldownAbilityEffect(0.5f));
-    }
 
     public float GetStatValue(CharacterStatType statType)
     {
@@ -94,9 +94,9 @@ public class CharacterStats : MonoBehaviour
         {
             Stat newStat = new Stat();
             CharacterStatInfo characterStatInfo = new CharacterStatInfo();
-            characterStatInfo.type = statType;
+            characterStatInfo.statType = statType;
             characterStatInfo.stat = newStat;
-            Stats.Add(characterStatInfo.type, characterStatInfo.stat);
+            Stats.Add(characterStatInfo.statType, characterStatInfo.stat);
 
             return newStat.Value;
         }
@@ -123,9 +123,19 @@ public class CharacterStats : MonoBehaviour
 
     public void ApplyAllEffects()
     {
-        foreach (var effect in statEffects)
+        foreach (var statInfo in statInfos)
         {
-            effect.ApplyEffect(this);
+            foreach (var effect in statInfo.derivedStatEffects)
+            {
+                ApplyEffect(statInfo, effect);
+            }
         }
+    }
+
+    private void ApplyEffect(CharacterStatInfo statInfo, DerivedCharacterStatEffect effect)
+    {
+        float statValue = statInfo.stat.Value;
+        float bonus = statValue * effect.effectPerPoint;
+        SetDerivedStatValue(effect.derivedStatType, bonus);
     }
 }
