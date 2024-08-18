@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "HealEffect", menuName = "Abilities/Effect/Health/Heal", order = 0)]
 public class HealEffect : EffectStrategy
 {
-    [Header("Damage Value")]
+    [Header("Heal")]
     [SerializeField] private float healValue;
     [SerializeField] private bool isPercent;
     private float currentValue;

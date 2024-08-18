@@ -11,11 +11,11 @@ public enum DamageType {
 [CreateAssetMenu(fileName = "DamageEffect", menuName = "Abilities/Effect/Health/Damage", order = 0)]
 public class DamageEffect : EffectStrategy
 {
-    [Header("Damage Value")]
+    [Header("Damage")]
     [SerializeField] private float damageValue;
     [SerializeField] private bool isPercent;
     [SerializeField] private DamageType damageType;
-    public float baseValue;
+    private float baseValue;
 
     [Header("Pop")]
     [SerializeField] private HealthPop healthPop;
