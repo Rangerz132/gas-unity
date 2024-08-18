@@ -6441,6 +6441,8 @@ GameObject:
   - component: {fileID: 1118900370}
   - component: {fileID: 1118900375}
   - component: {fileID: 1118900374}
+  - component: {fileID: 1118900377}
+  - component: {fileID: 1118900376}
   - component: {fileID: 1118900371}
   - component: {fileID: 1118900372}
   m_Layer: 7
@@ -6578,6 +6580,8 @@ MonoBehaviour:
       effectPerPoint: 1
     - derivedStatType: 10
       effectPerPoint: 0.25
+    - derivedStatType: 12
+      effectPerPoint: 0.5
   <Luck>k__BackingField:
     statType: 5
     derivedStatEffects: []
@@ -6589,8 +6593,30 @@ MonoBehaviour:
     derivedStatEffects:
     - derivedStatType: 13
       effectPerPoint: 0.05
-    - derivedStatType: 6
-      effectPerPoint: 5
+--- !u!114 &1118900376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118900367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc271c3c98862654792420e7da17ba70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1118900377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118900367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32a179614146c043be5b923b3edf5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1121180729
 GameObject:
   m_ObjectHideFlags: 0
@@ -8344,11 +8370,11 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_ImpulseDuration: 0.1
+    m_ImpulseDuration: 0.05
     m_ImpulseType: 3
     m_DissipationRate: 0
     m_RawSignal: {fileID: 11400000, guid: a70fe953eb49f834eba83064cd283a45, type: 2}
-    m_AmplitudeGain: 0.1
+    m_AmplitudeGain: 0.05
     m_FrequencyGain: 1
     m_RepeatMode: 0
     m_Randomize: 1
@@ -8365,9 +8391,9 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      m_AttackTime: 0.01
+      m_AttackTime: 0.05
       m_SustainTime: 0.1
-      m_DecayTime: 0.2
+      m_DecayTime: 0.1
       m_ScaleWithImpact: 1
       m_HoldForever: 0
     m_ImpactRadius: 100

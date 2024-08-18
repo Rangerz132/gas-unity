@@ -60,6 +60,11 @@ public class Health : MonoBehaviour
         OnTakeDamage?.Invoke();
     }
 
+    /// <summary>
+    /// Update Max Health on Stat Changed
+    /// </summary>
+    /// <param name="statType"></param>
+    /// <param name="newValue"></param>
     private void HandleDerivedStatChanged(DerivedCharacterStatType statType, float newValue)
     {
         if (statType == DerivedCharacterStatType.MaxHealth)

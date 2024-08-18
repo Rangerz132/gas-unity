@@ -41,7 +41,7 @@ public class CharacterStatsManager : MonoBehaviour
         CharacterStats.Add(CharacterStatType.Intelligence, Intelligence);
         CharacterStats.Add(CharacterStatType.Luck, Luck);
         CharacterStats.Add(CharacterStatType.Charisma, Charisma);
-        CharacterStats.Add(CharacterStatType.Wisdom, Wisdom); 
+        CharacterStats.Add(CharacterStatType.Wisdom, Wisdom);
     }
 
     public float GetStatValue(CharacterStatType statType)
