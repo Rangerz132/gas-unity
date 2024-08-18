@@ -22,9 +22,9 @@ public class CharacterStatsBuffEffect : EffectStrategy
         foreach (var target in data.targets)
         {
             // Add buff
-            if (target.TryGetComponent<CharacterStats>(out CharacterStats characterStats))
+            if (target.TryGetComponent<CharacterStatsManager>(out CharacterStatsManager characterStatsManager))
             {
-                characterStats.Stats[characterStatType].AddModifier(statModifier);    
+                characterStatsManager.CharacterStats[characterStatType].stat.AddModifier(statModifier);    
             }
         }
 

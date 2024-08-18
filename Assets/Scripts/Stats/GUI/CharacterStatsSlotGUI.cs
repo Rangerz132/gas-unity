@@ -6,24 +6,24 @@ using TMPro;
 
 public class CharacterStatsSlotGUI : MonoBehaviour
 {
-    private Stat stat;
+    private CharacterStat characterStat;
     [SerializeField] private TextMeshProUGUI statName;
     [SerializeField] private TextMeshProUGUI statValue;
     [SerializeField] private CharacterStatsSlotButtonGUI characterStatsButtonDecrease;
     [SerializeField] private CharacterStatsSlotButtonGUI characterStatsButtonIncrease;
 
 
-    public void SetCharacterStatsInfo(CharacterStatType characterStatType, Stat stat)
+    public void SetCharacterStatsInfo(CharacterStatType characterStatType, CharacterStat characterStat)
     {
-        this.stat = stat;
+        this.characterStat = characterStat;
 
         // Update text value
         statName.text = characterStatType.ToString();
-        statValue.text = stat.Value.ToString();
+        statValue.text = characterStat.stat.Value.ToString();
 
         // Update button 
-        characterStatsButtonDecrease.stat = stat;
-        characterStatsButtonIncrease.stat = stat;
+        characterStatsButtonDecrease.stat = characterStat.stat;
+        characterStatsButtonIncrease.stat = characterStat.stat;
         characterStatsButtonDecrease.characterStatsSlotGUI = this;
         characterStatsButtonIncrease.characterStatsSlotGUI = this;
         SetButtonInteractivity();
@@ -32,12 +32,12 @@ public class CharacterStatsSlotGUI : MonoBehaviour
 
     public void SetStatValue()
     {
-        statValue.text = stat.Value.ToString();
+        statValue.text = characterStat.stat.Value.ToString();
     }
 
     public void SetButtonInteractivity()
     {
-        if (stat.Value <= 0)
+        if (characterStat.stat.Value <= 0)
         {
             characterStatsButtonDecrease.DisableButton();
         }

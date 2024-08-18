@@ -11,21 +11,21 @@ public class AbilityManager : MonoBehaviour
 
     public event Action<Ability> OnAbilityUsed;
 
-    private CharacterStats characterStats;
+    private CharacterStatsManager characterStatsManager;
 
     private void Awake()
     {
-        characterStats = GetComponent<CharacterStats>();
+        characterStatsManager = GetComponent<CharacterStatsManager>();
     }
 
     private void OnEnable()
     {
-        characterStats.OnDerivedStatChanged += HandleDerivedStatChanged;
+        characterStatsManager.OnDerivedStatChanged += HandleDerivedStatChanged;
     }
 
     private void OnDisable()
     {
-        characterStats.OnDerivedStatChanged -= HandleDerivedStatChanged;
+        characterStatsManager.OnDerivedStatChanged -= HandleDerivedStatChanged;
     }
 
     public void Update()
@@ -46,7 +46,7 @@ public class AbilityManager : MonoBehaviour
     /// </summary>
     private void UpdateAbilityCooldown()
     {
-        float bonusCooldown = characterStats.GetDerivedStatValue(DerivedCharacterStatType.AbilityCooldown);
+        float bonusCooldown = characterStatsManager.GetDerivedStatValue(DerivedCharacterStatType.AbilityCooldown);
 
         foreach (Ability ability in Abilities)
         {

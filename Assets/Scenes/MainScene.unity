@@ -873,7 +873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91aa2f8a7bff7d441a473921157073ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <CharacterStats>k__BackingField: {fileID: 161552587}
+  <CharacterStatsManager>k__BackingField: {fileID: 161552587}
   <DamageManager>k__BackingField: {fileID: 0}
   <Health>k__BackingField: {fileID: 161552583}
   <Animator>k__BackingField: {fileID: 0}
@@ -940,29 +940,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68ea9e7d874ed446a1c3a13c20328ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <StatInfos>k__BackingField:
-  - statType: 0
-    derivedStatEffects:
-    - derivedStatType: 0
-      effectPerPoint: 10
-  - statType: 1
+  <Constitution>k__BackingField:
+    statType: 0
     derivedStatEffects: []
-  - statType: 2
+  <Endurance>k__BackingField:
+    statType: 0
     derivedStatEffects: []
-  - statType: 3
+  <Strength>k__BackingField:
+    statType: 0
     derivedStatEffects: []
-  - statType: 4
-    derivedStatEffects:
-    - derivedStatType: 1
-      effectPerPoint: 1
-  - statType: 5
+  <Dexterity>k__BackingField:
+    statType: 0
     derivedStatEffects: []
-  - statType: 6
+  <Intelligence>k__BackingField:
+    statType: 0
     derivedStatEffects: []
-  - statType: 7
-    derivedStatEffects:
-    - derivedStatType: 13
-      effectPerPoint: 0.5
+  <Luck>k__BackingField:
+    statType: 0
+    derivedStatEffects: []
+  <Charisma>k__BackingField:
+    statType: 0
+    derivedStatEffects: []
+  <Wisdom>k__BackingField:
+    statType: 0
+    derivedStatEffects: []
 --- !u!1 &167078091
 GameObject:
   m_ObjectHideFlags: 0
@@ -6437,8 +6438,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1118900368}
   - component: {fileID: 1118900369}
-  - component: {fileID: 1118900373}
   - component: {fileID: 1118900370}
+  - component: {fileID: 1118900375}
   - component: {fileID: 1118900374}
   - component: {fileID: 1118900371}
   - component: {fileID: 1118900372}
@@ -6478,7 +6479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564eb6a88f886834db13d534f317b739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <CharacterStats>k__BackingField: {fileID: 1118900373}
+  <CharacterStatsManager>k__BackingField: {fileID: 1118900375}
   <DamageManager>k__BackingField: {fileID: 1118900374}
   <Health>k__BackingField: {fileID: 1118900371}
   <Animator>k__BackingField: {fileID: 0}
@@ -6528,41 +6529,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c16e1471425a544b0b22d5b34ba3a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1118900373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1118900367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b68ea9e7d874ed446a1c3a13c20328ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <StatInfos>k__BackingField:
-  - statType: 0
-    derivedStatEffects:
-    - derivedStatType: 0
-      effectPerPoint: 10
-  - statType: 1
-    derivedStatEffects: []
-  - statType: 2
-    derivedStatEffects: []
-  - statType: 3
-    derivedStatEffects: []
-  - statType: 4
-    derivedStatEffects:
-    - derivedStatType: 1
-      effectPerPoint: 1
-  - statType: 5
-    derivedStatEffects: []
-  - statType: 6
-    derivedStatEffects: []
-  - statType: 7
-    derivedStatEffects:
-    - derivedStatType: 13
-      effectPerPoint: 0.5
 --- !u!114 &1118900374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6575,6 +6541,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 407106b15affa0a489f6952103d7154b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1118900375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118900367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b68ea9e7d874ed446a1c3a13c20328ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Constitution>k__BackingField:
+    statType: 0
+    derivedStatEffects:
+    - derivedStatType: 0
+      effectPerPoint: 10
+  <Endurance>k__BackingField:
+    statType: 1
+    derivedStatEffects: []
+  <Strength>k__BackingField:
+    statType: 2
+    derivedStatEffects:
+    - derivedStatType: 2
+      effectPerPoint: 1
+    - derivedStatType: 11
+      effectPerPoint: 0.25
+  <Dexterity>k__BackingField:
+    statType: 3
+    derivedStatEffects: []
+  <Intelligence>k__BackingField:
+    statType: 4
+    derivedStatEffects:
+    - derivedStatType: 1
+      effectPerPoint: 1
+    - derivedStatType: 6
+      effectPerPoint: 5
+  <Luck>k__BackingField:
+    statType: 5
+    derivedStatEffects: []
+  <Charisma>k__BackingField:
+    statType: 6
+    derivedStatEffects: []
+  <Wisdom>k__BackingField:
+    statType: 7
+    derivedStatEffects:
+    - derivedStatType: 13
+      effectPerPoint: 0.05
+    - derivedStatType: 10
+      effectPerPoint: 0.25
 --- !u!1 &1121180729
 GameObject:
   m_ObjectHideFlags: 0
@@ -8331,8 +8347,8 @@ MonoBehaviour:
     m_ImpulseDuration: 0.1
     m_ImpulseType: 3
     m_DissipationRate: 0
-    m_RawSignal: {fileID: 11400000, guid: a70fe953eb49f834eba83064cd283a45, type: 2}
-    m_AmplitudeGain: 0.1
+    m_RawSignal: {fileID: 11400000, guid: 5b98596f24b276049b9ce34baaf4e1e7, type: 2}
+    m_AmplitudeGain: 0.15
     m_FrequencyGain: 1
     m_RepeatMode: 0
     m_Randomize: 1
@@ -8349,9 +8365,9 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      m_AttackTime: 0.01
+      m_AttackTime: 0.05
       m_SustainTime: 0.1
-      m_DecayTime: 0.2
+      m_DecayTime: 0.3
       m_ScaleWithImpact: 1
       m_HoldForever: 0
     m_ImpactRadius: 100
@@ -9223,7 +9239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91aa2f8a7bff7d441a473921157073ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <CharacterStats>k__BackingField: {fileID: 1629795623}
+  <CharacterStatsManager>k__BackingField: {fileID: 1629795623}
   <DamageManager>k__BackingField: {fileID: 0}
   <Health>k__BackingField: {fileID: 1629795619}
   <Animator>k__BackingField: {fileID: 0}
@@ -9290,29 +9306,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68ea9e7d874ed446a1c3a13c20328ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <StatInfos>k__BackingField:
-  - statType: 0
-    derivedStatEffects:
-    - derivedStatType: 0
-      effectPerPoint: 10
-  - statType: 1
+  <Constitution>k__BackingField:
+    statType: 0
     derivedStatEffects: []
-  - statType: 2
+  <Endurance>k__BackingField:
+    statType: 0
     derivedStatEffects: []
-  - statType: 3
+  <Strength>k__BackingField:
+    statType: 0
     derivedStatEffects: []
-  - statType: 4
-    derivedStatEffects:
-    - derivedStatType: 1
-      effectPerPoint: 1
-  - statType: 5
+  <Dexterity>k__BackingField:
+    statType: 0
     derivedStatEffects: []
-  - statType: 6
+  <Intelligence>k__BackingField:
+    statType: 0
     derivedStatEffects: []
-  - statType: 7
-    derivedStatEffects:
-    - derivedStatType: 13
-      effectPerPoint: 0.5
+  <Luck>k__BackingField:
+    statType: 0
+    derivedStatEffects: []
+  <Charisma>k__BackingField:
+    statType: 0
+    derivedStatEffects: []
+  <Wisdom>k__BackingField:
+    statType: 0
+    derivedStatEffects: []
 --- !u!1 &1659143875
 GameObject:
   m_ObjectHideFlags: 0
@@ -10226,7 +10243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91aa2f8a7bff7d441a473921157073ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <CharacterStats>k__BackingField: {fileID: 1959940576}
+  <CharacterStatsManager>k__BackingField: {fileID: 1959940576}
   <DamageManager>k__BackingField: {fileID: 0}
   <Health>k__BackingField: {fileID: 1959940573}
   <Animator>k__BackingField: {fileID: 0}
@@ -10270,29 +10287,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b68ea9e7d874ed446a1c3a13c20328ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <StatInfos>k__BackingField:
-  - statType: 0
-    derivedStatEffects:
-    - derivedStatType: 0
-      effectPerPoint: 10
-  - statType: 1
+  <Constitution>k__BackingField:
+    statType: 0
     derivedStatEffects: []
-  - statType: 2
+  <Endurance>k__BackingField:
+    statType: 0
     derivedStatEffects: []
-  - statType: 3
+  <Strength>k__BackingField:
+    statType: 0
     derivedStatEffects: []
-  - statType: 4
-    derivedStatEffects:
-    - derivedStatType: 1
-      effectPerPoint: 1
-  - statType: 5
+  <Dexterity>k__BackingField:
+    statType: 0
     derivedStatEffects: []
-  - statType: 6
+  <Intelligence>k__BackingField:
+    statType: 0
     derivedStatEffects: []
-  - statType: 7
-    derivedStatEffects:
-    - derivedStatType: 13
-      effectPerPoint: 0.5
+  <Luck>k__BackingField:
+    statType: 0
+    derivedStatEffects: []
+  <Charisma>k__BackingField:
+    statType: 0
+    derivedStatEffects: []
+  <Wisdom>k__BackingField:
+    statType: 0
+    derivedStatEffects: []
 --- !u!1 &1963759612
 GameObject:
   m_ObjectHideFlags: 0
@@ -11415,7 +11433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04af261283c33d0449e1dd7911437537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterStats: {fileID: 1118900373}
+  characterStatsManager: {fileID: 1118900375}
   characterStatsSlotGUIPrefab: {fileID: 6927136132412191060, guid: 6af1183856f389f42bc4cc275b09f39f,
     type: 3}
 --- !u!224 &7244710104865872761

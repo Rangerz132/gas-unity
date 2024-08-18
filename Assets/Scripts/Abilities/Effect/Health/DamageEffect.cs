@@ -23,6 +23,9 @@ public class DamageEffect : EffectStrategy
 
     public override void StartEffect(AbilityData data, Action finished)
     {
+
+        DamageManager damageManager = data.User.GetComponent<DamageManager>();
+
         foreach (var target in data.targets)
         {
             // Get health component
@@ -34,11 +37,9 @@ public class DamageEffect : EffectStrategy
 
                 float currentValue = baseValue;
 
-                DamageManager damageManager = data.User.GetComponent<DamageManager>();
-
                 if (damageManager != null)
                 {
-                    float damageBonus = damageManager.CalculateDamageModifier();
+                    float damageBonus = damageManager.CalculateDamageModifier(damageType);
                     currentValue += damageBonus;
                 }
 

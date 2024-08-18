@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IStatEffect
 {
-    void ApplyEffect(CharacterStats characterStats);
+    void ApplyEffect(CharacterStatsManager characterStatsManager);
 }

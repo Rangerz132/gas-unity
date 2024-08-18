@@ -4,17 +4,44 @@ using UnityEngine;
 
 public class DamageManager : MonoBehaviour
 {
-    private CharacterStats characterStats;
+    private CharacterStatsManager characterStatsManager;
 
     private void Awake()
     {
-        characterStats = GetComponent<CharacterStats>();
+        characterStatsManager = GetComponent<CharacterStatsManager>();
     }
 
-    public float CalculateDamageModifier()
+    public float CalculateDamageModifier(DamageType damageType)
     {
-        float intelligenceValue = characterStats.GetStatValue(CharacterStatType.Intelligence);
-        float damageModifier = 1f +(intelligenceValue * 0.005f);
-        return damageModifier;
+        float damagerModifier = 0;
+        switch (damageType)
+        {
+            case DamageType.Magic:
+                damagerModifier = CalculateDamage(CharacterStatType.Intelligence, DerivedCharacterStatType.MagicDamage);
+                break;
+            case DamageType.Physic:
+                damagerModifier = CalculateDamage(CharacterStatType.Strength, DerivedCharacterStatType.PhysicalDamage);
+                break;
+        }
+
+        return damagerModifier;
+    }
+
+    public float CalculateDamage(CharacterStatType characterStatType, DerivedCharacterStatType derivedCharacterStatType)
+    {
+        CharacterStat characterStat = characterStatsManager.CharacterStats[characterStatType];
+
+        float statValue = characterStatsManager.GetStatValue(characterStatType);
+        float damageModierValue = 0;
+
+        for (var i = 0; i < characterStat.derivedStatEffects.Count; i++)
+        {
+            if (characterStat.derivedStatEffects[i].derivedStatType.Equals(derivedCharacterStatType))
+            {
+                damageModierValue = characterStat.derivedStatEffects[i].effectPerPoint;
+            }
+        }
+
+        return statValue * damageModierValue;
     }
 }

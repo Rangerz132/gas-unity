@@ -11,22 +11,22 @@ public class Health : MonoBehaviour
     public static Action OnHeal;
     public static Action OnMaxHealChange;
 
-    private CharacterStats characterStats;
+    private CharacterStatsManager characterStatsManager;
 
     private void Awake()
     {
-        characterStats = GetComponent<CharacterStats>();
+        characterStatsManager = GetComponent<CharacterStatsManager>();
         InitializeHealth();
     }
 
     private void OnEnable()
     {
-        characterStats.OnDerivedStatChanged += HandleDerivedStatChanged;
+        characterStatsManager.OnDerivedStatChanged += HandleDerivedStatChanged;
     }
 
     private void OnDisable()
     {
-        characterStats.OnDerivedStatChanged -= HandleDerivedStatChanged;
+        characterStatsManager.OnDerivedStatChanged -= HandleDerivedStatChanged;
     }
 
 
@@ -82,7 +82,7 @@ public class Health : MonoBehaviour
     /// </summary>
     private void UpdateMaxHealth()
     {
-        float bonusHealth = characterStats.GetDerivedStatValue(DerivedCharacterStatType.MaxHealth);
+        float bonusHealth = characterStatsManager.GetDerivedStatValue(DerivedCharacterStatType.MaxHealth);
         MaxHealth = baseHealth + bonusHealth;
         CurrentHealth += bonusHealth;
         CurrentHealth = Mathf.Min(CurrentHealth, MaxHealth);

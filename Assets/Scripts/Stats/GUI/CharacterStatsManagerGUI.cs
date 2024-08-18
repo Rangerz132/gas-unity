@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterStatsManagerGUI : MonoBehaviour
 {
-    public CharacterStats characterStats;
+    public CharacterStatsManager characterStatsManager;
     public CharacterStatsSlotGUI characterStatsSlotGUIPrefab;
     public List<CharacterStatsSlotGUI> CharacterStatsSlotGUIs { get; private set; }
 
@@ -15,7 +15,7 @@ public class CharacterStatsManagerGUI : MonoBehaviour
 
     public void SetCharacterStatsSlotGUIs()
     {
-        foreach (KeyValuePair<CharacterStatType, Stat> kvp in characterStats.Stats)
+        foreach (KeyValuePair<CharacterStatType, CharacterStat> kvp in characterStatsManager.CharacterStats)
         {
             CharacterStatsSlotGUI characterStatsSlotGUIInstance = Instantiate(characterStatsSlotGUIPrefab);
             characterStatsSlotGUIInstance.gameObject.transform.SetParent(gameObject.transform);
