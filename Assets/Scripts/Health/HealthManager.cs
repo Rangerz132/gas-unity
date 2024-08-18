@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 
-public class Health : MonoBehaviour
+public class HealthManager : MonoBehaviour
 {
     [SerializeField] private float baseHealth;
     public float CurrentHealth { get; private set; }

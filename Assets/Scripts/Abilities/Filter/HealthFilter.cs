@@ -25,10 +25,10 @@ public class HealthFilter : FilterStrategy
         foreach (var gameObject in objectsToFilter)
         {
             // Get health component
-            if (gameObject.TryGetComponent<Health>(out Health health))
+            if (gameObject.TryGetComponent<HealthManager>(out HealthManager healthManager))
             {
                 // Transform current value in percentile if needed
-                currentValue = isPercent ? (health.CurrentHealth / health.MaxHealth) * 100 : value;
+                currentValue = isPercent ? (healthManager.CurrentHealth / healthManager.MaxHealth) * 100 : value;
 
                 switch (valueType)
                 {

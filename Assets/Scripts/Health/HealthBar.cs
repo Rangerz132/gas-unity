@@ -6,22 +6,22 @@ using TMPro;
 
 public class HealthBar : MonoBehaviour
 {
-    [SerializeField] private Health health;
+    [SerializeField] private HealthManager healthManager;
     [SerializeField] private TextMeshProUGUI healtText;
     [SerializeField] private Image healtBar;
 
     private void OnEnable()
     {
-        Health.OnTakeDamage += UpdateHealth;
-        Health.OnHeal += UpdateHealth;
-        Health.OnMaxHealChange += UpdateHealth;
+        HealthManager.OnTakeDamage += UpdateHealth;
+        HealthManager.OnHeal += UpdateHealth;
+        HealthManager.OnMaxHealChange += UpdateHealth;
     }
 
     private void OnDisable()
     {
-        Health.OnTakeDamage -= UpdateHealth;
-        Health.OnHeal -= UpdateHealth;
-        Health.OnMaxHealChange -= UpdateHealth;
+        HealthManager.OnTakeDamage -= UpdateHealth;
+        HealthManager.OnHeal -= UpdateHealth;
+        HealthManager.OnMaxHealChange -= UpdateHealth;
     }
 
     void Start()
@@ -34,9 +34,9 @@ public class HealthBar : MonoBehaviour
     /// </summary>
     public void UpdateHealth()
     {
-        float fillAmount = health.CurrentHealth / health.MaxHealth;
+        float fillAmount = healthManager.CurrentHealth / healthManager.MaxHealth;
         healtBar.fillAmount = fillAmount;
 
-        healtText.text = $"{health.CurrentHealth} / {health.MaxHealth}";
+        healtText.text = $"{healthManager.CurrentHealth} / {healthManager.MaxHealth}";
     }
 }

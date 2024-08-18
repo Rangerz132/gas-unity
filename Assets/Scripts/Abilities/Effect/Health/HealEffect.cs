@@ -22,10 +22,10 @@ public class HealEffect : EffectStrategy
         foreach (var target in data.targets)
         {
             // Get health component
-            if (target.TryGetComponent<Health>(out Health health))
+            if (target.TryGetComponent<HealthManager>(out HealthManager healthManager))
             {
                 // Transform current value in percentile if needed
-                baseValue = isPercent ? healValue * health.MaxHealth / 100 : healValue;
+                baseValue = isPercent ? healValue * healthManager.MaxHealth / 100 : healValue;
                 float currentValue = baseValue;
 
                 // Calculate regeneration bonus
@@ -35,13 +35,13 @@ public class HealEffect : EffectStrategy
                 }
 
                 // Heal
-                health.Heal(data.User, currentValue);
+                healthManager.Heal(data.User, currentValue);
 
                 if (healthPop)
                 {
                     GameObject healthPopGameObject = HealthPopPoolManager.OnGetHealthPop?.Invoke(HealthPopType.Heal);
                     HealthPop healthPopInstance = healthPopGameObject.GetComponent<HealthPop>();
-                    healthPopInstance.Initialize(currentValue.ToString(), health.gameObject.transform.position + healthOffset);
+                    healthPopInstance.Initialize(currentValue.ToString(), healthManager.gameObject.transform.position + healthOffset);
 
                 
                 }

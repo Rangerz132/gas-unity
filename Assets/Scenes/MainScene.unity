@@ -692,7 +692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce0293e5bdedd2488345b26aee7b7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 1118900371}
+  healthManager: {fileID: 1118900371}
   healtText: {fileID: 711838703}
   healtBar: {fileID: 1055647044}
 --- !u!1 &128175564
@@ -820,8 +820,11 @@ GameObject:
   m_Component:
   - component: {fileID: 161552582}
   - component: {fileID: 161552584}
-  - component: {fileID: 161552587}
   - component: {fileID: 161552583}
+  - component: {fileID: 161552587}
+  - component: {fileID: 161552590}
+  - component: {fileID: 161552589}
+  - component: {fileID: 161552588}
   - component: {fileID: 161552585}
   - component: {fileID: 161552586}
   m_Layer: 0
@@ -874,8 +877,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CharacterStatsManager>k__BackingField: {fileID: 161552587}
-  <DamageManager>k__BackingField: {fileID: 0}
-  <Health>k__BackingField: {fileID: 161552583}
+  <HealthManager>k__BackingField: {fileID: 161552583}
+  <DamageManager>k__BackingField: {fileID: 161552590}
+  <ResistanceManager>k__BackingField: {fileID: 161552589}
+  <RegenerationManager>k__BackingField: {fileID: 161552588}
   <Animator>k__BackingField: {fileID: 0}
   <GizmoDrawer>k__BackingField: {fileID: 0}
 --- !u!136 &161552585
@@ -964,6 +969,42 @@ MonoBehaviour:
   <Wisdom>k__BackingField:
     statType: 0
     derivedStatEffects: []
+--- !u!114 &161552588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161552581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc271c3c98862654792420e7da17ba70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &161552589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161552581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32a179614146c043be5b923b3edf5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &161552590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161552581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407106b15affa0a489f6952103d7154b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &167078091
 GameObject:
   m_ObjectHideFlags: 0
@@ -6439,11 +6480,11 @@ GameObject:
   - component: {fileID: 1118900368}
   - component: {fileID: 1118900369}
   - component: {fileID: 1118900370}
+  - component: {fileID: 1118900371}
   - component: {fileID: 1118900375}
   - component: {fileID: 1118900374}
   - component: {fileID: 1118900377}
   - component: {fileID: 1118900376}
-  - component: {fileID: 1118900371}
   - component: {fileID: 1118900372}
   m_Layer: 7
   m_Name: Player
@@ -6482,8 +6523,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CharacterStatsManager>k__BackingField: {fileID: 1118900375}
+  <HealthManager>k__BackingField: {fileID: 1118900371}
   <DamageManager>k__BackingField: {fileID: 1118900374}
-  <Health>k__BackingField: {fileID: 1118900371}
+  <ResistanceManager>k__BackingField: {fileID: 1118900377}
+  <RegenerationManager>k__BackingField: {fileID: 1118900376}
   <Animator>k__BackingField: {fileID: 0}
   <GizmoDrawer>k__BackingField: {fileID: 1118900372}
   <AbilityManager>k__BackingField: {fileID: 1118900370}
@@ -8833,7 +8876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce0293e5bdedd2488345b26aee7b7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 161552583}
+  healthManager: {fileID: 161552583}
   healtText: {fileID: 338622734}
   healtBar: {fileID: 234527722}
 --- !u!1 &1587951254
@@ -9199,7 +9242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce0293e5bdedd2488345b26aee7b7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 1629795619}
+  healthManager: {fileID: 1629795619}
   healtText: {fileID: 1066347438}
   healtBar: {fileID: 248320325}
 --- !u!1 &1629795617
@@ -9213,6 +9256,9 @@ GameObject:
   - component: {fileID: 1629795618}
   - component: {fileID: 1629795620}
   - component: {fileID: 1629795623}
+  - component: {fileID: 1629795626}
+  - component: {fileID: 1629795625}
+  - component: {fileID: 1629795624}
   - component: {fileID: 1629795619}
   - component: {fileID: 1629795621}
   - component: {fileID: 1629795622}
@@ -9266,8 +9312,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CharacterStatsManager>k__BackingField: {fileID: 1629795623}
-  <DamageManager>k__BackingField: {fileID: 0}
-  <Health>k__BackingField: {fileID: 1629795619}
+  <HealthManager>k__BackingField: {fileID: 1629795619}
+  <DamageManager>k__BackingField: {fileID: 1629795626}
+  <ResistanceManager>k__BackingField: {fileID: 1629795625}
+  <RegenerationManager>k__BackingField: {fileID: 1629795624}
   <Animator>k__BackingField: {fileID: 0}
   <GizmoDrawer>k__BackingField: {fileID: 0}
 --- !u!136 &1629795621
@@ -9356,6 +9404,42 @@ MonoBehaviour:
   <Wisdom>k__BackingField:
     statType: 0
     derivedStatEffects: []
+--- !u!114 &1629795624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629795617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc271c3c98862654792420e7da17ba70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1629795625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629795617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32a179614146c043be5b923b3edf5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1629795626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629795617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407106b15affa0a489f6952103d7154b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1659143875
 GameObject:
   m_ObjectHideFlags: 0
@@ -10030,7 +10114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce0293e5bdedd2488345b26aee7b7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 1959940573}
+  healthManager: {fileID: 1959940573}
   healtText: {fileID: 1605488972}
   healtBar: {fileID: 1529942736}
 --- !u!1 &1834065038
@@ -10193,8 +10277,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1959940571}
   - component: {fileID: 1959940574}
-  - component: {fileID: 1959940576}
   - component: {fileID: 1959940573}
+  - component: {fileID: 1959940576}
+  - component: {fileID: 1959940579}
+  - component: {fileID: 1959940578}
+  - component: {fileID: 1959940577}
   - component: {fileID: 1959940572}
   - component: {fileID: 1959940575}
   m_Layer: 0
@@ -10270,8 +10357,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <CharacterStatsManager>k__BackingField: {fileID: 1959940576}
-  <DamageManager>k__BackingField: {fileID: 0}
-  <Health>k__BackingField: {fileID: 1959940573}
+  <HealthManager>k__BackingField: {fileID: 1959940573}
+  <DamageManager>k__BackingField: {fileID: 1959940579}
+  <ResistanceManager>k__BackingField: {fileID: 1959940578}
+  <RegenerationManager>k__BackingField: {fileID: 1959940577}
   <Animator>k__BackingField: {fileID: 0}
   <GizmoDrawer>k__BackingField: {fileID: 0}
 --- !u!54 &1959940575
@@ -10337,6 +10426,42 @@ MonoBehaviour:
   <Wisdom>k__BackingField:
     statType: 0
     derivedStatEffects: []
+--- !u!114 &1959940577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959940570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc271c3c98862654792420e7da17ba70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1959940578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959940570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32a179614146c043be5b923b3edf5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1959940579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959940570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407106b15affa0a489f6952103d7154b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1963759612
 GameObject:
   m_ObjectHideFlags: 0

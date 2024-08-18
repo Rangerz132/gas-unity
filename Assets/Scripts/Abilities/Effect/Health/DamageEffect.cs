@@ -29,11 +29,11 @@ public class DamageEffect : EffectStrategy
         foreach (var target in data.targets)
         {
             // Get health component
-            if (target.TryGetComponent<Health>(out Health health))
+            if (target.TryGetComponent<HealthManager>(out HealthManager healthManager))
             {
 
                 // Transform current value in percentile if needed
-                baseValue = isPercent ? damageValue * health.MaxHealth / 100 : damageValue;
+                baseValue = isPercent ? damageValue * healthManager.MaxHealth / 100 : damageValue;
 
                 float currentValue = baseValue;
 
@@ -54,13 +54,13 @@ public class DamageEffect : EffectStrategy
                 }
 
                 // Do damage
-                health.TakeDamage(data.User, currentValue);
+                healthManager.TakeDamage(data.User, currentValue);
 
                 if (healthPop)
                 {
                     GameObject healthPopGameObject = HealthPopPoolManager.OnGetHealthPop?.Invoke(HealthPopType.Damage);
                     HealthPop healthPopInstance = healthPopGameObject.GetComponent<HealthPop>();
-                    healthPopInstance.Initialize(currentValue.ToString(), health.gameObject.transform.position + healthOffset);
+                    healthPopInstance.Initialize(currentValue.ToString(), healthManager.gameObject.transform.position + healthOffset);
                 }
             }
         }
