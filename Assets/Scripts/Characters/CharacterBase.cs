@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterStatsManager))]
 [RequireComponent(typeof(HealthManager))]
 [RequireComponent(typeof(DamageManager))]
 [RequireComponent(typeof(ResistanceManager))]
@@ -19,6 +20,7 @@ public abstract class CharacterBase : MonoBehaviour
 
     private void Awake()
     {
+        CharacterStatsManager = GetComponent<CharacterStatsManager>();
         HealthManager = GetComponent<HealthManager>();
         DamageManager = GetComponent<DamageManager>();
         ResistanceManager = GetComponent<ResistanceManager>();

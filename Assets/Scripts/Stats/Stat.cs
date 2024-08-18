@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class Stat
 {
-    private float _baseValue;
+    [SerializeField] private float _baseValue;
     private float _lastCalculatedValue;
     private bool isDirty = true;
     public float baseValue

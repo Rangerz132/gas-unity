@@ -947,27 +947,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Constitution>k__BackingField:
     statType: 0
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Endurance>k__BackingField:
-    statType: 0
+    statType: 1
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Strength>k__BackingField:
-    statType: 0
+    statType: 2
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Dexterity>k__BackingField:
-    statType: 0
+    statType: 3
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Intelligence>k__BackingField:
-    statType: 0
+    statType: 4
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Luck>k__BackingField:
-    statType: 0
+    statType: 5
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Charisma>k__BackingField:
-    statType: 0
+    statType: 6
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Wisdom>k__BackingField:
-    statType: 0
+    statType: 7
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
 --- !u!114 &161552588
 MonoBehaviour:
@@ -6600,14 +6616,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Constitution>k__BackingField:
     statType: 0
+    stat:
+      _baseValue: 0
     derivedStatEffects:
     - derivedStatType: 0
       effectPerPoint: 10
   <Endurance>k__BackingField:
     statType: 1
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Strength>k__BackingField:
     statType: 2
+    stat:
+      _baseValue: 0
     derivedStatEffects:
     - derivedStatType: 2
       effectPerPoint: 1
@@ -6615,9 +6637,13 @@ MonoBehaviour:
       effectPerPoint: 0.25
   <Dexterity>k__BackingField:
     statType: 3
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Intelligence>k__BackingField:
     statType: 4
+    stat:
+      _baseValue: 0
     derivedStatEffects:
     - derivedStatType: 1
       effectPerPoint: 1
@@ -6627,12 +6653,18 @@ MonoBehaviour:
       effectPerPoint: 0.5
   <Luck>k__BackingField:
     statType: 5
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Charisma>k__BackingField:
     statType: 6
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Wisdom>k__BackingField:
     statType: 7
+    stat:
+      _baseValue: 0
     derivedStatEffects:
     - derivedStatType: 13
       effectPerPoint: 0.05
@@ -8413,11 +8445,11 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    m_ImpulseDuration: 0.05
+    m_ImpulseDuration: 0.1
     m_ImpulseType: 3
     m_DissipationRate: 0
-    m_RawSignal: {fileID: 11400000, guid: a70fe953eb49f834eba83064cd283a45, type: 2}
-    m_AmplitudeGain: 0.05
+    m_RawSignal: {fileID: 11400000, guid: 5b98596f24b276049b9ce34baaf4e1e7, type: 2}
+    m_AmplitudeGain: 0.15
     m_FrequencyGain: 1
     m_RepeatMode: 0
     m_Randomize: 1
@@ -8436,7 +8468,7 @@ MonoBehaviour:
         m_RotationOrder: 4
       m_AttackTime: 0.05
       m_SustainTime: 0.1
-      m_DecayTime: 0.1
+      m_DecayTime: 0.3
       m_ScaleWithImpact: 1
       m_HoldForever: 0
     m_ImpactRadius: 100
@@ -9255,11 +9287,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1629795618}
   - component: {fileID: 1629795620}
+  - component: {fileID: 1629795619}
   - component: {fileID: 1629795623}
   - component: {fileID: 1629795626}
   - component: {fileID: 1629795625}
   - component: {fileID: 1629795624}
-  - component: {fileID: 1629795619}
   - component: {fileID: 1629795621}
   - component: {fileID: 1629795622}
   m_Layer: 0
@@ -9382,27 +9414,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Constitution>k__BackingField:
     statType: 0
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Endurance>k__BackingField:
-    statType: 0
+    statType: 1
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Strength>k__BackingField:
-    statType: 0
+    statType: 2
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Dexterity>k__BackingField:
-    statType: 0
+    statType: 3
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Intelligence>k__BackingField:
-    statType: 0
+    statType: 4
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Luck>k__BackingField:
-    statType: 0
+    statType: 5
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Charisma>k__BackingField:
-    statType: 0
+    statType: 6
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Wisdom>k__BackingField:
-    statType: 0
+    statType: 7
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
 --- !u!114 &1629795624
 MonoBehaviour:
@@ -10404,27 +10452,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Constitution>k__BackingField:
     statType: 0
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Endurance>k__BackingField:
-    statType: 0
+    statType: 1
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Strength>k__BackingField:
-    statType: 0
+    statType: 2
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Dexterity>k__BackingField:
-    statType: 0
+    statType: 3
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Intelligence>k__BackingField:
-    statType: 0
+    statType: 4
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Luck>k__BackingField:
-    statType: 0
+    statType: 5
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Charisma>k__BackingField:
-    statType: 0
+    statType: 6
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
   <Wisdom>k__BackingField:
-    statType: 0
+    statType: 7
+    stat:
+      _baseValue: 0
     derivedStatEffects: []
 --- !u!114 &1959940577
 MonoBehaviour:
