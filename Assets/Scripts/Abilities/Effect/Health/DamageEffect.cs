@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum DamageType { 
+public enum DamageType
+{
     Physic,
     Magic
 }
@@ -23,7 +24,6 @@ public class DamageEffect : EffectStrategy
 
     public override void StartEffect(AbilityData data, Action finished)
     {
-
         DamageManager damageManager = data.User.GetComponent<DamageManager>();
 
         foreach (var target in data.targets)
@@ -37,10 +37,20 @@ public class DamageEffect : EffectStrategy
 
                 float currentValue = baseValue;
 
+                // Calculate damage bonus
                 if (damageManager != null)
                 {
                     float damageBonus = damageManager.CalculateDamageModifier(damageType);
                     currentValue += damageBonus;
+                }
+
+                ResistanceManager resistanceManager = target.GetComponent<ResistanceManager>();
+
+                // Calculate resistance bonus
+                if (resistanceManager != null)
+                {
+                    float resistanceBonus = resistanceManager.CalculateResistanceModifier(damageType);
+                    currentValue -= resistanceBonus;
                 }
 
                 // Do damage

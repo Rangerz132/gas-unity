@@ -6576,8 +6576,8 @@ MonoBehaviour:
     derivedStatEffects:
     - derivedStatType: 1
       effectPerPoint: 1
-    - derivedStatType: 6
-      effectPerPoint: 5
+    - derivedStatType: 10
+      effectPerPoint: 0.25
   <Luck>k__BackingField:
     statType: 5
     derivedStatEffects: []
@@ -6589,8 +6589,8 @@ MonoBehaviour:
     derivedStatEffects:
     - derivedStatType: 13
       effectPerPoint: 0.05
-    - derivedStatType: 10
-      effectPerPoint: 0.25
+    - derivedStatType: 6
+      effectPerPoint: 5
 --- !u!1 &1121180729
 GameObject:
   m_ObjectHideFlags: 0
@@ -8347,8 +8347,8 @@ MonoBehaviour:
     m_ImpulseDuration: 0.1
     m_ImpulseType: 3
     m_DissipationRate: 0
-    m_RawSignal: {fileID: 11400000, guid: 5b98596f24b276049b9ce34baaf4e1e7, type: 2}
-    m_AmplitudeGain: 0.15
+    m_RawSignal: {fileID: 11400000, guid: a70fe953eb49f834eba83064cd283a45, type: 2}
+    m_AmplitudeGain: 0.1
     m_FrequencyGain: 1
     m_RepeatMode: 0
     m_Randomize: 1
@@ -8365,9 +8365,9 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      m_AttackTime: 0.05
+      m_AttackTime: 0.01
       m_SustainTime: 0.1
-      m_DecayTime: 0.3
+      m_DecayTime: 0.2
       m_ScaleWithImpact: 1
       m_HoldForever: 0
     m_ImpactRadius: 100
