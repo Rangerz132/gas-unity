@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "CharacterStatsBuffEffect", menuName = "Abilities/Effect/Buff/Character Stats Buff", order = 0)]
-public class CharacterStatsBuffEffect : EffectStrategy
+[CreateAssetMenu(fileName = "CharacterStatsBuffEffect", menuName = "Abilities/Effect/CharacterStat/Character Stat", order = 0)]
+public class CharacterStatBuffEffect : EffectStrategy
 {
     [Header("Modifier")]
     public float value;
