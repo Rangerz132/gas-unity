@@ -20,7 +20,8 @@ public enum DerivedCharacterStatType
     HealthRegeneration,
     StaminaRegeneration,
     ManaRegeneration,
-    AbilityCooldown
+    AbilityCooldown,
+    MaxWeight
 }
 
 [Serializable]

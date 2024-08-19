@@ -64,7 +64,7 @@ public class ManaManager : MonoBehaviour
     /// <param name="newValue"></param>
     private void HandleDerivedStatChanged(DerivedCharacterStatType statType, float newValue)
     {
-        if (statType == DerivedCharacterStatType.ManaRegeneration)
+        if (statType == DerivedCharacterStatType.MaxMana)
         {
             UpdateMaxMana();
         }
@@ -85,7 +85,7 @@ public class ManaManager : MonoBehaviour
     /// </summary>
     private void UpdateMaxMana()
     {
-        float bonusMana = characterStatsManager.GetDerivedStatValue(DerivedCharacterStatType.MaxHealth);
+        float bonusMana = characterStatsManager.GetDerivedStatValue(DerivedCharacterStatType.MaxMana);
         MaxMana = baseMana + bonusMana;
         CurrentMana += bonusMana;
         CurrentMana = Mathf.Min(CurrentMana, MaxMana);
@@ -107,8 +107,6 @@ public class ManaManager : MonoBehaviour
     private void RegenOverTime()
     {
         CurrentMana += Time.deltaTime * CurrentManaRegen;
-
-        Debug.Log(CurrentMana);
 
         if (CurrentMana > MaxMana)
         {

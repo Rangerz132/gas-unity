@@ -30,15 +30,14 @@ public class ManaBar : MonoBehaviour
     }
 
     /// <summary>
-    /// Update the Healt Bar
+    /// Update the Mana Bar
     /// </summary>
     public void UpdateMana()
     {
-        Debug.Log("testtt");
         float fillAmount = manaManager.CurrentMana / manaManager.MaxMana;
         manaBar.fillAmount = fillAmount;
 
-        manaText.text = $"{Mathf.Floor(manaManager.CurrentMana)} / {manaManager.MaxMana}";
+        manaText.text = $"{Mathf.Floor(manaManager.CurrentMana)} / {manaManager.MaxMana} MP";
     }
 }
 

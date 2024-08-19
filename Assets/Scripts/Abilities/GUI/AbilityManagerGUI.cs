@@ -20,7 +20,7 @@ public class AbilityManagerGUI : MonoBehaviour
 
     void Start()
     {
-        SetAbilitySlotsIcon();
+        SetAbilitySlots();
     }
 
     void Update()
@@ -31,12 +31,13 @@ public class AbilityManagerGUI : MonoBehaviour
     /// <summary>
     /// Override all current ability icon with the one from the ability manager
     /// </summary>
-    private void SetAbilitySlotsIcon()
+    private void SetAbilitySlots()
     {
         for (var i = 0; i < abilityManager.Abilities.Length; i++)
         {
             abilitySlots[i].ability = abilityManager.Abilities[i];
             abilitySlots[i].SetAbilityIcon(abilityManager.Abilities[i].icon);
+            abilitySlots[i].SetAbilityManaCost(abilityManager.Abilities[i].manaCost);          
         }
     }
 

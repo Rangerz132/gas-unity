@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 public class AbilitySlotGUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -11,7 +12,8 @@ public class AbilitySlotGUI : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     [SerializeField] private AbilityInfoGUI abilityInfoGUI;
     [SerializeField] private Image icon;
     [SerializeField] private Image overlayCooldownIcon;
-    
+    [SerializeField] private TextMeshProUGUI abilityManaCostText;
+
     void Update() { }
 
     /// <summary>
@@ -21,6 +23,15 @@ public class AbilitySlotGUI : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public void SetAbilityIcon(Sprite abilityIcon)
     {
         this.icon.sprite = abilityIcon;
+    }
+
+    /// <summary>
+    /// Set the Ability Slot Icon image
+    /// </summary>
+    /// <param name="abilityIcon"></param>
+    public void SetAbilityManaCost(float manaCost)
+    {
+        abilityManaCostText.text = $"{manaCost} MP"; ;
     }
 
     /// <summary>
