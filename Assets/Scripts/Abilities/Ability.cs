@@ -24,7 +24,7 @@ public class Ability : ScriptableObject
     {
         if (user.TryGetComponent<ManaManager>(out ManaManager manaManager))
         {
-            if (manaManager.CurrentMana >= manaCost && (CooldownStrategy == null || CooldownStrategy.IsReady))
+            if (manaManager.CurrentAttribute >= manaCost && (CooldownStrategy == null || CooldownStrategy.IsReady))
             {
                 AbilityData data = new AbilityData(user);
                 targetingStrategy.StartTargeting(data, () => TargetAcquired(data));

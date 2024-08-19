@@ -4,32 +4,27 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public abstract class BaseAttributeBar<T> : MonoBehaviour 
+public abstract class BaseAttributeBar<T> : MonoBehaviour where T : BaseAttributeManager
 {
     [SerializeField] protected T attributeManager;
     [SerializeField] protected TextMeshProUGUI attributeText;
     [SerializeField] protected Image attributeBar;
     [SerializeField] protected string attributetName;
 
-
-    public T GetT(T genericAttribute)
-    {
-        return genericAttribute;
-    }
     void Start()
     {
         UpdateAttribute();
     }
 
     /// <summary>
-    /// Update the Healt Bar
+    /// Update the Attribute Bar
     /// </summary>
     public void UpdateAttribute()
     {
-        //float fillAmount = attributeManager.CurrentHealth / attributeManager.MaxHealth;
-        //attributeBar.fillAmount = fillAmount;
+        float fillAmount = attributeManager.CurrentAttribute / attributeManager.MaxAttribute;
+        attributeBar.fillAmount = fillAmount;
 
-        //attributeText.text = $"{attributeManager.CurrentHealth} / {attributeManager.MaxHealth} {attributetName}";
+        attributeText.text = $"{Mathf.Ceil(attributeManager.CurrentAttribute)} / {attributeManager.MaxAttribute} {attributetName}";
     }
 }
 

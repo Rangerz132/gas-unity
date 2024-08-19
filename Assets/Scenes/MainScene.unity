@@ -1247,8 +1247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88ce1f85e4f3594bad6eb4ef46f033b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseMana: 0
-  baseManaRegen: 0
+  baseAttribute: 0
+  baseAttributeRegen: 0
 --- !u!114 &161552592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1261,8 +1261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817085bf204caf043868b2965a4d9066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseStamina: 0
-  baseStaminaRegen: 0
+  baseAttribute: 0
+  baseAttributeRegen: 0
 --- !u!1 &167078091
 GameObject:
   m_ObjectHideFlags: 0
@@ -6279,9 +6279,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a958fcde0635840a0e7a5f34d48cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaManager: {fileID: 1118900378}
-  manaText: {fileID: 1334432005}
-  manaBar: {fileID: 1392990764}
+  attributeManager: {fileID: 1118900378}
+  attributeText: {fileID: 1334432005}
+  attributeBar: {fileID: 1392990764}
+  attributetName: MP
 --- !u!1 &882572672
 GameObject:
   m_ObjectHideFlags: 0
@@ -6706,9 +6707,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111b3eff10249e34198cde088454e56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  staminaManager: {fileID: 1118900379}
-  staminaText: {fileID: 1548602167}
-  staminaBar: {fileID: 721095662}
+  attributeManager: {fileID: 1118900379}
+  attributeText: {fileID: 1548602167}
+  attributeBar: {fileID: 721095662}
+  attributetName: SP
 --- !u!1 &952082973
 GameObject:
   m_ObjectHideFlags: 0
@@ -7927,8 +7929,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88ce1f85e4f3594bad6eb4ef46f033b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseMana: 100
-  baseManaRegen: 2.5
+  baseAttribute: 100
+  baseAttributeRegen: 1
 --- !u!114 &1118900379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7941,8 +7943,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817085bf204caf043868b2965a4d9066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseStamina: 250
-  baseStaminaRegen: 5
+  baseAttribute: 250
+  baseAttributeRegen: 2.5
 --- !u!1 &1121180729
 GameObject:
   m_ObjectHideFlags: 0
@@ -11027,8 +11029,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88ce1f85e4f3594bad6eb4ef46f033b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseMana: 0
-  baseManaRegen: 0
+  baseAttribute: 0
+  baseAttributeRegen: 0
 --- !u!114 &1629795628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11041,8 +11043,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817085bf204caf043868b2965a4d9066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseStamina: 0
-  baseStaminaRegen: 0
+  baseAttribute: 0
+  baseAttributeRegen: 0
 --- !u!1 &1659143875
 GameObject:
   m_ObjectHideFlags: 0
@@ -12058,8 +12060,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88ce1f85e4f3594bad6eb4ef46f033b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseMana: 0
-  baseManaRegen: 0
+  baseAttribute: 0
+  baseAttributeRegen: 0
 --- !u!114 &1959940581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12072,8 +12074,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 817085bf204caf043868b2965a4d9066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseStamina: 0
-  baseStaminaRegen: 0
+  baseAttribute: 0
+  baseAttributeRegen: 0
 --- !u!1 &1963759612
 GameObject:
   m_ObjectHideFlags: 0
