@@ -5,22 +5,22 @@ using System;
 
 public enum DerivedCharacterStatType
 {
-    MaxHealth,
+    MaxHealth, // Done
     MaxMana,
     MaxStamina,
-    MagicDamage,
-    PhysicalDamage,
+    MagicDamage, // Done
+    PhysicalDamage, // Done
     Accuracy,
     Evasion,
     CriticalHitChance,
     MovementSpeed,
     AttackSpeed,
-    MagicResistance,
-    PhysicalResistance,
-    HealthRegeneration,
+    MagicResistance, // Done
+    PhysicalResistance, // Done
+    HealthRegeneration, // Done
     StaminaRegeneration,
     ManaRegeneration,
-    AbilityCooldown,
+    AbilityCooldown, // Done
     MaxWeight
 }
 

@@ -37,6 +37,6 @@ public class HealthBar : MonoBehaviour
         float fillAmount = healthManager.CurrentHealth / healthManager.MaxHealth;
         healtBar.fillAmount = fillAmount;
 
-        healtText.text = $"{healthManager.CurrentHealth} / {healthManager.MaxHealth}";
+        healtText.text = $"{healthManager.CurrentHealth} / {healthManager.MaxHealth} HP";
     }
 }

@@ -37,7 +37,7 @@ public class ManaBar : MonoBehaviour
         float fillAmount = manaManager.CurrentMana / manaManager.MaxMana;
         manaBar.fillAmount = fillAmount;
 
-        manaText.text = $"{Mathf.Floor(manaManager.CurrentMana)} / {manaManager.MaxMana} MP";
+        manaText.text = $"{Mathf.Ceil(manaManager.CurrentMana)} / {manaManager.MaxMana} MP";
     }
 }
 
