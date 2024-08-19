@@ -23,7 +23,7 @@ public abstract class BaseAttributeManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Update Max Health on Stat Changed
+    /// Update max attribute on stat change
     /// </summary>
     /// <param name="statType"></param>
     /// <param name="newValue"></param>
@@ -36,7 +36,7 @@ public abstract class BaseAttributeManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Initialize stamina values
+    /// Initialize attribute values
     /// </summary>
     protected void InitializeAttribute()
     {
@@ -46,7 +46,7 @@ public abstract class BaseAttributeManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Set max stamina based on character stats and base value
+    /// Set max attribute based on character stats and base value
     /// </summary>
     protected void UpdateMaxAttribute()
     {
@@ -59,7 +59,7 @@ public abstract class BaseAttributeManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Restore stamina to the maximum amount
+    /// Restore attribute to the maximum amount
     /// </summary>
     protected void RestoreAttribute()
     {

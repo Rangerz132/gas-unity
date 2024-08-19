@@ -17,7 +17,7 @@ public abstract class BaseAttributeBar<T> : MonoBehaviour where T : BaseAttribut
     }
 
     /// <summary>
-    /// Update the Attribute Bar
+    /// Update the attribute bar
     /// </summary>
     public void UpdateAttribute()
     {
