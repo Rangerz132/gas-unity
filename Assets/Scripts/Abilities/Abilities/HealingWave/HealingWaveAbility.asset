@@ -17,6 +17,7 @@ MonoBehaviour:
   description: Heals multiple entities within a large radius, restoring their health
     instantly.
   icon: {fileID: 21300000, guid: 985a7b2c7765dd54d9ead422b86d8903, type: 3}
+  manaCost: 40
   targetingStrategy: {fileID: 11400000, guid: 0559e2f020b67f84e93724833e68813d, type: 2}
   <CooldownStrategy>k__BackingField: {fileID: 11400000, guid: 09c0db3f928c770429e560bd828418a6,
     type: 2}

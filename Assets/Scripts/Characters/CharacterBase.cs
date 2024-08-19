@@ -4,6 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(CharacterStatsManager))]
 [RequireComponent(typeof(HealthManager))]
+[RequireComponent(typeof(ManaManager))]
 [RequireComponent(typeof(DamageManager))]
 [RequireComponent(typeof(ResistanceManager))]
 [RequireComponent(typeof(RegenerationManager))]
@@ -11,6 +12,7 @@ public abstract class CharacterBase : MonoBehaviour
 {
     [field: SerializeField] public CharacterStatsManager CharacterStatsManager { get; private set; }
     [field: SerializeField] public HealthManager HealthManager { get; private set; }
+    [field: SerializeField] public ManaManager ManaManager { get; private set; }
     [field: SerializeField] public DamageManager DamageManager { get; private set; }
     [field: SerializeField] public ResistanceManager ResistanceManager { get; private set; }
     [field: SerializeField] public RegenerationManager RegenerationManager { get; private set; }
@@ -22,6 +24,7 @@ public abstract class CharacterBase : MonoBehaviour
     {
         CharacterStatsManager = GetComponent<CharacterStatsManager>();
         HealthManager = GetComponent<HealthManager>();
+        ManaManager = GetComponent<ManaManager>();
         DamageManager = GetComponent<DamageManager>();
         ResistanceManager = GetComponent<ResistanceManager>();
         RegenerationManager = GetComponent<RegenerationManager>();

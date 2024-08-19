@@ -16,6 +16,7 @@ MonoBehaviour:
   displayName: Fireball
   description: Throws fireballs at all enemies in a large radius, dealing damage.
   icon: {fileID: 21300000, guid: c3e24862179e4e447b24ad88da34d0c7, type: 3}
+  manaCost: 15
   targetingStrategy: {fileID: 11400000, guid: ec6f21a5503be9f4d875f46eeae6bd5f, type: 2}
   <CooldownStrategy>k__BackingField: {fileID: 11400000, guid: 7e0b2cad61275b64494869a717777ee5,
     type: 2}

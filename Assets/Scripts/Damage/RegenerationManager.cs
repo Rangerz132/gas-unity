@@ -20,7 +20,7 @@ public class RegenerationManager : MonoBehaviour
 
         for (var i = 0; i < characterStat.derivedStatEffects.Count; i++)
         {
-            if (characterStat.derivedStatEffects[i].derivedStatType.Equals(DerivedCharacterStatType.Regeneration))
+            if (characterStat.derivedStatEffects[i].derivedStatType.Equals(DerivedCharacterStatType.HealthRegeneration))
             {
                 regenerationModierValue = characterStat.derivedStatEffects[i].effectPerPoint;
             }

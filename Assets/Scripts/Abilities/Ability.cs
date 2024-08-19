@@ -9,6 +9,7 @@ public class Ability : ScriptableObject
     public string displayName;
     [TextArea] public string description;
     public Sprite icon;
+    public float manaCost;
 
     [SerializeField] private TargetingStrategy targetingStrategy;
     [field: SerializeField] public CooldownStrategy CooldownStrategy { get; private set; }
@@ -21,10 +22,13 @@ public class Ability : ScriptableObject
     /// <param name="user"></param>
     public void Use(GameObject user)
     {
-        if (CooldownStrategy == null || CooldownStrategy.IsReady)
+        if (user.TryGetComponent<ManaManager>(out ManaManager manaManager))
         {
-            AbilityData data = new AbilityData(user);
-            targetingStrategy.StartTargeting(data, () => TargetAcquired(data));
+            if (manaManager.CurrentMana >= manaCost && (CooldownStrategy == null || CooldownStrategy.IsReady))
+            {
+                AbilityData data = new AbilityData(user);
+                targetingStrategy.StartTargeting(data, () => TargetAcquired(data));
+            }
         }
     }
 
@@ -48,6 +52,13 @@ public class Ability : ScriptableObject
         // Apply cooldown
         CooldownStrategy.StartCooldown(data);
         data.User.GetComponent<AbilityManager>().StartCooldown(this, CooldownStrategy.remainingTime);
+
+        // Apply mana cost
+        if (data.User.TryGetComponent<ManaManager>(out ManaManager manaManager))
+        {
+            manaManager.ConsumeMana(manaCost);
+        }
+
     }
 
     private void EffectFinished() { }

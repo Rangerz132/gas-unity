@@ -16,6 +16,7 @@ MonoBehaviour:
   displayName: Void Strikes
   description: Unleashes a spray of 5 void bullets, dealing damage.
   icon: {fileID: 21300000, guid: 455887b489bbcc1499d86940dbb2347f, type: 3}
+  manaCost: 25
   targetingStrategy: {fileID: 11400000, guid: 6dc9d926d99a6a84fb2fa77342d6b83a, type: 2}
   <CooldownStrategy>k__BackingField: {fileID: 11400000, guid: e75dde39151567a43b9d64161cc10109,
     type: 2}

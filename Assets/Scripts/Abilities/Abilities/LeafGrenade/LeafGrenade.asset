@@ -17,6 +17,7 @@ MonoBehaviour:
   description: Throws a rotating leaf grenade that deals damage and slows multiple
     enemies in a small radius.
   icon: {fileID: 21300000, guid: e9aee65d46dddf647a533c07bc2dd847, type: 3}
+  manaCost: 30
   targetingStrategy: {fileID: 11400000, guid: b8d0e335beb81a6419e1dfd46ca9d02f, type: 2}
   <CooldownStrategy>k__BackingField: {fileID: 11400000, guid: 388ae9b663032b7459834b55a7427161,
     type: 2}
