@@ -28,7 +28,7 @@ public class HealthFilter : FilterStrategy
             if (gameObject.TryGetComponent<HealthManager>(out HealthManager healthManager))
             {
                 // Transform current value in percentile if needed
-                currentValue = isPercent ? (healthManager.CurrentHealth / healthManager.MaxHealth) * 100 : value;
+                currentValue = isPercent ? (healthManager.CurrentAttribute / healthManager.MaxAttribute) * 100 : value;
 
                 switch (valueType)
                 {

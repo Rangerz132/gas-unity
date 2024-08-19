@@ -25,7 +25,7 @@ public class HealEffect : EffectStrategy
             if (target.TryGetComponent<HealthManager>(out HealthManager healthManager))
             {
                 // Transform current value in percentile if needed
-                baseValue = isPercent ? healValue * healthManager.MaxHealth / 100 : healValue;
+                baseValue = isPercent ? healValue * healthManager.MaxAttribute / 100 : healValue;
                 float currentValue = baseValue;
 
                 // Calculate regeneration bonus

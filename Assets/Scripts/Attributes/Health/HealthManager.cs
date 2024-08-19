@@ -1,22 +1,14 @@
 using UnityEngine;
 using System;
 
-public class HealthManager : MonoBehaviour
+public class HealthManager : BaseAttributeManager
 {
-    [SerializeField] private float baseHealth;
-    public float CurrentHealth { get; private set; }
-    public float MaxHealth { get; private set; }
-
     public static Action OnTakeDamage;
     public static Action OnHeal;
-    public static Action OnMaxHealChange;
 
-    private CharacterStatsManager characterStatsManager;
-
-    private void Awake()
+    private void Start()
     {
-        characterStatsManager = GetComponent<CharacterStatsManager>();
-        InitializeHealth();
+        derivedCharacterStatType = DerivedCharacterStatType.MaxHealth;
     }
 
     private void OnEnable()
@@ -36,10 +28,10 @@ public class HealthManager : MonoBehaviour
     /// <param name="damageAmount"></param>
     public virtual void TakeDamage(GameObject damageDealer, float damageAmount)
     {
-        CurrentHealth -= damageAmount;
-        if (CurrentHealth <= 0)
+        CurrentAttribute -= damageAmount;
+        if (CurrentAttribute <= 0)
         {
-            CurrentHealth = 0;
+            CurrentAttribute = 0;
         }
 
         OnTakeDamage?.Invoke();
@@ -51,55 +43,12 @@ public class HealthManager : MonoBehaviour
     /// <param name="healAmount"></param>
     public virtual void Heal(GameObject healDealer, float healAmount)
     {
-        CurrentHealth += healAmount;
-        if (CurrentHealth > MaxHealth)
+        CurrentAttribute += healAmount;
+        if (CurrentAttribute > MaxAttribute)
         {
-            CurrentHealth = MaxHealth;
+            CurrentAttribute = MaxAttribute;
         }
 
         OnTakeDamage?.Invoke();
-    }
-
-    /// <summary>
-    /// Update Max Health on Stat Changed
-    /// </summary>
-    /// <param name="statType"></param>
-    /// <param name="newValue"></param>
-    private void HandleDerivedStatChanged(DerivedCharacterStatType statType, float newValue)
-    {
-        if (statType == DerivedCharacterStatType.MaxHealth)
-        {
-            UpdateMaxHealth();
-        }
-    }
-
-    /// <summary>
-    /// Initialize health values
-    /// </summary>
-    private void InitializeHealth()
-    {
-        UpdateMaxHealth();
-        RestoreHealth();
-    }
-
-    /// <summary>
-    /// Set max health based on character stats and base value
-    /// </summary>
-    private void UpdateMaxHealth()
-    {
-        float bonusHealth = characterStatsManager.GetDerivedStatValue(DerivedCharacterStatType.MaxHealth);
-        MaxHealth = baseHealth + bonusHealth;
-        CurrentHealth += bonusHealth;
-        CurrentHealth = Mathf.Min(CurrentHealth, MaxHealth);
-
-        OnMaxHealChange?.Invoke();
-    }
-
-    /// <summary>
-    /// Restore health to the maximum amount
-    /// </summary>
-    private void RestoreHealth()
-    {
-        CurrentHealth = MaxHealth;
     }
 }

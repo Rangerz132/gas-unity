@@ -799,9 +799,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce0293e5bdedd2488345b26aee7b7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthManager: {fileID: 1118900371}
-  healtText: {fileID: 591570316}
-  healtBar: {fileID: 859904319}
+  attributeManager: {fileID: 1118900371}
+  attributeText: {fileID: 591570316}
+  attributeBar: {fileID: 859904319}
+  attributeName: HP
 --- !u!1 &112280096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,14 +1032,14 @@ GameObject:
   - component: {fileID: 161552582}
   - component: {fileID: 161552584}
   - component: {fileID: 161552583}
+  - component: {fileID: 161552592}
+  - component: {fileID: 161552591}
   - component: {fileID: 161552587}
   - component: {fileID: 161552590}
   - component: {fileID: 161552589}
   - component: {fileID: 161552588}
   - component: {fileID: 161552585}
   - component: {fileID: 161552586}
-  - component: {fileID: 161552591}
-  - component: {fileID: 161552592}
   m_Layer: 0
   m_Name: Enemy (1)
   m_TagString: Enemy
@@ -1075,7 +1076,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0427344b2ad124cbc9744db6dc2ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 200
+  baseAttribute: 300
+  baseAttributeRegen: 0
 --- !u!114 &161552584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1090,8 +1092,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <CharacterStatsManager>k__BackingField: {fileID: 161552587}
   <HealthManager>k__BackingField: {fileID: 161552583}
-  <StaminaManager>k__BackingField: {fileID: 0}
-  <ManaManager>k__BackingField: {fileID: 0}
+  <StaminaManager>k__BackingField: {fileID: 161552592}
+  <ManaManager>k__BackingField: {fileID: 161552591}
   <DamageManager>k__BackingField: {fileID: 161552590}
   <ResistanceManager>k__BackingField: {fileID: 161552589}
   <RegenerationManager>k__BackingField: {fileID: 161552588}
@@ -2537,7 +2539,7 @@ GameObject:
   - component: {fileID: 338622735}
   - component: {fileID: 338622734}
   m_Layer: 0
-  m_Name: HealText
+  m_Name: HealthText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6282,7 +6284,7 @@ MonoBehaviour:
   attributeManager: {fileID: 1118900378}
   attributeText: {fileID: 1334432005}
   attributeBar: {fileID: 1392990764}
-  attributetName: MP
+  attributeName: MP
 --- !u!1 &882572672
 GameObject:
   m_ObjectHideFlags: 0
@@ -6710,7 +6712,7 @@ MonoBehaviour:
   attributeManager: {fileID: 1118900379}
   attributeText: {fileID: 1548602167}
   attributeBar: {fileID: 721095662}
-  attributetName: SP
+  attributeName: SP
 --- !u!1 &952082973
 GameObject:
   m_ObjectHideFlags: 0
@@ -7416,7 +7418,7 @@ GameObject:
   - component: {fileID: 1066347439}
   - component: {fileID: 1066347438}
   m_Layer: 0
-  m_Name: HealText
+  m_Name: HealthText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7784,7 +7786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0427344b2ad124cbc9744db6dc2ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 500
+  baseAttribute: 500
+  baseAttributeRegen: 5
 --- !u!114 &1118900372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7834,7 +7837,7 @@ MonoBehaviour:
       _baseValue: 0
     derivedStatEffects:
     - derivedStatType: 2
-      effectPerPoint: 10
+      effectPerPoint: 5
     - derivedStatType: 11
       effectPerPoint: 0.5
   <Strength>k__BackingField:
@@ -7892,7 +7895,7 @@ MonoBehaviour:
     - derivedStatType: 14
       effectPerPoint: 0.5
     - derivedStatType: 1
-      effectPerPoint: 5
+      effectPerPoint: 2
 --- !u!114 &1118900376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10431,9 +10434,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce0293e5bdedd2488345b26aee7b7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthManager: {fileID: 161552583}
-  healtText: {fileID: 338622734}
-  healtBar: {fileID: 234527722}
+  attributeManager: {fileID: 161552583}
+  attributeText: {fileID: 338622734}
+  attributeBar: {fileID: 234527722}
+  attributeName: 
 --- !u!1 &1587951254
 GameObject:
   m_ObjectHideFlags: 0
@@ -10624,7 +10628,7 @@ GameObject:
   - component: {fileID: 1605488973}
   - component: {fileID: 1605488972}
   m_Layer: 0
-  m_Name: HealText
+  m_Name: HealthText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10799,9 +10803,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce0293e5bdedd2488345b26aee7b7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthManager: {fileID: 1629795619}
-  healtText: {fileID: 1066347438}
-  healtBar: {fileID: 248320325}
+  attributeManager: {fileID: 1629795619}
+  attributeText: {fileID: 1066347438}
+  attributeBar: {fileID: 248320325}
+  attributeName: 
 --- !u!1 &1629795617
 GameObject:
   m_ObjectHideFlags: 0
@@ -10813,14 +10818,14 @@ GameObject:
   - component: {fileID: 1629795618}
   - component: {fileID: 1629795620}
   - component: {fileID: 1629795619}
+  - component: {fileID: 1629795628}
+  - component: {fileID: 1629795627}
   - component: {fileID: 1629795623}
   - component: {fileID: 1629795626}
   - component: {fileID: 1629795625}
   - component: {fileID: 1629795624}
   - component: {fileID: 1629795621}
   - component: {fileID: 1629795622}
-  - component: {fileID: 1629795627}
-  - component: {fileID: 1629795628}
   m_Layer: 0
   m_Name: Enemy (2)
   m_TagString: Enemy
@@ -10857,7 +10862,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0427344b2ad124cbc9744db6dc2ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 200
+  baseAttribute: 300
+  baseAttributeRegen: 0
 --- !u!114 &1629795620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10872,8 +10878,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <CharacterStatsManager>k__BackingField: {fileID: 1629795623}
   <HealthManager>k__BackingField: {fileID: 1629795619}
-  <StaminaManager>k__BackingField: {fileID: 0}
-  <ManaManager>k__BackingField: {fileID: 0}
+  <StaminaManager>k__BackingField: {fileID: 1629795628}
+  <ManaManager>k__BackingField: {fileID: 1629795627}
   <DamageManager>k__BackingField: {fileID: 1629795626}
   <ResistanceManager>k__BackingField: {fileID: 1629795625}
   <RegenerationManager>k__BackingField: {fileID: 1629795624}
@@ -11604,9 +11610,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bce0293e5bdedd2488345b26aee7b7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthManager: {fileID: 1959940573}
-  healtText: {fileID: 1605488972}
-  healtBar: {fileID: 1529942736}
+  attributeManager: {fileID: 1959940573}
+  attributeText: {fileID: 1605488972}
+  attributeBar: {fileID: 1529942736}
+  attributeName: 
 --- !u!1 &1834065038
 GameObject:
   m_ObjectHideFlags: 0
@@ -11844,14 +11851,14 @@ GameObject:
   - component: {fileID: 1959940571}
   - component: {fileID: 1959940574}
   - component: {fileID: 1959940573}
+  - component: {fileID: 1959940581}
+  - component: {fileID: 1959940580}
   - component: {fileID: 1959940576}
   - component: {fileID: 1959940579}
   - component: {fileID: 1959940578}
   - component: {fileID: 1959940577}
   - component: {fileID: 1959940572}
   - component: {fileID: 1959940575}
-  - component: {fileID: 1959940580}
-  - component: {fileID: 1959940581}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -11911,7 +11918,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0427344b2ad124cbc9744db6dc2ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 200
+  baseAttribute: 300
+  baseAttributeRegen: 0
 --- !u!114 &1959940574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11926,8 +11934,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <CharacterStatsManager>k__BackingField: {fileID: 1959940576}
   <HealthManager>k__BackingField: {fileID: 1959940573}
-  <StaminaManager>k__BackingField: {fileID: 0}
-  <ManaManager>k__BackingField: {fileID: 0}
+  <StaminaManager>k__BackingField: {fileID: 1959940581}
+  <ManaManager>k__BackingField: {fileID: 1959940580}
   <DamageManager>k__BackingField: {fileID: 1959940579}
   <ResistanceManager>k__BackingField: {fileID: 1959940578}
   <RegenerationManager>k__BackingField: {fileID: 1959940577}

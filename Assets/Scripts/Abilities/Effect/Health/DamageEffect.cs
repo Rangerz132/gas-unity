@@ -33,7 +33,7 @@ public class DamageEffect : EffectStrategy
             {
 
                 // Transform current value in percentile if needed
-                baseValue = isPercent ? damageValue * healthManager.MaxHealth / 100 : damageValue;
+                baseValue = isPercent ? damageValue * healthManager.MaxAttribute / 100 : damageValue;
 
                 float currentValue = baseValue;
 

@@ -9,7 +9,7 @@ public abstract class BaseAttributeBar<T> : MonoBehaviour where T : BaseAttribut
     [SerializeField] protected T attributeManager;
     [SerializeField] protected TextMeshProUGUI attributeText;
     [SerializeField] protected Image attributeBar;
-    [SerializeField] protected string attributetName;
+    [SerializeField] protected string attributeName;
 
     void Start()
     {
@@ -24,7 +24,7 @@ public abstract class BaseAttributeBar<T> : MonoBehaviour where T : BaseAttribut
         float fillAmount = attributeManager.CurrentAttribute / attributeManager.MaxAttribute;
         attributeBar.fillAmount = fillAmount;
 
-        attributeText.text = $"{Mathf.Ceil(attributeManager.CurrentAttribute)} / {attributeManager.MaxAttribute} {attributetName}";
+        attributeText.text = $"{Mathf.Ceil(attributeManager.CurrentAttribute)} / {attributeManager.MaxAttribute} {attributeName}";
     }
 }
 
