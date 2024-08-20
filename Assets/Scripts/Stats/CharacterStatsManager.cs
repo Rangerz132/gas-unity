@@ -33,6 +33,17 @@ public class CharacterStatsManager : MonoBehaviour
     {
         CharacterStats = new Dictionary<CharacterStatType, CharacterStat>();
 
+        // Set Character Stats type
+        Constitution.statType = CharacterStatType.Constitution;
+        Endurance.statType = CharacterStatType.Endurance;
+        Strength.statType = CharacterStatType.Strength;
+        Dexterity.statType = CharacterStatType.Dexterity;
+        Intelligence.statType = CharacterStatType.Intelligence;
+        Luck.statType = CharacterStatType.Luck;
+        Charisma.statType = CharacterStatType.Charisma;
+        Wisdom.statType = CharacterStatType.Wisdom;
+
+
         // Add Character Stats to dictionnary
         CharacterStats.Add(CharacterStatType.Constitution, Constitution);
         CharacterStats.Add(CharacterStatType.Endurance, Endurance);

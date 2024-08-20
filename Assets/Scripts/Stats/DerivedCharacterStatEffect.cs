@@ -24,9 +24,10 @@ public enum DerivedCharacterStatType
     MaxWeight
 }
 
-[Serializable]
-public class DerivedCharacterStatEffect
+[CreateAssetMenu(fileName = "DerivedCharacterStatEffect", menuName = "Stats/DerivedCharacterStatEffect", order = 0)]
+public class DerivedCharacterStatEffect: ScriptableObject
 {
     public DerivedCharacterStatType derivedStatType;
     public float effectPerPoint;
+    [TextArea] public string description;
 }

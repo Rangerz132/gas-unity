@@ -1167,37 +1167,37 @@ MonoBehaviour:
       _baseValue: 0
     derivedStatEffects: []
   <Endurance>k__BackingField:
-    statType: 1
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Strength>k__BackingField:
-    statType: 2
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Dexterity>k__BackingField:
-    statType: 3
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Intelligence>k__BackingField:
-    statType: 4
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Luck>k__BackingField:
-    statType: 5
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Charisma>k__BackingField:
-    statType: 6
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Wisdom>k__BackingField:
-    statType: 7
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
@@ -7829,73 +7829,56 @@ MonoBehaviour:
     stat:
       _baseValue: 0
     derivedStatEffects:
-    - derivedStatType: 0
-      effectPerPoint: 10
+    - {fileID: 11400000, guid: 473968d1c7c27fe4db588a86b83cd9ab, type: 2}
   <Endurance>k__BackingField:
-    statType: 1
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects:
-    - derivedStatType: 2
-      effectPerPoint: 5
-    - derivedStatType: 11
-      effectPerPoint: 0.5
+    - {fileID: 11400000, guid: 79fb63320578bcd438e1404fdbda865a, type: 2}
+    - {fileID: 11400000, guid: 4055cabd0887b7e4882d2ec2affdafc1, type: 2}
   <Strength>k__BackingField:
-    statType: 2
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects:
-    - derivedStatType: 4
-      effectPerPoint: 1
-    - derivedStatType: 16
-      effectPerPoint: 10
+    - {fileID: 11400000, guid: 39f92a92c8a85b049b457a7f2e2d2353, type: 2}
+    - {fileID: 11400000, guid: a25057374b65d4c47a9482712863611a, type: 2}
   <Dexterity>k__BackingField:
-    statType: 3
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects:
-    - derivedStatType: 5
-      effectPerPoint: 0
-    - derivedStatType: 6
-      effectPerPoint: 0
-    - derivedStatType: 7
-      effectPerPoint: 0
-    - derivedStatType: 8
-      effectPerPoint: 0
-    - derivedStatType: 9
-      effectPerPoint: 0
+    - {fileID: 11400000, guid: 33b9fe73699595242bb5523f24ee7159, type: 2}
+    - {fileID: 11400000, guid: 854392459fd90c34d8ac87df4b08e5f3, type: 2}
+    - {fileID: 11400000, guid: f5b30312123acc54688f48a1a6254c5e, type: 2}
+    - {fileID: 11400000, guid: ce29d09eb0b630b4da7706260b63a7e1, type: 2}
+    - {fileID: 11400000, guid: ea0603f8e212b5e46ab5abba7e1767a7, type: 2}
   <Intelligence>k__BackingField:
-    statType: 4
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects:
-    - derivedStatType: 3
-      effectPerPoint: 1
-    - derivedStatType: 10
-      effectPerPoint: 0.25
-    - derivedStatType: 10
-      effectPerPoint: 0.25
+    - {fileID: 11400000, guid: 02be7fce477b9de4fa2be7f454ecfab9, type: 2}
+    - {fileID: 11400000, guid: 1f289007362f01949987fa50b0bb34fc, type: 2}
   <Luck>k__BackingField:
-    statType: 5
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Charisma>k__BackingField:
-    statType: 6
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Wisdom>k__BackingField:
-    statType: 7
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects:
-    - derivedStatType: 15
-      effectPerPoint: 0.05
-    - derivedStatType: 14
-      effectPerPoint: 0.5
-    - derivedStatType: 1
-      effectPerPoint: 2
+    - {fileID: 11400000, guid: 658d0bd4fd47cd34f85cdc2abd4ecd36, type: 2}
+    - {fileID: 11400000, guid: 25bf9a1b3ab46274da885d6f9a1a6e02, type: 2}
+    - {fileID: 11400000, guid: 31113d77f36bf8e418fe9f943623c0c7, type: 2}
 --- !u!114 &1118900376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9839,8 +9822,8 @@ MonoBehaviour:
     m_ImpulseDuration: 0.1
     m_ImpulseType: 3
     m_DissipationRate: 0
-    m_RawSignal: {fileID: 11400000, guid: a70fe953eb49f834eba83064cd283a45, type: 2}
-    m_AmplitudeGain: 0.1
+    m_RawSignal: {fileID: 11400000, guid: 5b98596f24b276049b9ce34baaf4e1e7, type: 2}
+    m_AmplitudeGain: 0.15
     m_FrequencyGain: 1
     m_RepeatMode: 0
     m_Randomize: 1
@@ -9857,9 +9840,9 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      m_AttackTime: 0.01
+      m_AttackTime: 0.05
       m_SustainTime: 0.1
-      m_DecayTime: 0.2
+      m_DecayTime: 0.3
       m_ScaleWithImpact: 1
       m_HoldForever: 0
     m_ImpactRadius: 100
@@ -10953,37 +10936,37 @@ MonoBehaviour:
       _baseValue: 0
     derivedStatEffects: []
   <Endurance>k__BackingField:
-    statType: 1
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Strength>k__BackingField:
-    statType: 2
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Dexterity>k__BackingField:
-    statType: 3
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Intelligence>k__BackingField:
-    statType: 4
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Luck>k__BackingField:
-    statType: 5
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Charisma>k__BackingField:
-    statType: 6
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Wisdom>k__BackingField:
-    statType: 7
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
@@ -11986,37 +11969,37 @@ MonoBehaviour:
       _baseValue: 0
     derivedStatEffects: []
   <Endurance>k__BackingField:
-    statType: 1
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Strength>k__BackingField:
-    statType: 2
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Dexterity>k__BackingField:
-    statType: 3
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Intelligence>k__BackingField:
-    statType: 4
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Luck>k__BackingField:
-    statType: 5
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Charisma>k__BackingField:
-    statType: 6
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []
   <Wisdom>k__BackingField:
-    statType: 7
+    statType: 0
     stat:
       _baseValue: 0
     derivedStatEffects: []

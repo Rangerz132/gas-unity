@@ -16,9 +16,10 @@ public enum CharacterStatType
 }
 
 [Serializable]
-public class CharacterStat 
+public class CharacterStat
 {
-    public CharacterStatType statType;
+    [HideInInspector] public CharacterStatType statType;
     public Stat stat;
     public List<DerivedCharacterStatEffect> derivedStatEffects = new List<DerivedCharacterStatEffect>();
+
 }
