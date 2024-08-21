@@ -11,8 +11,13 @@ public class CharacterStatsSlotGUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI statValue;
     [SerializeField] private CharacterStatsSlotButtonGUI characterStatsButtonDecrease;
     [SerializeField] private CharacterStatsSlotButtonGUI characterStatsButtonIncrease;
+    [SerializeField] private CharacterStatsSlotDetailsGUI characterStatsSlotDetails;
 
-
+    /// <summary>
+    /// Set Character stats data
+    /// </summary>
+    /// <param name="characterStatType"></param>
+    /// <param name="characterStat"></param>
     public void SetCharacterStatsInfo(CharacterStatType characterStatType, CharacterStat characterStat)
     {
         this.characterStat = characterStat;
@@ -28,13 +33,22 @@ public class CharacterStatsSlotGUI : MonoBehaviour
         characterStatsButtonIncrease.characterStatsSlotGUI = this;
         SetButtonInteractivity();
 
-    }
+        // Set Character stats for effect details
+        characterStatsSlotDetails.SetCharacterStat(characterStat);
 
+    }
+    
+    /// <summary>
+    /// Set stats value text
+    /// </summary>
     public void SetStatValue()
     {
         statValue.text = characterStat.stat.Value.ToString();
     }
 
+    /// <summary>
+    /// Enable / Disable button according to stat value
+    /// </summary>
     public void SetButtonInteractivity()
     {
         if (characterStat.stat.Value <= 0)

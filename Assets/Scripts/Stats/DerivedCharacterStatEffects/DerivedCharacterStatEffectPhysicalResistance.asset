@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   derivedStatType: 11
   effectPerPoint: 1
+  description: 'Improves a character''s ability to resist or reduce physical damage
+    taken.
+
+'

@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   derivedStatType: 16
   effectPerPoint: 1
+  description: Increases the maximum weight of items a character can carry without
+    penalties.

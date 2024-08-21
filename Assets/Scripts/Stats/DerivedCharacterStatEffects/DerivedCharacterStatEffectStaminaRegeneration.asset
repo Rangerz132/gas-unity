@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   derivedStatType: 13
   effectPerPoint: 1
+  description: Accelerates the rate at which a character replenishes stamina.

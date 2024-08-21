@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   derivedStatType: 7
   effectPerPoint: 1
+  description: Raises the likelihood of a character landing a critical hit, causing
+    extra damage.

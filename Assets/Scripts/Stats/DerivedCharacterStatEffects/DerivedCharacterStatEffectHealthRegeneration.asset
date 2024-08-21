@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   derivedStatType: 12
   effectPerPoint: 1
+  description: Speeds up the rate at which a character naturally recovers health
+    over time.

@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   derivedStatType: 15
   effectPerPoint: 1
+  description: Reduces the time it takes for a character's abilities to become usable
+    again after being cast.

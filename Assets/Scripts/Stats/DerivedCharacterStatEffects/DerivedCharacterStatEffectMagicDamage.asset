@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   derivedStatType: 3
   effectPerPoint: 1
+  description: Boosts the amount of damage a character inflicts with magical abilities.
