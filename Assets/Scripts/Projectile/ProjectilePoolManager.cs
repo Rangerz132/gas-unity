@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
-
 public class ProjectilePoolManager : PoolManager<ProjectileType>
 {
     public static Func<ProjectileType, GameObject> OnGetProjectile { get; private set; }

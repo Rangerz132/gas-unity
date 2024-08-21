@@ -43,6 +43,7 @@ public class SpawnTargetPrefabEffect : EffectStrategy
             // Clear the list
             prefabs.Clear();
         }
+
         finished();
     }
 }

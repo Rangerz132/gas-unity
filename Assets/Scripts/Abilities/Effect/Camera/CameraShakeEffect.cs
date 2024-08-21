@@ -15,7 +15,6 @@ public class CameraShakeEffect : EffectStrategy
     [SerializeField] private NoiseSettings noiseSettings;
     private CinemachineImpulseSource impulseSource;
 
-
     public override void StartEffect(AbilityData data, Action finished)
     {
         impulseSource = CameraManager.Instance.GetComponent<CinemachineImpulseSource>();
@@ -28,7 +27,6 @@ public class CameraShakeEffect : EffectStrategy
 
     private void ShakeCamera()
     {
-
         impulseSource.m_ImpulseDefinition.m_AmplitudeGain = amplitudeGain;
         impulseSource.m_ImpulseDefinition.m_TimeEnvelope.m_AttackTime = attackTime;
         impulseSource.m_ImpulseDefinition.m_TimeEnvelope.m_SustainTime = sustainTime;

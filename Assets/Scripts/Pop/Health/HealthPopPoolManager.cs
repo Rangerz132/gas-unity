@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
-
 public class HealthPopPoolManager : PoolManager<HealthPopType>
 {
     public static Func<HealthPopType, GameObject> OnGetHealthPop { get; private set; }

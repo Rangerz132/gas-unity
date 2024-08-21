@@ -21,7 +21,6 @@ public abstract class CharacterBase : MonoBehaviour
     [field: SerializeField] public Animator Animator { get; private set; }
     [field: SerializeField] public GizmoDrawer GizmoDrawer { get; private set; }
 
-
     private void Awake()
     {
         CharacterStatsManager = GetComponent<CharacterStatsManager>();

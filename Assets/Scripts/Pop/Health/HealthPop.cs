@@ -10,7 +10,6 @@ public enum HealthPopType
     Damage,
 }
 
-
 public class HealthPop : MonoBehaviour
 {
     [field: SerializeField] public HealthPopType Type { get; private set; }

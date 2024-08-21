@@ -13,7 +13,6 @@ public class CharacterStatsSlotDetailsGUI : MonoBehaviour, IPointerEnterHandler,
     public static Action OnCharacterStatsSlotDetailsExit;
     public Vector2 offset;
 
-
     public void SetCharacterStat(CharacterStat characterStat)
     {
         this.characterStat = characterStat;

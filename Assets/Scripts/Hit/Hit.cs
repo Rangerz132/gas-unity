@@ -35,5 +35,4 @@ public class Hit : MonoBehaviour
             GetComponent<PooledObject>().ReturnToPool();
         }
     }
-
 }

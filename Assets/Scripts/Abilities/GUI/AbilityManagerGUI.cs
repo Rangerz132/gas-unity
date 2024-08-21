@@ -7,7 +7,6 @@ public class AbilityManagerGUI : MonoBehaviour
     [SerializeField] private AbilityManager abilityManager;
     [SerializeField] private AbilitySlotGUI[] abilitySlots;
 
-
     private void OnEnable()
     {
         abilityManager.OnAbilityUsed += HandleAbilityUsed;

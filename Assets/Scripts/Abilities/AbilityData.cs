@@ -22,5 +22,4 @@ public class AbilityData
     {
         targets = gameObjects;
     }
-
 }

@@ -42,8 +42,6 @@ public class HealEffect : EffectStrategy
                     GameObject healthPopGameObject = HealthPopPoolManager.OnGetHealthPop?.Invoke(HealthPopType.Heal);
                     HealthPop healthPopInstance = healthPopGameObject.GetComponent<HealthPop>();
                     healthPopInstance.Initialize(currentValue.ToString(), healthManager.gameObject.transform.position + healthOffset);
-
-                
                 }
             }
         }
