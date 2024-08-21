@@ -15,3 +15,5 @@ MonoBehaviour:
   derivedStatType: 9
   effectPerPoint: 1
   description: Increases the rate at which a character can perform consecutive attacks.
+  descriptionData: + ${} ATTACK SPEED per point
+  descriptionDataColor: {r: 1, g: 0.7176471, b: 0, a: 1}

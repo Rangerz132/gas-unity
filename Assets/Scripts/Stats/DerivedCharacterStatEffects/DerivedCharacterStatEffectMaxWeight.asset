@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eebf5e7abeb854a47848f21ae6b91125, type: 3}
-  m_Name: DerivedCharacterStatEffectMaxHeight
+  m_Name: DerivedCharacterStatEffectMaxWeight
   m_EditorClassIdentifier: 
   derivedStatType: 16
   effectPerPoint: 1
   description: Increases the maximum weight of items a character can carry without
     penalties.
+  descriptionData: + ${} MAX WEIGHT per point
+  descriptionDataColor: {r: 1, g: 0.7176471, b: 0, a: 1}

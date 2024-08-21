@@ -18,3 +18,5 @@ MonoBehaviour:
     taken.
 
 '
+  descriptionData: + ${} PHYSICAL RESISTANCE per point
+  descriptionDataColor: {r: 1, g: 0.7176471, b: 0, a: 1}

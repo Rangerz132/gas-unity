@@ -16,3 +16,5 @@ MonoBehaviour:
   effectPerPoint: 1
   description: Raises the likelihood of a character landing a critical hit, causing
     extra damage.
+  descriptionData: + ${} CRITICAL HIT CHANCE per point
+  descriptionDataColor: {r: 1, g: 0.7176471, b: 0, a: 1}

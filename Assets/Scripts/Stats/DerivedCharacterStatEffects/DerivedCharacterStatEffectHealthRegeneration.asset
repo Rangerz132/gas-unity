@@ -16,3 +16,5 @@ MonoBehaviour:
   effectPerPoint: 1
   description: Speeds up the rate at which a character naturally recovers health
     over time.
+  descriptionData: + ${} HEALTH REGENERATION per point
+  descriptionDataColor: {r: 1, g: 0.7176471, b: 0, a: 1}

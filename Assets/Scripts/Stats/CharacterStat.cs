@@ -21,5 +21,4 @@ public class CharacterStat
     [HideInInspector] public CharacterStatType statType;
     public Stat stat;
     public List<DerivedCharacterStatEffect> derivedStatEffects = new List<DerivedCharacterStatEffect>();
-
 }

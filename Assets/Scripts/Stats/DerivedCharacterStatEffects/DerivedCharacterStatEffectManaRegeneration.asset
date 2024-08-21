@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   derivedStatType: 14
   effectPerPoint: 1
-  description: Increases the maximum amount of mana available for casting spells.
+  description: Accelerates the rate at which a character replenishes mana.
+  descriptionData: + ${} MANA REGENERATION per point
+  descriptionDataColor: {r: 1, g: 0.7176471, b: 0, a: 1}

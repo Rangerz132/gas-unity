@@ -15,3 +15,5 @@ MonoBehaviour:
   derivedStatType: 2
   effectPerPoint: 5
   description: Increases the maximum amount of stamina a character can possess.
+  descriptionData: + ${} MAX STAMINA per point
+  descriptionDataColor: {r: 1, g: 0.7176471, b: 0, a: 1}

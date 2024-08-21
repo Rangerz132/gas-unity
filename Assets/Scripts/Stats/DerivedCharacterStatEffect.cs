@@ -30,4 +30,6 @@ public class DerivedCharacterStatEffect: ScriptableObject
     public DerivedCharacterStatType derivedStatType;
     public float effectPerPoint;
     [TextArea] public string description;
+    [TextArea] public string descriptionData;
+    public Color descriptionDataColor;
 }

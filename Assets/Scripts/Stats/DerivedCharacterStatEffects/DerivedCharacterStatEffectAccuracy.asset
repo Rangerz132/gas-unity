@@ -15,3 +15,5 @@ MonoBehaviour:
   derivedStatType: 5
   effectPerPoint: 1
   description: Improves a character's ability to land hits on a target.
+  descriptionData: + ${} ACCURACY per point
+  descriptionDataColor: {r: 1, g: 0.7176471, b: 0, a: 1}

@@ -15,3 +15,5 @@ MonoBehaviour:
   derivedStatType: 6
   effectPerPoint: 1
   description: Increases a character's ability to avoid incoming attacks.
+  descriptionData: + ${} EVASION per point
+  descriptionDataColor: {r: 1, g: 0.7176471, b: 0, a: 1}

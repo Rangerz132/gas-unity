@@ -12,5 +12,6 @@ public class CharacterStatsEffectGUI : MonoBehaviour
     public void SetEffect(DerivedCharacterStatEffect derivedCharacterStatEffect)
     {
         effectDescriptionText.text = derivedCharacterStatEffect.description;
+        effectDescriptionDataText.text = derivedCharacterStatEffect.descriptionData.Replace("${}", derivedCharacterStatEffect.effectPerPoint.ToString());
     }
 }

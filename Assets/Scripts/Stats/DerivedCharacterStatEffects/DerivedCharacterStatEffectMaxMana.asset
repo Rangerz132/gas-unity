@@ -15,3 +15,5 @@ MonoBehaviour:
   derivedStatType: 1
   effectPerPoint: 2
   description: Increases the maximum amount of mana available for casting spells.
+  descriptionData: + ${} MAX MANA per point
+  descriptionDataColor: {r: 1, g: 0.7176471, b: 0, a: 1}

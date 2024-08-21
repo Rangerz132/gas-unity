@@ -15,3 +15,5 @@ MonoBehaviour:
   derivedStatType: 3
   effectPerPoint: 1
   description: Boosts the amount of damage a character inflicts with magical abilities.
+  descriptionData: + ${} MAGIC DAMAGE per point
+  descriptionDataColor: {r: 1, g: 0.7176471, b: 0, a: 1}
