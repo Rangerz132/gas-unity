@@ -7,11 +7,11 @@ public class CharacterStatsEffectGUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI effectDescriptionText;
     [SerializeField] private TextMeshProUGUI effectDescriptionDataText;
-    [SerializeField] private Color effectDescriptionDataTextColor;
 
     public void SetEffect(DerivedCharacterStatEffect derivedCharacterStatEffect)
     {
         effectDescriptionText.text = derivedCharacterStatEffect.description;
         effectDescriptionDataText.text = derivedCharacterStatEffect.descriptionData.Replace("${}", derivedCharacterStatEffect.effectPerPoint.ToString());
+        effectDescriptionDataText.color = derivedCharacterStatEffect.descriptionDataColor;
     }
 }

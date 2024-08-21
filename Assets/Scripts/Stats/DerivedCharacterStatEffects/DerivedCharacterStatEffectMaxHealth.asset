@@ -16,4 +16,4 @@ MonoBehaviour:
   effectPerPoint: 10
   description: Increases the maximum amount of health a character can have.
   descriptionData: + ${} MAX HEALTH per point
-  descriptionDataColor: {r: 1, g: 0.7176471, b: 0, a: 1}
+  descriptionDataColor: {r: 1, g: 0, b: 0.10980392, a: 1}

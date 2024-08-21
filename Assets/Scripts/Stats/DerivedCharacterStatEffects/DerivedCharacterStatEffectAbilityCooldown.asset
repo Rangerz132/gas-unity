@@ -17,4 +17,4 @@ MonoBehaviour:
   description: Reduces the time it takes for a character's abilities to become usable
     again after being cast.
   descriptionData: + ${} ABILITY COOLDOWN per point
-  descriptionDataColor: {r: 1, g: 0.71488464, b: 0, a: 1}
+  descriptionDataColor: {r: 0, g: 0.54901963, b: 1, a: 1}

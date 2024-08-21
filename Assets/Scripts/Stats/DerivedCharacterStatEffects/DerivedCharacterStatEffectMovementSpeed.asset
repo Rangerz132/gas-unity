@@ -16,4 +16,4 @@ MonoBehaviour:
   effectPerPoint: 1
   description: Enhances the speed at which a character moves across the game world.
   descriptionData: + ${} MOVEMENT SPEED per point
-  descriptionDataColor: {r: 1, g: 0.7176471, b: 0, a: 1}
+  descriptionDataColor: {r: 0, g: 0.48235294, b: 0.16862746, a: 1}
