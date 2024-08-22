@@ -98,11 +98,13 @@ It consists of:
   - Here's the projectile prefab
     ![void-strikes-projectile](README/Assets/Ability/void-strikes-projectile.png)
 
-        **Collision Effect Stategies** :
-        - Damage Effect
-        ![void-strikes-damage](README/Assets/Ability/void-strikes-damage.png)
-        - Camera Shake
-        ![void-strikes-camera-shake](README/Assets/Ability/void-strikes-camera-shake.png)
+    **Collision Effect Stategies**:
+
+    - Damage Effect
+      ![void-strikes-damage](README/Assets/Ability/void-strikes-damage.png)
+
+    - Camera Shake
+      ![void-strikes-camera-shake](README/Assets/Ability/void-strikes-camera-shake.png)
 
 ### Stats and Derived Stats
 
@@ -161,5 +163,3 @@ Derived stats are calculated based on the base stats and determine various in-ga
 - **ManaRegeneration**: The rate at which a character regenerates mana over time.
 - **AbilityCooldown**: The reduction in cooldown time for abilities.
 - **MaxWeight**: The maximum amount of weight a character can carry. _(Not yet implemented)_
-
-## Media
