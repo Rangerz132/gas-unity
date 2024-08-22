@@ -95,14 +95,14 @@ It consists of:
 - **Effect Strategies**: Spawn Projectile Spray Prefab
   ![void-strikes-spawn](README/Assets/Ability/void-strikes-spawn.png)
 
-      - Here's the projectile prefab
-      ![void-strikes-projectile](README/Assets/Ability/void-strikes-projectile.png)
+  - Here's the projectile prefab
+    ![void-strikes-projectile](README/Assets/Ability/void-strikes-projectile.png)
 
-          **Collision Effect Stategies** :
-           - Damage Effect
-          ![void-strikes-damage](README/Assets/Ability/void-strikes-damage.png)
-          - Camera Shake
-          ![void-strikes-camera-shake](README/Assets/Ability/void-strikes-camera-shake.png)
+        **Collision Effect Stategies** :
+        - Damage Effect
+        ![void-strikes-damage](README/Assets/Ability/void-strikes-damage.png)
+        - Camera Shake
+        ![void-strikes-camera-shake](README/Assets/Ability/void-strikes-camera-shake.png)
 
 ### Stats and Derived Stats
 
