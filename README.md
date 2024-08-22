@@ -16,6 +16,8 @@ Each ability in this system is composed of multiple interchangeable **Scriptable
 
 ### Abilities
 
+![gas-unity-abilities](README/Assets/gas-unity-abilities.gif)
+
 The system allows for the creation of abilities that can perform a wide range of actions. Each ability can have different components, including:
 
 - **Targeting System**: Define and handle different targeting methods for abilities.
@@ -70,8 +72,6 @@ The system allows for the creation of abilities that can perform a wide range of
   - _More to come (WIP)_
 
 #### Ability Example
-
-![gas-unity-abilities](README/Assets/gas-unity-abilities.gif)
 
 Let’s take the **Void Strikes** ability as an example and break it down.
 
