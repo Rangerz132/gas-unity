@@ -69,9 +69,9 @@ The system allows for the creation of abilities that can perform a wide range of
 
   - _More to come (WIP)_
 
----
-
 #### Ability Example
+
+![gas-unity-abilities](README/Assets/gas-unity-abilities.gif)
 
 Let’s take the **Void Strikes** ability as an example and break it down.
 
@@ -107,6 +107,8 @@ It consists of:
       ![void-strikes-camera-shake](README/Assets/Ability/void-strikes-camera-shake.png)
 
 ### Stats and Derived Stats
+
+![gas-unity-stats](README/Assets/gas-unity-stats.gif)
 
 The GAS includes a robust system for managing character stats and derived stats, which are used to calculate various in-game effects and outcomes. These stats are crucial in determining a character's effectiveness in combat, resource management, and overall gameplay performance.
 
